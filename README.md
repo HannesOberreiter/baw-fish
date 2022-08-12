@@ -83,4 +83,4 @@ python yolov5/detect.py \
 
 ## License
 
-[MIT 2022](LICENSE.md)
+[GNU GENERAL PUBLIC LICENSE](LICENSE.md)
