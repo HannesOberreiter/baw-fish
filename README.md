@@ -74,8 +74,12 @@ python yolov5/detect.py \
     --source='inference/input' \
     --name='exp' \
     --save-txt \
+    --line-thickness=1 \
+    --hide-labels \
     --project='inference/output'
 ```
+
+![example inference result](inference/example_result.jpg)
 
 ## License
 
