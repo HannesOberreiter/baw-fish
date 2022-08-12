@@ -1,0 +1,42 @@
+#!/bin/bash
+#
+#$ -N baw-yolo          # Job name
+#$ -S /bin/bash         # Set shell to bash
+#
+#$ -l h_vmem=4G         # Request Max. Virt. Mem.
+#
+#$ -q all               # choose the queue, this should be removed or modified. Because the q is specially made for our example course
+#$ -cwd                 # Change to current working directory
+#$ -V                   # Export environment variables into script
+#$ -pe smp 4            # Select the parallel environment, threads
+#
+#$ -o job.$JOB_NAME.$JOB_ID.out.log      # SGE-Output File
+#$ -e job.$JOB_NAME.$JOB_ID.err.log      # SGE-Error File
+
+#print some info to log
+echo "Running under shell '${SHELL}' in directory '`pwd`' using $NSLOTS slots"
+echo "Host: $HOSTNAME"
+echo "Job: $JOB_ID"
+
+#get going
+echo -e "\n[$(date)] - Starting ..\n"
+
+ROOT = $(pwd)
+file = ROOT + 'content/fish.yaml'
+epochs = 300
+img_size = 640 # must be a multiple of 32
+name = 'baw'
+project = ROOT + 'content/runs/train'
+weights = 'yolov5s.pt'
+device = 0 # 'cuda device, i.e. 0 or 0,1,2,3 or cpu'
+
+python yolov5/train.py \
+    --weights=$(weights) \
+    --data=$(file) \
+    --epochs=$(epochs) \
+    --img-size=$(img_size) \
+    --name=$(name) \
+    --device=$(device) \
+    --project=$(project)
+
+echo -e "\n[$(date)] - Done!\n"
