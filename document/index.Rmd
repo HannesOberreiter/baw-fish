@@ -1,0 +1,30 @@
+---
+title: "Einsatz von Bilderkennung mittels neuronalen Netzwerken in der Fischzucht der BAW in Kreuzstein"
+author:
+  - Anna Dünser^[Bundesamt für Wasserwirtschaft, anna.duenser@baw.at]
+  - Hannes Oberreiter^[Institut der Biologie, Universität Graz, hoberreiter@gmail.com]
+date: "`r Sys.Date()`"
+output: pdf_document
+bibliography: "references.bib"
+link-citations: yes
+---
+
+# Einführung
+
+Blutzellen Fische
+- Warum
+- Präparieren
+- Auszählen
+
+# Neuronales Netz YOLOv5
+
+Das beschriebene händische Auszählen von Blutzellen ist sehr Zeitintensiv und auch individuell Fehleranfällig. Dadurch das automatische optische Bilderkennungen heutzutage breit zugänglich sind und immer bessere Leistung erbringen, war die Idee eine automatische segmentierte Bilderkennung für diesen Schritt einzusetzen. Für diese Bilderkennungen werden hauptsächlich neuronale Netzwerke eingesetzt und der YOLO-Algorithmus ist einer davon. YOLO steht hierbei für ein Akronym "You only look once" in Deutsch "Du schaust nur einmal". Dem Algorithmus zugrunde liegt ein sogenanntes Convolutional Neural Network (CNN) und dieses findet bereits breite Anwendungsgebiete auch in der Landwirtschaft. Der Algorithmus zerlegt hier jedes Bild in ein Grid-System und jede Zelle im Grid ist für sich selbst verantwortlich um die Objekte zu erkennen. Dies führt zu einer besonders schnellen aber auch guter Genauigkeit und eignet sich hervorragend für die Auswertung von Live-Filmen.
+
+Der YOLO-Algorithmus wurde im Jahr 2015 veröffentlicht [@yolo]. In unserem Fall wurde YOLOv5 verwendet [@yolov5], was bereits trainierte Modelle zur Verfügung stellt, sehr gute Dokumentation und eine einfache Funktionalität. Aufgebaut auf den PyTorch Framework [@pytorch] in Python, erlaubt es auch Personen mit nur rudimentären Kenntnissen in Programmieren bereits einfache Modelle zu erstellen und damit zu arbeiten.
+
+# Methodik und Resultate
+
+Für unseren Fall haben wir X Bilder zuerst annotiert und diese im Training auf HARDWARE mit vortrainierten gewichten YOLO Large trainiert. Validation, also die Kontrolle wie gut die Daten sind wurde mit X Bildern durchgeführt. Was zu einer Erfolgrate von führte.
+
+# Referenzen
+
