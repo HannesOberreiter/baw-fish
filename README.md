@@ -54,7 +54,7 @@ python yolov5/train.py \
 ### Testing
 
 ```bash
-!python yolov5/val.py \
+python yolov5/val.py \
     --weights='content/current.pt' \
     --data='content/fish.yaml' \
     --imgsz=640 \
