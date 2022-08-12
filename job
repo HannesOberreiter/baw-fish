@@ -27,7 +27,7 @@ epochs = 300
 img_size = 640 # must be a multiple of 32
 name = 'baw'
 project = ROOT + 'content/runs/train'
-weights = 'yolov5s.pt'
+weights = 'yolov5l.pt'
 device = 0 # 'cuda device, i.e. 0 or 0,1,2,3 or cpu'
 
 python yolov5/train.py \
