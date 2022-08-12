@@ -42,13 +42,13 @@ See [index.ipynb](index.ipynb).
 
 ```bash
 python yolov5/train.py \
-    --weights=$(pwd)/yolov5s.pt \
-    --data=$(pwd)/content/fish.yaml \
+    --weights='yolov5s.pt' \
+    --data='content/fish.yaml' \
     --epochs=300 \
     --img-size=640 \
     --name='baw' \
     --device='cpu' \
-    --project=$(pwd)/content/runs/train
+    --project='content/runs/train'
 ```
 
 ### Testing
