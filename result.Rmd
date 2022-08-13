@@ -1,0 +1,52 @@
+
+```{r}
+library(here)
+library(tidyverse)
+```
+
+# Inference
+
+Run inference from R you can also simply use the python script from the console. First we need to activate the environment.
+
+```{r}
+# Inference ----
+INPUT <- "inference/input"
+OUTPUT <- "inference/output"
+WEIGHT <- "content/current.pt"
+# Run python inference
+system(
+    glue::glue("source env/bin/activate && python yolov5/detect.py --weights={WEIGHT} --imgsz=640 --source={INPUT} --name='exp' --save-txt --line-thickness=1 --hide-labels --project={OUTPUT}"),
+    wait = TRUE
+)
+```
+
+# Result
+
+Calculate the mean of the detected bounding boxes in the given image.
+
+```{r}
+# Calculate Mean ----
+FOLDER <- "latest" # latest or folder name, eg. exp1, exp2 ...
+if (FOLDER == "latest") {
+    PATH <- glue::glue("inference/output/{sort(list.files('inference/output'), decreasing = TRUE)[1]}/labels/")
+} else {
+    PATH <- glue::glue("inference/output/{FOLDER}/labels/")
+}
+print(glue::glue("Loading from path: {PATH}"))
+
+# Get number of lines (each line is a bounding box)
+(files <- list.files(PATH))
+df <- list()
+for (file in files) {
+    df[[file]] <- c(
+        file = file,
+        length = length(readLines(stringr::str_c(PATH, file)))
+    )
+}
+# Calculate the mean
+bind_rows(df) %>%
+    glimpse() %>%
+    pull(length) %>%
+    as.numeric() %>%
+    mean()
+```
