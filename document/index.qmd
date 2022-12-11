@@ -1,0 +1,67 @@
+---
+title: "Einsatz von Bilderkennung mittels neuronalen Netzwerken in der Fischzucht der BAW in Kreuzstein"
+author:
+  - name: Anna Dünser 
+    orcid: 0000-0002-0761-8490
+    email: anna.duenser@baw.at
+    affiliation: Bundesamt für Wasserwirtschaft
+  - name: Hannes Oberreiter 
+    affiliation: Institut der Biologie, Universität Graz
+    orcid: 0000-0003-1019-1245
+    email: hoberreiter@gmail.com
+date: "11/12/2022"
+bibliography: "references.bib"
+link-citations: yes
+lang: de
+editor:
+  render-on-save: true
+citation:
+  url: https://github.com/HannesOberreiter/baw-fish-cell-yolo
+crossref:
+  fig-title: Abb.
+  tbl-title: Tabelle
+---
+
+## Einführung
+
+Blutzellen Fische - Warum - Präparieren - Auszählen
+
+## Neuronales Netz YOLOv5
+
+Das beschriebene händische Auszählen von Blutzellen ist sehr Zeitintensiv und auch individuell Fehleranfällig durch die subjektive Person. Dadurch das automatische optische Bilderkennungen heutzutage breit zugänglich sind und immer bessere Leistung erbringen, war die Idee eine automatische segmentierte Bilderkennung für diesen Schritt einzusetzen. Für diese Bilderkennungen werden hauptsächlich neuronale Netzwerke eingesetzt und die YOLO-Architektur ist einer davon. YOLO steht hierbei für ein Akronym "You only look once" in Deutsch "Du schaust nur einmal". Dem Algorithmus zugrunde liegt ein sogenanntes Convolutional Neural Network (CNN) und dieses findet auch in der Landwirtschaft die ein oder andere Anwendung. Es gibt mehrere Architekturen die neuronale Netzwerke zur Bilderkennung benutzen wie R-CNN (Region-based Convolutional Networks) oder R-FCN (Region based Fully Convolutional Networks) die je Anwendung verschiedene Stärken haben. Die meisten dieser Architekturen können mittlerweile mit relativ wenig Aufwand als Benutzer in TensorFlow, eine OpenSource Platform für maschinelles Lernen von Google, erstellt und bereitgestellt werden.
+
+Die von uns eingesetzte YOLO-Architektur wurde im Jahr 2015 veröffentlicht [@yolo]. Dabei zerlegt ein Algorithmus jedes Bild in ein Grid-System und jede Zelle im Grid ist für sich selbst verantwortlich um die Objekte zu erkennen. Diese Methode zeichnet sich besonders durch Schnelligkeit in der Erkennung und im Training aus, hat aber Schwierigkeiten mit sehr kleinen Objekten. Mit jeder neuen Version wurde aber an den Handicaps geschraubt und YOLO liefert mittlerweile eine sehr gute Genauigkeit und seit Version 2 handelt es sich um ein "fully convolutional network" (FCN) [@nakahara2018]. In unserem Fall wurde YOLOv5 verwendet [@yolov5], was bereits trainierte Modelle zur Verfügung stellt, eine sehr gute Dokumentation vorweist und durch eine unabhängige Funktionalität sich auszeichnet. Aufgebaut auf den PyTorch Framework [@pytorch] in Python, erlaubt es auch Personen mit nur rudimentären Kenntnissen in Programmieren bereits einfache Modelle zu erstellen und damit zu arbeiten.
+
+## Methodik und Resultate
+
+Für unseren Fall haben wir X Bilder zuerst annotiert und mit einem bereits gewichteten Model (yolov5s, COCO128 Datensatz) als Start Punkt trainiert. Validation, also die Kontrolle wie gut die Daten sind wurde mit X Bildern durchgeführt. Was zu einer Erfolgsrate von XXX führte.
+
+Die "Confusion" Matrix ist ein Werkzeug in der Maschinellen Lernforschung, das verwendet wird, um die Leistung eines Klassifikators zu bewerten, zum Beispiel: Genauigkeit, Sensitivität und Spezifität. In unserem Fall zeigt eine sehr geringe Abweichung zu den "wahren" Ergebnissen (@fig-confusion).
+
+![Confusion Matrix mit den viert Hauptwerten: true positives (wahre Positivwerte), false positives (falsche Positivwerte), true negatives (wahre Negativwerte) und false negatives (falsche Negativwerte).](img/confusion_matrix.png){#fig-confusion}
+
+Als Beispiel wie eine Validierung aussieht, ist in @fig-validation ein annotiertes Bild, also von uns markierte Blutzellen, und ein Bild wie es vom Alorithmus erkannt wurde angehängt worden. Dabei setzt der Alroithmus auch automatisch einen Prozentwert, die die Wahrscheinlichkeit wiederspiegelt ob es sich um eine Blutzelle handelt.
+
+::: {#fig-validation layout-ncol=2}
+
+![Annotierte Blutzellen](img/val_batch0_labels.jpg){#fig-label}
+
+![Erkannte Blutzellen mit Prozentwert](img/val_batch0_pred.jpg){#fig-pred}
+
+
+Beispielbild aus dem Validierungsdatensatz, Unterschied zwischen annotierte Blutzellen und erkannten Blutzellen mit Prozentwert der Wahrscheinlichkeit.
+:::
+
+Unser Projekt und die Trainingsdaten sind Open Source unter folgenden Link zu finden [GitHub](https://github.com/HannesOberreiter/baw-fish-cell-yolo).
+
+
+## Diskussion
+
+Durch die Verwendung von automatischer Bilderkennung konnte unsere Arbeit am Insitut automatisiert werden. Hier zeigt sich ein kleines potenziall von neuen innovativen Methoden um alte Techniken mit neuen zu kombinieren. Die Angewandte Methode ist natürlich immer offen für weitere Verbesserungen. Ein neuronales Netzwerk für diese relativ simple Aufgabe von Blutzellen zählen ist etwas überdimensioniert, da einfachere Methoden, zum Beispiel Kontur-Bild Erkennung wahrscheinlich die gleichen Ergebnisse geliefert hätten. Die relativ einfache Anwendbarkeit und die sehr guten Ergebnisse auch bei unterschiedlicher Bildqualität haben uns aber überzeugt und es uns auch erlaubt in kurzer Zeit ein System auf die Beine zu stellen.
+
+
+
+### Referenzen
+
+::: {#refs}
+:::
