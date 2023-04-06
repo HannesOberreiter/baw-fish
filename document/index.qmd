@@ -4,9 +4,12 @@ author:
   - name: Anna Dünser 
     orcid: 0000-0002-0761-8490
     email: anna.duenser@baw.at
-    affiliation: Bundesamt für Wasserwirtschaft
+    affiliation: Bundesamt für Wasserwirtschaft; Institut für Gewässerökologie und Fischereiwirtschaft
+  - name: Franz Lahnsteiner 
+    email: franz.lahnsteiner@baw.at
+    affiliation: Bundesamt für Wasserwirtschaft; Institut für Gewässerökologie und Fischereiwirtschaft
   - name: Hannes Oberreiter 
-    affiliation: Institut der Biologie, Universität Graz
+    affiliation: 'Privat'
     orcid: 0000-0003-1019-1245
     email: hoberreiter@gmail.com
 date: "11/12/2022"
@@ -24,7 +27,16 @@ crossref:
 
 ## Einführung
 
-Blutzellen Fische - Warum - Präparieren - Auszählen
+Die Dichte von rote Blutkörperchen (auch bekannt als Hämatokrit) wird bei uns am BAW bei verschiedenen Projekten gemessen, um Informationen über die Gesundheit und Physiologie der Fische zu erhalten. Rote Blutkörperchen (Erythrozyten) transportieren Sauerstoff von den Kiemen des Fisches zu den Geweben und Organen, und eine Änderung der Dichte kann darauf hinweisen, dass der Sauerstofftransport im Körper des Fisches gestört ist.
+
+Eine veränderte Erythrozytendichte kann auch auf verschiedene Erkrankungen oder Stressreaktionen hinweisen. Zum Beispiel kann eine Erhöhung der Erythrozytendichte bei Fischen auf eine Infektion, Dehydration oder eine Erhöhung des Hämoglobinspiegels im Blut hinweisen, während eine Verringerung der Erythrozytendichte auf Anämie, Blutverlust oder eine Verringerung des Hämoglobinspiegels im Blut hinweisen kann. 
+
+Ein Beispiel für eine Stressreaktion ist eine Veränderte Umwelt, wie zum Beispiel die Eröhung der Gewässer Temperaturen. Hier können bereits recht früh durch physiologische Untersuchungen wie der Bestimmung des Hämatokrit leichte Veränderungen wahrgenommen werden.
+
+Die Erythrozytendichte kann in einer Burker-Türk-Zählkammer bestimmt werden. Diese Art von Zählkammer besteht aus einer rechteckigen Glasplatte mit einer dünnen, rechteckigen Kammer in der Mitte, die in einem Gitternetz unterteilt ist. Um die Zellen zu zählen, wird eine verdünnte Blutprobe in die Kammer gegeben. Die Zellen verteilen sich gleichmäßig auf der Glasplatte und werden dann unter einem Mikroskop betrachtet. Das Gitternetz auf der Kammer ermöglicht es, den Bereich der Kammer zu berechnen und somit die Anzahl der Zellen pro Volumeneinheit zu bestimmen.
+
+Bei der Zählung wird die Anzahl der Zellen in mehreren Feldern des Gitternetzes gezählt und dann der Durchschnitt berechnet. Basierend auf der Größe des Feldes und der Gesamtzahl der Zellen in diesen Feldern kann die Gesamtzahl der Zellen in der Probe berechnet werden.
+
 
 ## Neuronales Netz YOLOv5
 
@@ -36,7 +48,7 @@ In unserem Fall haben wir YOLOv5 eingesetzt [@yolov5]. Diese Version bietet bere
 
 ## Methodik und Resultate
 
-Für unseren Fall haben wir X Bilder zuerst annotiert und mit einem bereits gewichteten Model (yolov5s, COCO128 Datensatz) als Start Punkt trainiert. Validation, also die Kontrolle wie gut die Daten sind wurde mit X Bildern durchgeführt. Was zu einer Erfolgsrate von XXX führte.
+Für unseren Fall haben 17 Bilder zuerst annotiert sowie zwei negativ Kontrollen mit einem bereits gewichteten Model (yolov5s, COCO128 Datensatz) als Start Punkt trainiert. Validation, also die Kontrolle wie gut die Daten sind wurde mit X Bildern durchgeführt. Was zu einer Erfolgsrate von XXX führte.
 
 Die "Confusion" Matrix ist ein Werkzeug in der Maschinellen Lernforschung, das verwendet wird, um die Leistung eines Klassifikators zu bewerten, zum Beispiel: Genauigkeit, Sensitivität und Spezifität. In unserem Fall zeigt eine sehr geringe Abweichung zu den "wahren" Ergebnissen (@fig-confusion).
 
@@ -59,7 +71,7 @@ Unser Projekt und die Trainingsdaten sind Open Source unter folgenden Link zu fi
 
 ## Diskussion
 
-Durch die Implementierung von automatischer Bilderkennung konnte die Arbeitsabläufe in unserem Institut automatisiert werden. Dabei wurde das Potenzial neuer, innovativer Methoden genutzt, um bewährte Technologien mit modernen Verfahren zu kombinieren. Die angewandte Methode ist jedoch stets offen für weitere Verbesserungen. Ein neuronales Netzwerk für die vergleichsweise einfache Aufgabe des Zählens von Blutzellen ist jedoch als überdimensioniert anzusehen, da simpelere Verfahren wie die Konturbilderkennung voraussichtlich ähnliche Ergebnisse geliefert hätten. Nichtsdestotrotz haben uns die vergleichsweise einfache Anwendung und die sehr guten Ergebnisse, auch bei unterschiedlicher Bildqualität, von der Wirksamkeit der implementierten Methode überzeugt und es ermöglicht, innerhalb kurzer Zeit ein effektives System aufzubauen.
+Durch die Implementierung von automatischer Bilderkennung konnte die Arbeitsabläufe in unserem Institut automatisiert werden. Dabei wurde das Potenzial innovativer Methoden genutzt, um bewährte Technologien mit modernen Verfahren zu kombinieren. Die angewandte Methode ist jedoch stets offen für weitere Verbesserungen. Ein neuronales Netzwerk für die vergleichsweise einfache Aufgabe des Zählens von Blutzellen ist jedoch als überdimensioniert anzusehen, da simpelere Verfahren wie die Konturbilderkennung voraussichtlich ähnliche Ergebnisse geliefert hätten, aber diese wieder Fehleranfälliger für unterschiedliche Lichtverhältnisse beim Fotografieren wäre. Nichtsdestotrotz haben uns die vergleichsweise einfache Anwendung und die sehr guten Ergebnisse, auch bei unterschiedlicher Bildqualität, von der Wirksamkeit der implementierten Methode überzeugt und es ermöglicht, innerhalb kurzer Zeit ein effektives System aufzubauen.
 
 
 
