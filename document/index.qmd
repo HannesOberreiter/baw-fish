@@ -14,7 +14,7 @@ author:
     email: hoberreiter@gmail.com
 date: "11/12/2022"
 bibliography: "references.bib"
-link-citations: yes
+link-citations: true
 lang: de
 editor:
   render-on-save: true
@@ -44,7 +44,7 @@ Das manuelle Zählen von Blutzellen ist ein zeitaufwändiger Prozess und birgt a
 
 Die von uns verwendete YOLO-Architektur wurde im Jahr 2015 veröffentlicht [@yolo]. Der zugrundeliegende Algorithmus unterteilt jedes Bild in ein Grid-System, wobei jede Zelle des Grids für die Erkennung von Objekten verantwortlich ist. Obwohl diese Methode durch eine schnelle Erkennung und ein schnelles Training gekennzeichnet ist, hat sie Schwierigkeiten bei der Identifikation sehr kleiner Objekte. Im Laufe der Zeit wurden jedoch diese Einschränkungen in jeder neuen Version der Architektur verbessert, und YOLO bietet mittlerweile eine hohe Genauigkeit. Seit Version 2 ist YOLO ein "Fully Convolutional Network" (FCN) [@nakahara2018].
 
-In unserem Fall haben wir YOLOv5 eingesetzt [@yolov5]. Diese Version bietet bereits trainierte Modelle, eine hervorragende Dokumentation und eine unabhängige Funktionalität. Darüber hinaus ist es auf dem Python-basierten PyTorch-Framework [@pytorch] aufgebaut, was es auch Personen mit begrenzten Programmierkenntnissen ermöglicht, einfache Modelle zu erstellen und zu verwenden.
+In unserem Fall haben wir YOLOv5 eingesetzt [@yolov5]. Diese Version bietet bereits trainierte Modelle, eine hervorragende Dokumentation und eine unabhängige Funktionalität. Darüber hinaus ist es auf dem Python-basierten PyTorch-Framework [@pytorch] aufgebaut, was es auch Personen mit begrenzten Programmierkenntnissen ermöglicht, einfache Modelle zu erstellen und zu verwenden. Die Weiterentwicklung basiert aber äußert schnell in diesem Bereich und mittlerweile mit Stand 2023 gibt es auch bereits YOLOv8.
 
 ## Methodik und Resultate
 
