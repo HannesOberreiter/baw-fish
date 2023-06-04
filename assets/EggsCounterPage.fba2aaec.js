@@ -1,1 +1,0 @@
-import{Q as e}from"./QPage.03ed5365.js";import{_ as t,q as r,s as a,t as o,N as s}from"./index.ce1f08ab.js";import"./render.63ec3f97.js";const c={};function n(_,f){return r(),a(e,null,{default:o(()=>[s(" Under development ... ")]),_:1})}var p=t(c,[["render",n]]);export{p as default};
