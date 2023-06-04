@@ -86,6 +86,7 @@
 
 <script setup lang="ts">
 import * as tf from '@tensorflow/tfjs';
+import { getDistUrl } from 'src/utilities';
 import { ref, watch } from 'vue';
 
 const file = ref<File | null>(null);
@@ -95,7 +96,7 @@ const tab = ref('upload');
 const scoreThreshold = ref(0.5);
 const resultCount = ref(0);
 
-const modelUrl = '/models/cell-counter/model.json';
+const modelUrl = getDistUrl() + '/models/cell-counter/model.json';
 const canvasRaw = ref<HTMLCanvasElement | null>(null);
 const canvasCrop = ref<HTMLCanvasElement | null>(null);
 const selectedRegion = ref<HTMLCanvasElement | null>(null);
@@ -147,7 +148,7 @@ function loadImage(file: Blob | MediaSource) {
 }
 
 async function onLoadDemo() {
-  const demoPath = window.location.origin + '/demo/DemoCellsPlate.jpg';
+  const demoPath = getDistUrl() + '/demo/DemoCellsPlate.jpg';
   file.value = null;
   try {
     const response = await fetch(demoPath);
