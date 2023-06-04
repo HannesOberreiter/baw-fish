@@ -1,42 +1,31 @@
 <template>
   <q-page>
-    <h3>Cell Counter</h3>
-    <div v-if="!hasWebGL">
-      <q-banner class="bg-negative text-white">
-        <h5>WebGL is not supported</h5>
-        <p>This app requires WebGL to run. Please try a different browser.</p>
-      </q-banner>
-    </div>
-    <div v-else>
-      <Suspense>
-        <CellCounterModel />
-        <template #fallback>
-          <q-spinner-hourglass color="purple" size="4em" />
-        </template>
-      </Suspense>
+    <div class="q-ma-sm">
+      <div class="text-h4 q-mb-sm">YOLO Utility Collection</div>
+      <div class="text-h5 q-mb-lg">Bundesamt für Wasserwirtschaft, Austria</div>
+      <div>
+        This is a collection of utilities for the YOLO object detection
+        algorithm used by the Bundesamt für Wasserwirtschaft, Austria
+        <a href="https://www.baw.at">BAW</a>.
+      </div>
+      <ul>
+        <li>
+          Source Code:
+          <a href="https://github.com/HannesOberreiter/baw-fish-cell-yolo">
+            github.com/HannesOberreiter/baw-fish-cell-yolo
+          </a>
+        </li>
+        <li>
+          Training and Base Model, YOLOv5, Ultralytics, AGPL-3.0 License:
+          <a href="https://github.com/ultralytics/yolov5">
+            github.com/ultralytics/yolov5
+          </a>
+        </li>
+        <li>
+          Bundesamt für Wasserwirtschaft, Austria:
+          <a href="https://www.baw.at"> www.baw.at </a>
+        </li>
+      </ul>
     </div>
   </q-page>
 </template>
-
-<script setup lang="ts">
-import CellCounterModel from 'components/CellCounterModel.vue';
-import { onMounted, ref } from 'vue';
-
-const hasWebGL = ref<boolean>(false);
-
-onMounted(() => {
-  hasWebGL.value = webgl_support();
-});
-
-function webgl_support() {
-  try {
-    var canvas = document.createElement('canvas');
-    return !!(
-      window.WebGLRenderingContext &&
-      (canvas.getContext('webgl') || canvas.getContext('experimental-webgl'))
-    );
-  } catch (e) {
-    return false;
-  }
-}
-</script>

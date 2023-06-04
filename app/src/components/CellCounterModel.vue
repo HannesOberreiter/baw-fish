@@ -1,92 +1,115 @@
 <template>
-  <div class="q-pa-md">
-    <div class="row">
-    <div class="col">
-      <div>
-      <q-file
-        v-model="file"
-        label="Pick one file"
-        filled
-        accept="image/*"
-        style="max-width: 300px"
-      />
-      </div>
-      <div>
-            <q-btn
-        label="Predict"
-        color="primary"
-        @click="onPredict"
-        :disable="!file"
-      />
-      </div>
-      <div>
-        Count: {{ resultCount }}
-      </div>
-    </div>
-    <div class="col-10">
-
-        <div>
-      <canvas
-        ref="canvasCrop"
-        width="640"
-        height="640"
-        style="border: 1px solid #000000"
-      ></canvas>
-    </div>
-    </div>
-        </div>
-
-  </div>
-
-  <div class="flex">
-    <div>
-      <canvas
-        ref="canvasRaw"
-        width="640"
-        height="640"
-        style="border: 1px solid #000000"
-      ></canvas>
-    </div>
-
-  </div>
+  <q-card>
+    <q-card-section>
+      <q-tabs
+        v-model="tab"
+        class="text-primary"
+        align="justify"
+        indicator-color="primary"
+        active-color="primary"
+        shrink
+      >
+        <q-tab name="upload" label="Upload & Crop" />
+        <q-tab name="results" label="Predict & Results" />
+      </q-tabs>
+      <q-separator />
+      <q-tab-panels
+        v-model="tab"
+        :animated="false"
+        :keep-alive="true"
+        @transition="onTabChange"
+      >
+        <q-tab-panel name="upload">
+          <q-file
+            v-model="file"
+            label="Upload blood sample grid image"
+            accept="image/*"
+            class="q-mb-md"
+            :clearable="true"
+            :filled="true"
+          >
+            <template v-slot:prepend>
+              <q-icon name="cloud_upload" color="orange" />
+            </template>
+            <template v-slot:after>
+              <q-btn label="Load Demo" @click="onLoadDemo" :flat="true"></q-btn>
+            </template>
+          </q-file>
+          <div class="row justify-center full-height full-width">
+            <canvas
+              ref="canvasRaw"
+              height="640"
+              width="640"
+              style="border: 1px solid #015f07"
+            ></canvas>
+          </div>
+        </q-tab-panel>
+        <q-tab-panel name="results">
+          <div class="row justify-center full-height full-width">
+            <div class="col-6 q-pr-xs">
+              <q-btn
+                label="Predict"
+                color="primary"
+                @click="onPredict"
+                :disable="!selectedRegion"
+                style="width: 100%"
+              />
+              <div class="q-pt-xl q-pr-sm">
+                <q-slider
+                  v-model="scoreThreshold"
+                  :min="0"
+                  :max="1"
+                  :step="0.01"
+                  :disable="!selectedRegion"
+                  :label-value="scoreThreshold + ' Score Threshold'"
+                  :label-always="true"
+                />
+              </div>
+              <div class="text-h4">
+                Count: <b>{{ resultCount }}</b>
+              </div>
+            </div>
+            <div class="col-6 justify-center">
+              <canvas
+                ref="canvasCrop"
+                width="640"
+                height="640"
+                style="border: 1px solid #000000"
+              ></canvas>
+            </div>
+          </div>
+        </q-tab-panel>
+      </q-tab-panels>
+    </q-card-section>
+  </q-card>
 </template>
 
 <script setup lang="ts">
 import * as tf from '@tensorflow/tfjs';
-import {ref, watch } from 'vue';
+import { ref, watch } from 'vue';
 
 const file = ref<File | null>(null);
 const imageUrl = ref(new Image());
+const tab = ref('upload');
 
+const scoreThreshold = ref(0.5);
 const resultCount = ref(0);
 
 const modelUrl = '/models/cell-counter/model.json';
 const canvasRaw = ref<HTMLCanvasElement | null>(null);
 const canvasCrop = ref<HTMLCanvasElement | null>(null);
+const selectedRegion = ref<HTMLCanvasElement | null>(null);
+const selectedRegionChanged = ref(false);
 
 watch(file, (newFile) => {
   if (newFile) {
-    imageUrl.value = new Image();
-    imageUrl.value.src = URL.createObjectURL(newFile);
-    imageUrl.value.onload = () => {
-      if (canvasRaw.value) {
-        const ctx = canvasRaw.value.getContext('2d');
-        canvasRaw.value.width = imageUrl.value.width;
-        canvasRaw.value.height = imageUrl.value.height;
-        if (ctx) {
-          ctx.drawImage(
-            imageUrl.value,
-            0,
-            0,
-            canvasRaw.value.width,
-            canvasRaw.value.height
-          );
-        }
-        enableDrawing(canvasRaw.value);
-      } else {
-        alert('Canvas not supported');
-      }
-    };
+    loadImage(newFile);
+  }
+});
+
+watch(selectedRegion, (newRegion) => {
+  if (newRegion) {
+    selectedRegionChanged.value = true;
   }
 });
 
@@ -99,6 +122,53 @@ async function init() {
   return model;
 }
 
+function loadImage(file: Blob | MediaSource) {
+  imageUrl.value = new Image();
+  imageUrl.value.src = URL.createObjectURL(file);
+  imageUrl.value.onload = () => {
+    if (canvasRaw.value) {
+      const ctx = canvasRaw.value.getContext('2d');
+      canvasRaw.value.width = imageUrl.value.width;
+      canvasRaw.value.height = imageUrl.value.height;
+      if (ctx) {
+        ctx.drawImage(
+          imageUrl.value,
+          0,
+          0,
+          canvasRaw.value.width,
+          canvasRaw.value.height
+        );
+      }
+      enableDrawing(canvasRaw.value);
+    } else {
+      alert('Canvas not supported');
+    }
+  };
+}
+
+async function onLoadDemo() {
+  const demoPath = window.location.origin + '/demo/DemoCellsPlate.jpg';
+  file.value = null;
+  try {
+    const response = await fetch(demoPath);
+    const blob = await response.blob();
+    loadImage(blob);
+  } catch (error) {
+    console.error('Error loading image:', error);
+    return null;
+  }
+}
+
+function onTabChange() {
+  if (
+    tab.value === 'results' &&
+    selectedRegion.value &&
+    selectedRegionChanged.value
+  ) {
+    selectedRegionChanged.value = false;
+    cropToCanvas(selectedRegion.value);
+  }
+}
 async function onPredict() {
   if (!file.value) {
     alert('Please upload an image first');
@@ -108,7 +178,11 @@ async function onPredict() {
     alert('Model not loaded yet');
     return;
   }
-  if(!canvasCrop.value) return;
+  if (!canvasCrop.value) return;
+  if (!selectedRegion.value) return;
+
+  cropToCanvas(selectedRegion.value);
+
   const c = canvasCrop.value;
   const ctx = c.getContext('2d') as CanvasRenderingContext2D;
 
@@ -120,59 +194,42 @@ async function onPredict() {
       .expandDims(0);
   });
 
-  const output = await model.executeAsync(input);
+  const output = (await model.executeAsync(input)) as
+    | tf.Tensor<tf.Rank>[]
+    | null;
   if (!output) {
     return;
   }
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  // 0: "detection_boxes", 1: "detection_scores", 2: "detection_classes", 3: "num_detections"
+  const boxes = output[0].dataSync();
+  const scores = output[1].dataSync();
+  const validDetections = output[3].dataSync()[0];
 
-  const [boxes, scores, _classes, valid_detections] =
-    output as tf.Tensor<tf.Rank>[];
-  const boxes_data = boxes.dataSync();
-  const scores_data = scores.dataSync();
-  const valid_detections_data = valid_detections.dataSync()[0];
-
-  resultCount.value = valid_detections_data;
+  resultCount.value = validDetections;
 
   tf.dispose(output);
 
-  for (let i = 0; i < valid_detections_data; ++i) {
-    let [x1, y1, x2, y2] = boxes_data.slice(i * 4, (i + 1) * 4);
+  for (let i = 0; i < validDetections; ++i) {
+    let [x1, y1, x2, y2] = boxes.slice(i * 4, (i + 1) * 4);
     x1 *= c.width;
     x2 *= c.width;
     y1 *= c.height;
     y2 *= c.height;
     const width = x2 - x1;
     const height = y2 - y1;
-    const score = scores_data[i].toFixed(2);
 
-    // Draw the bounding box.
+    if (scores[i] < scoreThreshold.value) continue;
+    const score = scores[i].toFixed(2);
+
     ctx.strokeStyle = '#00FFFF';
     ctx.lineWidth = 4;
     ctx.strokeRect(x1, y1, width, height);
-
-    // Draw the label background.
-    ctx.fillStyle = '#00FFFF';
-    const font = '16px sans-serif';
-
-    const textWidth = ctx.measureText('class' + ':' + score).width;
-    const textHeight = parseInt(font, 10); // base 10
-    ctx.fillRect(x1, y1, textWidth + 4, textHeight + 4);
-  }
-  for (let i = 0; i < valid_detections_data; ++i) {
-    let [x1, y1, ,] = boxes_data.slice(i * 4, (i + 1) * 4);
-    x1 *= c.width;
-    y1 *= c.height;
-    const score = scores_data[i].toFixed(2);
-
-    // Draw the text last to ensure it's on top.
-    ctx.fillStyle = '#000000';
     ctx.fillText('cell' + ':' + score, x1, y1);
   }
 }
 
-function cropToCanvas(
-  image: HTMLImageElement | HTMLCanvasElement,
-) {
+function cropToCanvas(image: HTMLImageElement | HTMLCanvasElement) {
   if (!canvasCrop.value) {
     alert('Canvas not supported');
     return;
@@ -217,6 +274,9 @@ function enableDrawing(canvas: HTMLCanvasElement) {
   let rect: DOMRect;
   let isDrawing = false;
   let startX: number, startY: number;
+  let width: number, height: number;
+  let absWidth: number, absHeight: number;
+  let x: number, y: number;
 
   canvas.addEventListener('mousedown', start);
   canvas.addEventListener('mousemove', draw);
@@ -236,8 +296,8 @@ function enableDrawing(canvas: HTMLCanvasElement) {
     const currentX = event.clientX - rect.left;
     const currentY = event.clientY - rect.top;
 
-    const width = currentX - startX;
-    const height = currentY - startY;
+    width = Math.abs(currentX - startX); // Use absolute difference
+    height = Math.abs(currentY - startY); // Use absolute difference
 
     ctx.clearRect(0, 0, canvas.width, canvas.height); // Clear the canvas
 
@@ -247,24 +307,28 @@ function enableDrawing(canvas: HTMLCanvasElement) {
       }
     }
 
-        const x = width < 0 ? currentX : startX;
-    const y = height < 0 ? currentY : startY;
-    const absWidth = Math.abs(width);
-    const absHeight = Math.abs(height);
+    x = currentX < startX ? currentX : startX; // Use the smaller value as x
+    y = currentY < startY ? currentY : startY; // Use the smaller value as y
+    absWidth = Math.abs(width);
+    absHeight = Math.abs(height);
 
     // Draw the square outline
     ctx.strokeStyle = 'black';
     ctx.strokeRect(x, y, absWidth, absHeight);
+  }
+
+  function stop() {
+    isDrawing = false;
 
     // Crop the background image to the square
-    const selectedRegion = document.createElement('canvas');
-    const croppedCtx = selectedRegion.getContext('2d');
+    selectedRegion.value = document.createElement('canvas');
+    const croppedCtx = selectedRegion.value.getContext('2d');
     if (!croppedCtx) {
       alert('Canvas not supported');
       return;
     }
-    selectedRegion.width = width;
-    selectedRegion.height = height;
+    selectedRegion.value.width = width;
+    selectedRegion.value.height = height;
     croppedCtx.drawImage(
       imageUrl.value,
       x,
@@ -276,13 +340,6 @@ function enableDrawing(canvas: HTMLCanvasElement) {
       absWidth,
       absHeight
     );
-    cropToCanvas(selectedRegion)
-
-
-  }
-
-  function stop() {
-    isDrawing = false;
   }
 }
 </script>
