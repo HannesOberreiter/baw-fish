@@ -35,6 +35,11 @@
               <q-btn label="Load Demo" @click="onLoadDemo" :flat="true"></q-btn>
             </template>
           </q-file>
+          <div class="text-caption">
+            After upload you can select a region of interest, click on the
+            starting point of your grid square and hold and move the mouse to
+            draw.
+          </div>
           <div class="row justify-center full-height full-width">
             <canvas
               ref="canvasRaw"
@@ -114,6 +119,10 @@ watch(selectedRegion, (newRegion) => {
   }
 });
 
+watch(scoreThreshold, () => {
+  onPredict();
+});
+
 const model = await init();
 
 async function init() {
@@ -171,10 +180,6 @@ function onTabChange() {
   }
 }
 async function onPredict() {
-  if (!file.value) {
-    alert('Please upload an image first');
-    return;
-  }
   if (!model.inputs[0].shape) {
     alert('Model not loaded yet');
     return;
@@ -226,7 +231,7 @@ async function onPredict() {
     ctx.strokeStyle = '#00FFFF';
     ctx.lineWidth = 4;
     ctx.strokeRect(x1, y1, width, height);
-    ctx.fillText('cell' + ':' + score, x1, y1);
+    ctx.fillText(score, x1, y1);
   }
 }
 
