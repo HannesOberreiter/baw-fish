@@ -2,6 +2,10 @@
 
 Repository for training and setup of fish cell counting with YOLOv5.
 
+## Utility Demo Homepage
+
+<https://hannesoberreiter.github.io/baw-fish-cell-yolo>
+
 ## Setup environment
 
 ```bash
