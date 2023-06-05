@@ -18,7 +18,11 @@
       <Suspense>
         <CellCounterModel />
         <template #fallback>
-          <q-spinner-hourglass color="purple" size="4em" />
+          <div class="text-h6 text-center q-mt-lg text-purple">
+            Loading model size circa 20MB. Please wait...
+            <br />
+            <q-spinner-hourglass color="purple" size="4em" class="q-mt-md" />
+          </div>
         </template>
       </Suspense>
     </div>
