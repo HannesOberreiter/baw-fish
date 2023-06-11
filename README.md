@@ -1,6 +1,6 @@
-# BAW Fish Cell YOLOv5
+# BAW Fish YOLOv5
 
-Repository for training and setup of fish cell counting with YOLOv5.
+Repository for utility helper, training and setup of YOLOv5.
 
 ## Utility Demo Homepage
 
@@ -15,7 +15,7 @@ python3 -m venv env
 source env/bin/activate
 # Clone Yolo
 git clone https://github.com/ultralytics/yolov5
-# Install packages
+# Install packages into environment
 pip install -r yolov5/requirements.txt
 # Unzip dataset
 unzip content/dataset.zip
@@ -38,53 +38,12 @@ zip -r dataset.zip dataset
 
 Inside [content](content) folder you can find the `fish.yaml` to define folder paths to the dataset and classes. The `current.pt` file are the currently used weights of the best training run. The archive `dataset.zip` contains the training and validation dataset.
 
-The notebook [index.ipynb](index.ipynb) contains all information to run training and testing.
+The **notebook** [index.ipynb](index.ipynb) contains all information to run training and testing.
 
-### Training
+## Fish Blood Cells Example Prediction Result
 
-See [index.ipynb](index.ipynb).
-
-```bash
-python yolov5/train.py \
-    --weights='yolov5s.pt' \
-    --data='content/fish.yaml' \
-    --epochs=300 \
-    --img-size=640 \
-    --name='baw' \
-    --device='cpu' \
-    --project='content/runs/train'
-```
-
-### Testing
-
-```bash
-python yolov5/val.py \
-    --weights='content/current.pt' \
-    --data='content/fish.yaml' \
-    --imgsz=640 \
-    --name='test' \
-    --task='test' \
-    --project='content/runs'
-```
-
-### Inference
-
-The [inference](inference) folder can be used to use on new images.
-
-```bash
-python yolov5/detect.py \
-    --weights='content/current.pt' \
-    --imgsz=640 \
-    --source='inference/input' \
-    --name='exp' \
-    --save-txt \
-    --line-thickness=1 \
-    --hide-labels \
-    --project='inference/output'
-```
-
-![example inference result](inference/example_result.jpg)
+![example inference result](/example_result.jpg)
 
 ## License
 
-[GNU GENERAL PUBLIC LICENSE](LICENSE.md)
+[GNU Affero General Public License v3.0](LICENSE.md)
