@@ -56,6 +56,7 @@
                 label="Predict"
                 color="primary"
                 @click="onPredict"
+                :loading="isLoading"
                 :disable="!selectedRegion"
                 style="width: 100%"
               />
@@ -65,13 +66,20 @@
                   :min="0"
                   :max="1"
                   :step="0.01"
-                  :disable="!selectedRegion"
+                  :disable="!selectedRegion || isLoading"
                   :label-value="scoreThreshold + ' Score Threshold'"
                   :label-always="true"
                 />
               </div>
-              <div class="text-h4">
+              <div class="text-h4" v-if="!isLoading">
                 Count: <b>{{ resultCount }}</b>
+              </div>
+              <div v-else>
+                <ol>
+                  <li v-for="(item, index) in isLoadingItems" :key="index">
+                    {{ item }}
+                  </li>
+                </ol>
               </div>
             </div>
             <div class="col-6 justify-center">
@@ -100,6 +108,8 @@ const tab = ref('upload');
 
 const scoreThreshold = ref(0.5);
 const resultCount = ref(0);
+const isLoading = ref(false);
+const isLoadingItems = ref<string[]>([]);
 
 const modelUrl = getDistUrl() + '/models/cell-counter/model.json';
 const canvasRaw = ref<HTMLCanvasElement | null>(null);
@@ -117,10 +127,6 @@ watch(selectedRegion, (newRegion) => {
   if (newRegion) {
     selectedRegionChanged.value = true;
   }
-});
-
-watch(scoreThreshold, () => {
-  onPredict();
 });
 
 const model = await init();
@@ -180,12 +186,15 @@ function onTabChange() {
   }
 }
 async function onPredict() {
+  isLoadingItems.value = [];
   if (!model.inputs[0].shape) {
     alert('Model not loaded yet');
     return;
   }
   if (!canvasCrop.value) return;
   if (!selectedRegion.value) return;
+  isLoading.value = true;
+  isLoadingItems.value.push('Calculating tensor input...');
 
   cropToCanvas(selectedRegion.value);
 
@@ -199,11 +208,13 @@ async function onPredict() {
       .div(255.0)
       .expandDims(0);
   });
-
+  isLoadingItems.value.push('Predicting...');
   const output = (await model.executeAsync(input)) as
     | tf.Tensor<tf.Rank>[]
     | null;
   if (!output) {
+    alert('Error running inference');
+    isLoading.value = false;
     return;
   }
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
@@ -211,6 +222,7 @@ async function onPredict() {
   const boxes = output[0].dataSync();
   const scores = output[1].dataSync();
   const validDetections = output[3].dataSync()[0];
+  isLoadingItems.value.push('Post processing...');
 
   resultCount.value = validDetections;
 
@@ -233,6 +245,7 @@ async function onPredict() {
     ctx.strokeRect(x1, y1, width, height);
     ctx.fillText(score, x1, y1);
   }
+  isLoading.value = false;
 }
 
 function cropToCanvas(image: HTMLImageElement | HTMLCanvasElement) {
