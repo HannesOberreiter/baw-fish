@@ -6,6 +6,7 @@ const routes: RouteRecordRaw[] = [
     component: () => import('layouts/MainLayout.vue'),
     children: [
       { path: '', component: () => import('pages/IndexPage.vue') },
+      { path: 'legal', component: () => import('pages/LegalPage.vue') },
       {
         path: 'blood-cells-counter',
         component: () => import('pages/CellsCounterPage.vue'),

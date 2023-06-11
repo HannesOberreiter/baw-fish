@@ -5,6 +5,7 @@
         <q-route-tab to="/" label="Home" />
         <q-route-tab to="/blood-cells-counter" label="Blood Cells Counter" />
         <q-route-tab to="/fish-eggs-counter" label="Fish Eggs Counter" />
+        <q-route-tab to="/legal" label="Legal" />
       </q-tabs>
     </q-header>
 

@@ -224,7 +224,7 @@ async function onPredict() {
   const validDetections = output[3].dataSync()[0];
   isLoadingItems.value.push('Post processing...');
 
-  resultCount.value = validDetections;
+  resultCount.value = 0;
 
   tf.dispose(output);
 
@@ -238,6 +238,7 @@ async function onPredict() {
     const height = y2 - y1;
 
     if (scores[i] < scoreThreshold.value) continue;
+    resultCount.value++;
     const score = scores[i].toFixed(2);
 
     ctx.strokeStyle = '#00FFFF';
@@ -299,8 +300,14 @@ function enableDrawing(canvas: HTMLCanvasElement) {
 
   canvas.addEventListener('mousedown', start);
   canvas.addEventListener('mousemove', draw);
+
+  canvas.addEventListener('touchstart', startTouch);
+  canvas.addEventListener('touchmove', drawTouch);
+
   canvas.addEventListener('mouseup', stop);
   canvas.addEventListener('mouseout', stop);
+  canvas.addEventListener('touchend', stop);
+  canvas.addEventListener('touchcancel', stop);
 
   function start(event: MouseEvent) {
     isDrawing = true;
@@ -309,12 +316,34 @@ function enableDrawing(canvas: HTMLCanvasElement) {
     startY = event.clientY - rect.top;
   }
 
+  function startTouch(event: TouchEvent) {
+    event.preventDefault();
+    isDrawing = true;
+    rect = canvas.getBoundingClientRect();
+    const touch = event.touches[0];
+    startX = touch.clientX - rect.left;
+    startY = touch.clientY - rect.top;
+  }
+
+  function drawTouch(event: TouchEvent) {
+    if (!isDrawing) return;
+    const touch = event.touches[0];
+    const currentX = touch.clientX - rect.left;
+    const currentY = touch.clientY - rect.top;
+
+    drawSquare(currentX, currentY);
+  }
+
   function draw(event: MouseEvent) {
     if (!isDrawing) return;
 
     const currentX = event.clientX - rect.left;
     const currentY = event.clientY - rect.top;
 
+    drawSquare(currentX, currentY);
+  }
+
+  function drawSquare(currentX: number, currentY: number) {
     width = Math.abs(currentX - startX); // Use absolute difference
     height = Math.abs(currentY - startY); // Use absolute difference
 
