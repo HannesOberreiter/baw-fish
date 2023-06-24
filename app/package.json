@@ -1,13 +1,25 @@
 {
+  "name": "baw-fish-cell-yolo",
+  "private": true,
+  "productName": "BAW Yolo",
+  "description": "Helper frontend page to use YOLO in production",
   "author": "HannesOberreiter <hoberreiter@gmail.com>",
+  "version": "0.0.1",
+  "scripts": {
+    "build": "quasar build",
+    "dev": "quasar dev",
+    "format": "prettier --write \"**/*.{js,ts,vue,scss,html,md,json}\" --ignore-path .gitignore",
+    "lint": "eslint --ext .js,.ts,.vue ./",
+    "test": "echo \"No test specified\" && exit 0"
+  },
   "dependencies": {
     "@quasar/extras": "^1.0.0",
     "@tensorflow/tfjs": "^4.6.0",
+    "@vueuse/core": "^10.2.0",
     "quasar": "^2.6.0",
     "vue": "^3.0.0",
     "vue-router": "^4.0.0"
   },
-  "description": "Helper frontend page to use YOLO in production",
   "devDependencies": {
     "@quasar/app-vite": "^1.0.0",
     "@types/node": "^12.20.21",
@@ -24,16 +36,5 @@
     "node": "^18 || ^16 || ^14.19",
     "npm": ">= 6.13.4",
     "yarn": ">= 1.21.1"
-  },
-  "name": "baw-fish-cell-yolo",
-  "private": true,
-  "productName": "BAW Yolo",
-  "scripts": {
-    "build": "quasar build",
-    "dev": "quasar dev",
-    "format": "prettier --write \"**/*.{js,ts,vue,scss,html,md,json}\" --ignore-path .gitignore",
-    "lint": "eslint --ext .js,.ts,.vue ./",
-    "test": "echo \"No test specified\" && exit 0"
-  },
-  "version": "0.0.1"
+  }
 }

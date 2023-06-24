@@ -11,6 +11,17 @@
       >
         <q-tab name="upload" label="Upload & Crop" />
         <q-tab name="results" label="Predict & Results" />
+        <q-tab
+          :disable="!isSupported"
+          @click="onOpenTab()"
+          icon="fa-solid fa-clone"
+        >
+          <q-tooltip>
+            Open second tab, cropped images will be broadcasted. This means you
+            can use two browser windows/tabs side by side to crop and see the
+            results at the same time.
+          </q-tooltip>
+        </q-tab>
       </q-tabs>
       <q-separator />
       <q-tab-panels
@@ -29,7 +40,7 @@
             :filled="true"
           >
             <template v-slot:prepend>
-              <q-icon name="cloud_upload" color="orange" />
+              <q-icon name="fa-solid fa-cloud-arrow-up" color="orange" />
             </template>
             <template v-slot:after>
               <q-btn label="Load Demo" @click="onLoadDemo" :flat="true"></q-btn>
@@ -118,10 +129,14 @@
 import * as tf from '@tensorflow/tfjs';
 import { getDistUrl } from 'src/utilities';
 import { ref, watch } from 'vue';
+import { useBroadcastChannel } from '@vueuse/core';
 
 const file = ref<File | null>(null);
 const imageUrl = ref(new Image());
 const tab = ref('upload');
+const { isSupported, data, post } = useBroadcastChannel({
+  name: 'selectedRegionChannel',
+});
 
 const scoreThreshold = ref(0.5);
 const resultCount = ref(0);
@@ -135,6 +150,14 @@ const canvasRaw = ref<HTMLCanvasElement | null>(null);
 const canvasCrop = ref<HTMLCanvasElement | null>(null);
 const selectedRegion = ref<HTMLCanvasElement | null>(null);
 const selectedRegionChanged = ref(false);
+const channelBlob = ref<Blob | undefined>();
+
+watch(data, (val) => {
+  if (val) channelBlob.value = val as Blob;
+  if (val && tab.value === 'results') {
+    loadBlobOnCanvas(val as Blob);
+  }
+});
 
 watch(file, (newFile) => {
   if (newFile) {
@@ -202,8 +225,11 @@ function onTabChange() {
   ) {
     selectedRegionChanged.value = false;
     cropToCanvas(selectedRegion.value);
+  } else if (tab.value === 'results' && channelBlob.value) {
+    loadBlobOnCanvas(channelBlob.value);
   }
 }
+
 async function onPredict() {
   isLoadingItems.value = [];
   if (!model.inputs[0].shape) {
@@ -422,6 +448,22 @@ function enableDrawing(canvas: HTMLCanvasElement) {
       absWidth,
       absHeight
     );
+    selectedRegion.value?.toBlob((val) => {
+      post(val);
+    });
   }
+}
+
+function onOpenTab() {
+  tab.value = 'upload';
+  window.open(window.location.toString(), '_blank');
+}
+
+function loadBlobOnCanvas(val: Blob) {
+  const img = new Image();
+  img.addEventListener('load', function () {
+    cropToCanvas(img);
+  });
+  img.src = URL.createObjectURL(val);
 }
 </script>
