@@ -72,7 +72,24 @@
                 />
               </div>
               <div class="text-h4" v-if="!isLoading">
-                Count: <b>{{ resultCount }}</b>
+                Count: <b>{{ resultCount }}</b> <br />
+                Results: [
+                <span
+                  v-for="(v, i) in resultCounts"
+                  :key="i"
+                  @click="onRemoveResult(i)"
+                  style="cursor: pointer"
+                >
+                  <span v-if="i > 0">, </span> {{ v }}
+                </span>
+                ]
+                <span>
+                  <q-btn :inline="true" :flat="true" @click="onRemoveResult()">
+                    Reset
+                  </q-btn>
+                </span>
+                <br />
+                Mean: <b>{{ resultMean.toFixed(2) }}</b>
               </div>
               <div v-else>
                 <ol>
@@ -108,6 +125,8 @@ const tab = ref('upload');
 
 const scoreThreshold = ref(0.5);
 const resultCount = ref(0);
+const resultCounts = ref<number[]>([]);
+const resultMean = ref(0);
 const isLoading = ref(false);
 const isLoadingItems = ref<string[]>([]);
 
@@ -246,7 +265,22 @@ async function onPredict() {
     ctx.strokeRect(x1, y1, width, height);
     ctx.fillText(score, x1, y1);
   }
+
+  resultCounts.value.push(resultCount.value);
+  resultMean.value = calculateMean(resultCounts.value);
+
   isLoading.value = false;
+}
+
+function onRemoveResult(index: undefined | number = undefined) {
+  if (!index) resultCounts.value = [];
+  else resultCounts.value.splice(index, 1);
+  resultMean.value = calculateMean(resultCounts.value);
+}
+
+function calculateMean(results: number[]) {
+  if (results.length === 0) return 0;
+  return results.reduce((x, y) => x + y) / results.length;
 }
 
 function cropToCanvas(image: HTMLImageElement | HTMLCanvasElement) {
