@@ -68,7 +68,7 @@
                 color="primary"
                 @click="onPredict"
                 :loading="isLoading"
-                :disable="!selectedRegion"
+                :disable="!rawCropped"
                 style="width: 100%"
               />
               <div class="q-pt-xl q-pr-sm">
@@ -77,7 +77,7 @@
                   :min="0"
                   :max="1"
                   :step="0.01"
-                  :disable="!selectedRegion || isLoading"
+                  :disable="!rawCropped || isLoading"
                   :label-value="scoreThreshold + ' Score Threshold'"
                   :label-always="true"
                 />
@@ -151,6 +151,7 @@ const canvasCrop = ref<HTMLCanvasElement | null>(null);
 const selectedRegion = ref<HTMLCanvasElement | null>(null);
 const selectedRegionChanged = ref(false);
 const channelBlob = ref<Blob | undefined>();
+const rawCropped = ref<HTMLCanvasElement | HTMLImageElement | null>(null);
 
 watch(data, (val) => {
   if (val) channelBlob.value = val as Blob;
@@ -236,12 +237,15 @@ async function onPredict() {
     alert('Model not loaded yet');
     return;
   }
+  if (!rawCropped.value) {
+    alert('Missing region of interest');
+    return;
+  }
   if (!canvasCrop.value) return;
-  if (!selectedRegion.value) return;
   isLoading.value = true;
   isLoadingItems.value.push('Calculating tensor input...');
 
-  cropToCanvas(selectedRegion.value);
+  cropToCanvas(rawCropped.value);
 
   const c = canvasCrop.value;
   const ctx = c.getContext('2d') as CanvasRenderingContext2D;
@@ -314,6 +318,7 @@ function cropToCanvas(image: HTMLImageElement | HTMLCanvasElement) {
     alert('Canvas not supported');
     return;
   }
+  rawCropped.value = image;
   const canvas = canvasCrop.value;
   const ctx = canvas.getContext('2d');
   if (!ctx) {
