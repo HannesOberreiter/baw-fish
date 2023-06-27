@@ -93,7 +93,11 @@
                 />
               </div>
               <div class="text-h4" v-if="!isLoading">
-                Count: <b>{{ resultCount }}</b> <br />
+                Count: <b>{{ resultCount }}</b>
+                <span v-if="resultCount === 300" class="text-red">
+                  Maximum count reached
+                </span>
+                <br />
                 Results: [
                 <span
                   v-for="(v, i) in resultCounts"
