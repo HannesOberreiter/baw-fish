@@ -1,7 +1,7 @@
 {
   "format": "graph-model",
   "generatedBy": "2.12.0",
-  "convertedBy": "TensorFlow.js Converter v4.6.0",
+  "convertedBy": "TensorFlow.js Converter v3.18.0",
   "signature": {
     "outputs": {
       "Identity": { "name": "Identity" },
@@ -45,8 +45,8 @@
         "name": "model/agnostic_nms_1/agnostic_nms/TensorArrayV2_4/element_shape",
         "op": "Const",
         "attr": {
-          "value": { "tensor": { "dtype": "DT_INT32", "tensorShape": {} } },
-          "dtype": { "type": "DT_INT32" }
+          "dtype": { "type": "DT_INT32" },
+          "value": { "tensor": { "dtype": "DT_INT32", "tensorShape": {} } }
         }
       },
       {
@@ -82,8 +82,8 @@
         "name": "model/agnostic_nms_1/agnostic_nms/TensorArrayV2_5/num_elements",
         "op": "Const",
         "attr": {
-          "value": { "tensor": { "dtype": "DT_INT32", "tensorShape": {} } },
-          "dtype": { "type": "DT_INT32" }
+          "dtype": { "type": "DT_INT32" },
+          "value": { "tensor": { "dtype": "DT_INT32", "tensorShape": {} } }
         }
       },
       {
@@ -103,21 +103,21 @@
         "name": "model/agnostic_nms_1/agnostic_nms/TensorArrayV2Stack_2/TensorListStack/element_shape",
         "op": "Const",
         "attr": {
+          "dtype": { "type": "DT_INT32" },
           "value": {
             "tensor": {
               "dtype": "DT_INT32",
               "tensorShape": { "dim": [{ "size": "1" }] }
             }
-          },
-          "dtype": { "type": "DT_INT32" }
+          }
         }
       },
       {
         "name": "model/agnostic_nms_1/agnostic_nms/TensorArrayV2_6/element_shape",
         "op": "Const",
         "attr": {
-          "value": { "tensor": { "dtype": "DT_INT32", "tensorShape": {} } },
-          "dtype": { "type": "DT_INT32" }
+          "dtype": { "type": "DT_INT32" },
+          "value": { "tensor": { "dtype": "DT_INT32", "tensorShape": {} } }
         }
       },
       {
@@ -140,16 +140,16 @@
         "name": "ConstantFolding/model/tf.math.truediv_1/truediv_recip",
         "op": "Const",
         "attr": {
-          "value": { "tensor": { "dtype": "DT_FLOAT", "tensorShape": {} } },
-          "dtype": { "type": "DT_FLOAT" }
+          "dtype": { "type": "DT_FLOAT" },
+          "value": { "tensor": { "dtype": "DT_FLOAT", "tensorShape": {} } }
         }
       },
       {
         "name": "ConstantFolding/model/tf.math.truediv_2/truediv_recip",
         "op": "Const",
         "attr": {
-          "value": { "tensor": { "dtype": "DT_FLOAT", "tensorShape": {} } },
-          "dtype": { "type": "DT_FLOAT" }
+          "dtype": { "type": "DT_FLOAT" },
+          "value": { "tensor": { "dtype": "DT_FLOAT", "tensorShape": {} } }
         }
       },
       {
@@ -164,26 +164,26 @@
         "name": "model/tf.__operators__.getitem/strided_slice/stack",
         "op": "Const",
         "attr": {
+          "dtype": { "type": "DT_INT32" },
           "value": {
             "tensor": {
               "dtype": "DT_INT32",
               "tensorShape": { "dim": [{ "size": "2" }] }
             }
-          },
-          "dtype": { "type": "DT_INT32" }
+          }
         }
       },
       {
         "name": "model/tf.__operators__.getitem/strided_slice/stack_1",
         "op": "Const",
         "attr": {
+          "dtype": { "type": "DT_INT32" },
           "value": {
             "tensor": {
               "dtype": "DT_INT32",
               "tensorShape": { "dim": [{ "size": "2" }] }
             }
-          },
-          "dtype": { "type": "DT_INT32" }
+          }
         }
       },
       {
@@ -203,16 +203,16 @@
         "name": "ConstantFolding/model/tf.math.truediv_3/truediv_recip",
         "op": "Const",
         "attr": {
-          "value": { "tensor": { "dtype": "DT_FLOAT", "tensorShape": {} } },
-          "dtype": { "type": "DT_FLOAT" }
+          "dtype": { "type": "DT_FLOAT" },
+          "value": { "tensor": { "dtype": "DT_FLOAT", "tensorShape": {} } }
         }
       },
       {
         "name": "model/tf.concat/concat/axis",
         "op": "Const",
         "attr": {
-          "value": { "tensor": { "dtype": "DT_INT32", "tensorShape": {} } },
-          "dtype": { "type": "DT_INT32" }
+          "dtype": { "type": "DT_INT32" },
+          "value": { "tensor": { "dtype": "DT_INT32", "tensorShape": {} } }
         }
       },
       {
@@ -245,13 +245,13 @@
         "name": "model/tf.__operators__.getitem_1/strided_slice/stack_1",
         "op": "Const",
         "attr": {
+          "dtype": { "type": "DT_INT32" },
           "value": {
             "tensor": {
               "dtype": "DT_INT32",
               "tensorShape": { "dim": [{ "size": "3" }] }
             }
-          },
-          "dtype": { "type": "DT_INT32" }
+          }
         }
       },
       {
@@ -284,13 +284,13 @@
         "name": "model/tf_detect/strided_slice_3/stack_1",
         "op": "Const",
         "attr": {
+          "dtype": { "type": "DT_INT32" },
           "value": {
             "tensor": {
               "dtype": "DT_INT32",
               "tensorShape": { "dim": [{ "size": "2" }] }
             }
-          },
-          "dtype": { "type": "DT_INT32" }
+          }
         }
       },
       {
@@ -351,13 +351,13 @@
         "name": "model/tf_detect/strided_slice_5/stack",
         "op": "Const",
         "attr": {
+          "dtype": { "type": "DT_INT32" },
           "value": {
             "tensor": {
               "dtype": "DT_INT32",
               "tensorShape": { "dim": [{ "size": "2" }] }
             }
-          },
-          "dtype": { "type": "DT_INT32" }
+          }
         }
       },
       {
@@ -423,13 +423,13 @@
         "name": "model/tf_detect/strided_slice_6/stack_1",
         "op": "Const",
         "attr": {
+          "dtype": { "type": "DT_INT32" },
           "value": {
             "tensor": {
               "dtype": "DT_INT32",
               "tensorShape": { "dim": [{ "size": "2" }] }
             }
-          },
-          "dtype": { "type": "DT_INT32" }
+          }
         }
       },
       {
@@ -482,13 +482,13 @@
         "name": "model/tf_detect/Reshape/shape_1",
         "op": "Const",
         "attr": {
+          "dtype": { "type": "DT_INT32" },
           "value": {
             "tensor": {
               "dtype": "DT_INT32",
               "tensorShape": { "dim": [{ "size": "4" }] }
             }
-          },
-          "dtype": { "type": "DT_INT32" }
+          }
         }
       },
       {
@@ -508,13 +508,13 @@
         "name": "model/tf_detect/strided_slice_7/stack_1",
         "op": "Const",
         "attr": {
+          "dtype": { "type": "DT_INT32" },
           "value": {
             "tensor": {
               "dtype": "DT_INT32",
               "tensorShape": { "dim": [{ "size": "2" }] }
             }
-          },
-          "dtype": { "type": "DT_INT32" }
+          }
         }
       },
       {
@@ -594,14 +594,15 @@
         "name": "model/tf_detect/mul_9/y",
         "op": "Const",
         "attr": {
-          "value": { "tensor": { "dtype": "DT_FLOAT", "tensorShape": {} } },
-          "dtype": { "type": "DT_FLOAT" }
+          "dtype": { "type": "DT_FLOAT" },
+          "value": { "tensor": { "dtype": "DT_FLOAT", "tensorShape": {} } }
         }
       },
       {
         "name": "model/tf_detect/sub_1",
         "op": "Const",
         "attr": {
+          "dtype": { "type": "DT_FLOAT" },
           "value": {
             "tensor": {
               "dtype": "DT_FLOAT",
@@ -614,34 +615,33 @@
                 ]
               }
             }
-          },
-          "dtype": { "type": "DT_FLOAT" }
+          }
         }
       },
       {
         "name": "model/tf_detect/mul_10",
         "op": "Const",
         "attr": {
+          "dtype": { "type": "DT_FLOAT" },
           "value": {
             "tensor": {
               "dtype": "DT_FLOAT",
               "tensorShape": { "dim": [{ "size": "1" }, { "size": "2" }] }
             }
-          },
-          "dtype": { "type": "DT_FLOAT" }
+          }
         }
       },
       {
         "name": "model/tf_detect/strided_slice_13/stack",
         "op": "Const",
         "attr": {
+          "dtype": { "type": "DT_INT32" },
           "value": {
             "tensor": {
               "dtype": "DT_INT32",
               "tensorShape": { "dim": [{ "size": "2" }] }
             }
-          },
-          "dtype": { "type": "DT_INT32" }
+          }
         }
       },
       {
@@ -694,39 +694,39 @@
         "name": "model/tf_detect/strided_slice_14/stack",
         "op": "Const",
         "attr": {
+          "dtype": { "type": "DT_INT32" },
           "value": {
             "tensor": {
               "dtype": "DT_INT32",
               "tensorShape": { "dim": [{ "size": "2" }] }
             }
-          },
-          "dtype": { "type": "DT_INT32" }
+          }
         }
       },
       {
         "name": "model/tf_detect/strided_slice_14/stack_1",
         "op": "Const",
         "attr": {
+          "dtype": { "type": "DT_INT32" },
           "value": {
             "tensor": {
               "dtype": "DT_INT32",
               "tensorShape": { "dim": [{ "size": "2" }] }
             }
-          },
-          "dtype": { "type": "DT_INT32" }
+          }
         }
       },
       {
         "name": "model/tf_detect/strided_slice_14/stack_2",
         "op": "Const",
         "attr": {
+          "dtype": { "type": "DT_INT32" },
           "value": {
             "tensor": {
               "dtype": "DT_INT32",
               "tensorShape": { "dim": [{ "size": "2" }] }
             }
-          },
-          "dtype": { "type": "DT_INT32" }
+          }
         }
       },
       {
@@ -766,13 +766,13 @@
         "name": "model/tf_detect/Reshape_2/shape_1",
         "op": "Const",
         "attr": {
+          "dtype": { "type": "DT_INT32" },
           "value": {
             "tensor": {
               "dtype": "DT_INT32",
               "tensorShape": { "dim": [{ "size": "4" }] }
             }
-          },
-          "dtype": { "type": "DT_INT32" }
+          }
         }
       },
       {
@@ -792,13 +792,13 @@
         "name": "model/tf_detect/strided_slice_15/stack_1",
         "op": "Const",
         "attr": {
+          "dtype": { "type": "DT_INT32" },
           "value": {
             "tensor": {
               "dtype": "DT_INT32",
               "tensorShape": { "dim": [{ "size": "2" }] }
             }
-          },
-          "dtype": { "type": "DT_INT32" }
+          }
         }
       },
       {
@@ -839,26 +839,26 @@
         "name": "model/tf_detect/strided_slice_19/stack",
         "op": "Const",
         "attr": {
+          "dtype": { "type": "DT_INT32" },
           "value": {
             "tensor": {
               "dtype": "DT_INT32",
               "tensorShape": { "dim": [{ "size": "2" }] }
             }
-          },
-          "dtype": { "type": "DT_INT32" }
+          }
         }
       },
       {
         "name": "model/tf_detect/strided_slice_19/stack_1",
         "op": "Const",
         "attr": {
+          "dtype": { "type": "DT_INT32" },
           "value": {
             "tensor": {
               "dtype": "DT_INT32",
               "tensorShape": { "dim": [{ "size": "2" }] }
             }
-          },
-          "dtype": { "type": "DT_INT32" }
+          }
         }
       },
       {
@@ -906,26 +906,26 @@
         "name": "model/tf_detect/mul_17",
         "op": "Const",
         "attr": {
+          "dtype": { "type": "DT_FLOAT" },
           "value": {
             "tensor": {
               "dtype": "DT_FLOAT",
               "tensorShape": { "dim": [{ "size": "1" }, { "size": "2" }] }
             }
-          },
-          "dtype": { "type": "DT_FLOAT" }
+          }
         }
       },
       {
         "name": "model/tf_detect/strided_slice_21/stack",
         "op": "Const",
         "attr": {
+          "dtype": { "type": "DT_INT32" },
           "value": {
             "tensor": {
               "dtype": "DT_INT32",
               "tensorShape": { "dim": [{ "size": "2" }] }
             }
-          },
-          "dtype": { "type": "DT_INT32" }
+          }
         }
       },
       {
@@ -945,19 +945,20 @@
         "name": "model/tf_detect/strided_slice_21/stack_2",
         "op": "Const",
         "attr": {
+          "dtype": { "type": "DT_INT32" },
           "value": {
             "tensor": {
               "dtype": "DT_INT32",
               "tensorShape": { "dim": [{ "size": "2" }] }
             }
-          },
-          "dtype": { "type": "DT_INT32" }
+          }
         }
       },
       {
         "name": "model/tf_detect/mul_18",
         "op": "Const",
         "attr": {
+          "dtype": { "type": "DT_FLOAT" },
           "value": {
             "tensor": {
               "dtype": "DT_FLOAT",
@@ -970,34 +971,33 @@
                 ]
               }
             }
-          },
-          "dtype": { "type": "DT_FLOAT" }
+          }
         }
       },
       {
         "name": "model/tf_detect/strided_slice_22/stack",
         "op": "Const",
         "attr": {
+          "dtype": { "type": "DT_INT32" },
           "value": {
             "tensor": {
               "dtype": "DT_INT32",
               "tensorShape": { "dim": [{ "size": "2" }] }
             }
-          },
-          "dtype": { "type": "DT_INT32" }
+          }
         }
       },
       {
         "name": "model/tf_detect/strided_slice_22/stack_1",
         "op": "Const",
         "attr": {
+          "dtype": { "type": "DT_INT32" },
           "value": {
             "tensor": {
               "dtype": "DT_INT32",
               "tensorShape": { "dim": [{ "size": "2" }] }
             }
-          },
-          "dtype": { "type": "DT_INT32" }
+          }
         }
       },
       {
@@ -1017,6 +1017,7 @@
         "name": "model/tfc3_7/tf_conv_52/conv2d_52/Conv2D/ReadVariableOp",
         "op": "Const",
         "attr": {
+          "dtype": { "type": "DT_FLOAT" },
           "value": {
             "tensor": {
               "dtype": "DT_FLOAT",
@@ -1029,8 +1030,7 @@
                 ]
               }
             }
-          },
-          "dtype": { "type": "DT_FLOAT" }
+          }
         }
       },
       {
@@ -1070,13 +1070,13 @@
         "name": "model/tfc3_7/sequential_14/tf_bottleneck_10/tf_conv_55/conv2d_55/BiasAdd/ReadVariableOp",
         "op": "Const",
         "attr": {
+          "dtype": { "type": "DT_FLOAT" },
           "value": {
             "tensor": {
               "dtype": "DT_FLOAT",
               "tensorShape": { "dim": [{ "size": "256" }] }
             }
-          },
-          "dtype": { "type": "DT_FLOAT" }
+          }
         }
       },
       {
@@ -1169,19 +1169,20 @@
         "name": "model/tfc3_6/sequential_12/tf_bottleneck_9/tf_conv_49/conv2d_49/BiasAdd/ReadVariableOp",
         "op": "Const",
         "attr": {
+          "dtype": { "type": "DT_FLOAT" },
           "value": {
             "tensor": {
               "dtype": "DT_FLOAT",
               "tensorShape": { "dim": [{ "size": "128" }] }
             }
-          },
-          "dtype": { "type": "DT_FLOAT" }
+          }
         }
       },
       {
         "name": "model/tfc3_6/sequential_12/tf_bottleneck_9/tf_conv_50/conv2d_50/Conv2D/ReadVariableOp",
         "op": "Const",
         "attr": {
+          "dtype": { "type": "DT_FLOAT" },
           "value": {
             "tensor": {
               "dtype": "DT_FLOAT",
@@ -1194,8 +1195,7 @@
                 ]
               }
             }
-          },
-          "dtype": { "type": "DT_FLOAT" }
+          }
         }
       },
       {
@@ -1281,6 +1281,7 @@
         "name": "model/tfc3_5/sequential_10/tf_bottleneck_8/tf_conv_44/conv2d_44/Conv2D/ReadVariableOp",
         "op": "Const",
         "attr": {
+          "dtype": { "type": "DT_FLOAT" },
           "value": {
             "tensor": {
               "dtype": "DT_FLOAT",
@@ -1293,8 +1294,7 @@
                 ]
               }
             }
-          },
-          "dtype": { "type": "DT_FLOAT" }
+          }
         }
       },
       {
@@ -1314,13 +1314,13 @@
         "name": "model/tf_upsample_1/resize/size",
         "op": "Const",
         "attr": {
+          "dtype": { "type": "DT_INT32" },
           "value": {
             "tensor": {
               "dtype": "DT_INT32",
               "tensorShape": { "dim": [{ "size": "2" }] }
             }
-          },
-          "dtype": { "type": "DT_INT32" }
+          }
         }
       },
       {
@@ -1355,13 +1355,13 @@
         "name": "model/tfc3_5/tf_conv_41/conv2d_41/BiasAdd/ReadVariableOp",
         "op": "Const",
         "attr": {
+          "dtype": { "type": "DT_FLOAT" },
           "value": {
             "tensor": {
               "dtype": "DT_FLOAT",
               "tensorShape": { "dim": [{ "size": "64" }] }
             }
-          },
-          "dtype": { "type": "DT_FLOAT" }
+          }
         }
       },
       {
@@ -1376,6 +1376,7 @@
         "name": "model/tfc3_5/tf_conv_42/conv2d_42/Conv2D/ReadVariableOp",
         "op": "Const",
         "attr": {
+          "dtype": { "type": "DT_FLOAT" },
           "value": {
             "tensor": {
               "dtype": "DT_FLOAT",
@@ -1388,8 +1389,7 @@
                 ]
               }
             }
-          },
-          "dtype": { "type": "DT_FLOAT" }
+          }
         }
       },
       {
@@ -1442,13 +1442,13 @@
         "name": "model/tf_conv_45/sequential_11/conv2d_45/BiasAdd/ReadVariableOp",
         "op": "Const",
         "attr": {
+          "dtype": { "type": "DT_FLOAT" },
           "value": {
             "tensor": {
               "dtype": "DT_FLOAT",
               "tensorShape": { "dim": [{ "size": "128" }] }
             }
-          },
-          "dtype": { "type": "DT_FLOAT" }
+          }
         }
       },
       {
@@ -1488,6 +1488,7 @@
         "name": "model/tfc3_4/sequential_9/tf_bottleneck_7/tf_conv_37/conv2d_37/Conv2D/ReadVariableOp",
         "op": "Const",
         "attr": {
+          "dtype": { "type": "DT_FLOAT" },
           "value": {
             "tensor": {
               "dtype": "DT_FLOAT",
@@ -1500,8 +1501,7 @@
                 ]
               }
             }
-          },
-          "dtype": { "type": "DT_FLOAT" }
+          }
         }
       },
       {
@@ -1521,6 +1521,7 @@
         "name": "model/tfc3_4/sequential_9/tf_bottleneck_7/tf_conv_38/conv2d_38/Conv2D/ReadVariableOp",
         "op": "Const",
         "attr": {
+          "dtype": { "type": "DT_FLOAT" },
           "value": {
             "tensor": {
               "dtype": "DT_FLOAT",
@@ -1533,21 +1534,20 @@
                 ]
               }
             }
-          },
-          "dtype": { "type": "DT_FLOAT" }
+          }
         }
       },
       {
         "name": "model/tfc3_4/sequential_9/tf_bottleneck_7/tf_conv_38/conv2d_38/BiasAdd/ReadVariableOp",
         "op": "Const",
         "attr": {
+          "dtype": { "type": "DT_FLOAT" },
           "value": {
             "tensor": {
               "dtype": "DT_FLOAT",
               "tensorShape": { "dim": [{ "size": "128" }] }
             }
-          },
-          "dtype": { "type": "DT_FLOAT" }
+          }
         }
       },
       {
@@ -1575,6 +1575,7 @@
         "name": "model/tfc3_4/tf_conv_35/conv2d_35/Conv2D/ReadVariableOp",
         "op": "Const",
         "attr": {
+          "dtype": { "type": "DT_FLOAT" },
           "value": {
             "tensor": {
               "dtype": "DT_FLOAT",
@@ -1587,8 +1588,7 @@
                 ]
               }
             }
-          },
-          "dtype": { "type": "DT_FLOAT" }
+          }
         }
       },
       {
@@ -1608,8 +1608,8 @@
         "name": "model/tfc3_4/concat/axis",
         "op": "Const",
         "attr": {
-          "value": { "tensor": { "dtype": "DT_INT32", "tensorShape": {} } },
-          "dtype": { "type": "DT_INT32" }
+          "dtype": { "type": "DT_INT32" },
+          "value": { "tensor": { "dtype": "DT_INT32", "tensorShape": {} } }
         }
       },
       {
@@ -1649,6 +1649,7 @@
         "name": "model/tf_conv_39/conv2d_39/Conv2D/ReadVariableOp",
         "op": "Const",
         "attr": {
+          "dtype": { "type": "DT_FLOAT" },
           "value": {
             "tensor": {
               "dtype": "DT_FLOAT",
@@ -1661,21 +1662,20 @@
                 ]
               }
             }
-          },
-          "dtype": { "type": "DT_FLOAT" }
+          }
         }
       },
       {
         "name": "model/tf_conv_39/conv2d_39/BiasAdd/ReadVariableOp",
         "op": "Const",
         "attr": {
+          "dtype": { "type": "DT_FLOAT" },
           "value": {
             "tensor": {
               "dtype": "DT_FLOAT",
               "tensorShape": { "dim": [{ "size": "128" }] }
             }
-          },
-          "dtype": { "type": "DT_FLOAT" }
+          }
         }
       },
       {
@@ -1751,26 +1751,26 @@
         "name": "model/tfc3_6/tf_conv_48/conv2d_48/BiasAdd/ReadVariableOp",
         "op": "Const",
         "attr": {
+          "dtype": { "type": "DT_FLOAT" },
           "value": {
             "tensor": {
               "dtype": "DT_FLOAT",
               "tensorShape": { "dim": [{ "size": "256" }] }
             }
-          },
-          "dtype": { "type": "DT_FLOAT" }
+          }
         }
       },
       {
         "name": "model/tf_conv_51/sequential_13/tf_pad_6/Pad/paddings",
         "op": "Const",
         "attr": {
+          "dtype": { "type": "DT_INT32" },
           "value": {
             "tensor": {
               "dtype": "DT_INT32",
               "tensorShape": { "dim": [{ "size": "4" }, { "size": "2" }] }
             }
-          },
-          "dtype": { "type": "DT_INT32" }
+          }
         }
       },
       {
@@ -1797,19 +1797,20 @@
         "name": "model/tf_conv_51/sequential_13/conv2d_51/BiasAdd/ReadVariableOp",
         "op": "Const",
         "attr": {
+          "dtype": { "type": "DT_FLOAT" },
           "value": {
             "tensor": {
               "dtype": "DT_FLOAT",
               "tensorShape": { "dim": [{ "size": "256" }] }
             }
-          },
-          "dtype": { "type": "DT_FLOAT" }
+          }
         }
       },
       {
         "name": "model/tfc3_3/tf_conv_26/conv2d_26/Conv2D/ReadVariableOp",
         "op": "Const",
         "attr": {
+          "dtype": { "type": "DT_FLOAT" },
           "value": {
             "tensor": {
               "dtype": "DT_FLOAT",
@@ -1822,8 +1823,7 @@
                 ]
               }
             }
-          },
-          "dtype": { "type": "DT_FLOAT" }
+          }
         }
       },
       {
@@ -1843,6 +1843,7 @@
         "name": "model/tfc3_3/sequential_8/tf_bottleneck_6/tf_conv_29/conv2d_29/Conv2D/ReadVariableOp",
         "op": "Const",
         "attr": {
+          "dtype": { "type": "DT_FLOAT" },
           "value": {
             "tensor": {
               "dtype": "DT_FLOAT",
@@ -1855,27 +1856,27 @@
                 ]
               }
             }
-          },
-          "dtype": { "type": "DT_FLOAT" }
+          }
         }
       },
       {
         "name": "model/tfc3_3/sequential_8/tf_bottleneck_6/tf_conv_29/conv2d_29/BiasAdd/ReadVariableOp",
         "op": "Const",
         "attr": {
+          "dtype": { "type": "DT_FLOAT" },
           "value": {
             "tensor": {
               "dtype": "DT_FLOAT",
               "tensorShape": { "dim": [{ "size": "256" }] }
             }
-          },
-          "dtype": { "type": "DT_FLOAT" }
+          }
         }
       },
       {
         "name": "model/tfc3_3/sequential_8/tf_bottleneck_6/tf_conv_30/conv2d_30/Conv2D/ReadVariableOp",
         "op": "Const",
         "attr": {
+          "dtype": { "type": "DT_FLOAT" },
           "value": {
             "tensor": {
               "dtype": "DT_FLOAT",
@@ -1888,8 +1889,7 @@
                 ]
               }
             }
-          },
-          "dtype": { "type": "DT_FLOAT" }
+          }
         }
       },
       {
@@ -1909,6 +1909,7 @@
         "name": "model/tfc3_2/tf_conv_16/conv2d_16/Conv2D/ReadVariableOp",
         "op": "Const",
         "attr": {
+          "dtype": { "type": "DT_FLOAT" },
           "value": {
             "tensor": {
               "dtype": "DT_FLOAT",
@@ -1921,8 +1922,7 @@
                 ]
               }
             }
-          },
-          "dtype": { "type": "DT_FLOAT" }
+          }
         }
       },
       {
@@ -1942,6 +1942,7 @@
         "name": "model/tfc3_2/sequential_6/tf_bottleneck_3/tf_conv_19/conv2d_19/Conv2D/ReadVariableOp",
         "op": "Const",
         "attr": {
+          "dtype": { "type": "DT_FLOAT" },
           "value": {
             "tensor": {
               "dtype": "DT_FLOAT",
@@ -1954,8 +1955,7 @@
                 ]
               }
             }
-          },
-          "dtype": { "type": "DT_FLOAT" }
+          }
         }
       },
       {
@@ -1995,13 +1995,13 @@
         "name": "model/tfc3_2/sequential_6/tf_bottleneck_3/tf_conv_20/conv2d_20/BiasAdd/ReadVariableOp",
         "op": "Const",
         "attr": {
+          "dtype": { "type": "DT_FLOAT" },
           "value": {
             "tensor": {
               "dtype": "DT_FLOAT",
               "tensorShape": { "dim": [{ "size": "128" }] }
             }
-          },
-          "dtype": { "type": "DT_FLOAT" }
+          }
         }
       },
       {
@@ -2028,13 +2028,13 @@
         "name": "model/tfc3_2/sequential_6/tf_bottleneck_4/tf_conv_21/conv2d_21/BiasAdd/ReadVariableOp",
         "op": "Const",
         "attr": {
+          "dtype": { "type": "DT_FLOAT" },
           "value": {
             "tensor": {
               "dtype": "DT_FLOAT",
               "tensorShape": { "dim": [{ "size": "128" }] }
             }
-          },
-          "dtype": { "type": "DT_FLOAT" }
+          }
         }
       },
       {
@@ -2061,13 +2061,13 @@
         "name": "model/tfc3_2/sequential_6/tf_bottleneck_4/tf_conv_22/conv2d_22/BiasAdd/ReadVariableOp",
         "op": "Const",
         "attr": {
+          "dtype": { "type": "DT_FLOAT" },
           "value": {
             "tensor": {
               "dtype": "DT_FLOAT",
               "tensorShape": { "dim": [{ "size": "128" }] }
             }
-          },
-          "dtype": { "type": "DT_FLOAT" }
+          }
         }
       },
       {
@@ -2173,6 +2173,7 @@
         "name": "model/tfc3_1/sequential_4/tf_bottleneck_1/tf_conv_11/conv2d_11/Conv2D/ReadVariableOp",
         "op": "Const",
         "attr": {
+          "dtype": { "type": "DT_FLOAT" },
           "value": {
             "tensor": {
               "dtype": "DT_FLOAT",
@@ -2185,21 +2186,20 @@
                 ]
               }
             }
-          },
-          "dtype": { "type": "DT_FLOAT" }
+          }
         }
       },
       {
         "name": "model/tfc3_1/sequential_4/tf_bottleneck_1/tf_conv_11/conv2d_11/BiasAdd/ReadVariableOp",
         "op": "Const",
         "attr": {
+          "dtype": { "type": "DT_FLOAT" },
           "value": {
             "tensor": {
               "dtype": "DT_FLOAT",
               "tensorShape": { "dim": [{ "size": "64" }] }
             }
-          },
-          "dtype": { "type": "DT_FLOAT" }
+          }
         }
       },
       {
@@ -2239,6 +2239,7 @@
         "name": "model/tfc3_1/sequential_4/tf_bottleneck_2/tf_conv_13/conv2d_13/Conv2D/ReadVariableOp",
         "op": "Const",
         "attr": {
+          "dtype": { "type": "DT_FLOAT" },
           "value": {
             "tensor": {
               "dtype": "DT_FLOAT",
@@ -2251,8 +2252,7 @@
                 ]
               }
             }
-          },
-          "dtype": { "type": "DT_FLOAT" }
+          }
         }
       },
       {
@@ -2272,6 +2272,7 @@
         "name": "model/tfc3_1/sequential_4/tf_bottleneck_2/tf_conv_14/conv2d_14/Conv2D/ReadVariableOp",
         "op": "Const",
         "attr": {
+          "dtype": { "type": "DT_FLOAT" },
           "value": {
             "tensor": {
               "dtype": "DT_FLOAT",
@@ -2284,21 +2285,20 @@
                 ]
               }
             }
-          },
-          "dtype": { "type": "DT_FLOAT" }
+          }
         }
       },
       {
         "name": "model/tfc3_1/sequential_4/tf_bottleneck_2/tf_conv_14/conv2d_14/BiasAdd/ReadVariableOp",
         "op": "Const",
         "attr": {
+          "dtype": { "type": "DT_FLOAT" },
           "value": {
             "tensor": {
               "dtype": "DT_FLOAT",
               "tensorShape": { "dim": [{ "size": "64" }] }
             }
-          },
-          "dtype": { "type": "DT_FLOAT" }
+          }
         }
       },
       {
@@ -2325,19 +2325,20 @@
         "name": "model/tfc3/tf_conv_2/conv2d_2/BiasAdd/ReadVariableOp",
         "op": "Const",
         "attr": {
+          "dtype": { "type": "DT_FLOAT" },
           "value": {
             "tensor": {
               "dtype": "DT_FLOAT",
               "tensorShape": { "dim": [{ "size": "32" }] }
             }
-          },
-          "dtype": { "type": "DT_FLOAT" }
+          }
         }
       },
       {
         "name": "model/tfc3/sequential_2/tf_bottleneck/tf_conv_5/conv2d_5/Conv2D/ReadVariableOp",
         "op": "Const",
         "attr": {
+          "dtype": { "type": "DT_FLOAT" },
           "value": {
             "tensor": {
               "dtype": "DT_FLOAT",
@@ -2350,8 +2351,7 @@
                 ]
               }
             }
-          },
-          "dtype": { "type": "DT_FLOAT" }
+          }
         }
       },
       {
@@ -2371,6 +2371,7 @@
         "name": "model/tfc3/sequential_2/tf_bottleneck/tf_conv_6/conv2d_6/Conv2D/ReadVariableOp",
         "op": "Const",
         "attr": {
+          "dtype": { "type": "DT_FLOAT" },
           "value": {
             "tensor": {
               "dtype": "DT_FLOAT",
@@ -2383,21 +2384,20 @@
                 ]
               }
             }
-          },
-          "dtype": { "type": "DT_FLOAT" }
+          }
         }
       },
       {
         "name": "model/tfc3/sequential_2/tf_bottleneck/tf_conv_6/conv2d_6/BiasAdd/ReadVariableOp",
         "op": "Const",
         "attr": {
+          "dtype": { "type": "DT_FLOAT" },
           "value": {
             "tensor": {
               "dtype": "DT_FLOAT",
               "tensorShape": { "dim": [{ "size": "32" }] }
             }
-          },
-          "dtype": { "type": "DT_FLOAT" }
+          }
         }
       },
       {
@@ -2496,6 +2496,7 @@
         "name": "model/tfc3/tf_conv_3/conv2d_3/Conv2D/ReadVariableOp",
         "op": "Const",
         "attr": {
+          "dtype": { "type": "DT_FLOAT" },
           "value": {
             "tensor": {
               "dtype": "DT_FLOAT",
@@ -2508,21 +2509,20 @@
                 ]
               }
             }
-          },
-          "dtype": { "type": "DT_FLOAT" }
+          }
         }
       },
       {
         "name": "model/tfc3/tf_conv_3/conv2d_3/BiasAdd/ReadVariableOp",
         "op": "Const",
         "attr": {
+          "dtype": { "type": "DT_FLOAT" },
           "value": {
             "tensor": {
               "dtype": "DT_FLOAT",
               "tensorShape": { "dim": [{ "size": "32" }] }
             }
-          },
-          "dtype": { "type": "DT_FLOAT" }
+          }
         }
       },
       {
@@ -2557,13 +2557,13 @@
         "name": "model/tfc3/tf_conv_4/conv2d_4/BiasAdd/ReadVariableOp",
         "op": "Const",
         "attr": {
+          "dtype": { "type": "DT_FLOAT" },
           "value": {
             "tensor": {
               "dtype": "DT_FLOAT",
               "tensorShape": { "dim": [{ "size": "64" }] }
             }
-          },
-          "dtype": { "type": "DT_FLOAT" }
+          }
         }
       },
       {
@@ -2583,6 +2583,7 @@
         "name": "model/tf_conv_7/sequential_3/conv2d_7/Conv2D/ReadVariableOp",
         "op": "Const",
         "attr": {
+          "dtype": { "type": "DT_FLOAT" },
           "value": {
             "tensor": {
               "dtype": "DT_FLOAT",
@@ -2595,8 +2596,7 @@
                 ]
               }
             }
-          },
-          "dtype": { "type": "DT_FLOAT" }
+          }
         }
       },
       {
@@ -2636,27 +2636,28 @@
         "name": "model/tfc3_1/tf_conv_9/conv2d_9/BiasAdd/ReadVariableOp",
         "op": "Const",
         "attr": {
+          "dtype": { "type": "DT_FLOAT" },
           "value": {
             "tensor": {
               "dtype": "DT_FLOAT",
               "tensorShape": { "dim": [{ "size": "64" }] }
             }
-          },
-          "dtype": { "type": "DT_FLOAT" }
+          }
         }
       },
       {
         "name": "model/tfc3_1/concat/axis",
         "op": "Const",
         "attr": {
-          "value": { "tensor": { "dtype": "DT_INT32", "tensorShape": {} } },
-          "dtype": { "type": "DT_INT32" }
+          "dtype": { "type": "DT_INT32" },
+          "value": { "tensor": { "dtype": "DT_INT32", "tensorShape": {} } }
         }
       },
       {
         "name": "model/tfc3_1/tf_conv_10/conv2d_10/Conv2D/ReadVariableOp",
         "op": "Const",
         "attr": {
+          "dtype": { "type": "DT_FLOAT" },
           "value": {
             "tensor": {
               "dtype": "DT_FLOAT",
@@ -2669,40 +2670,40 @@
                 ]
               }
             }
-          },
-          "dtype": { "type": "DT_FLOAT" }
+          }
         }
       },
       {
         "name": "model/tfc3_1/tf_conv_10/conv2d_10/BiasAdd/ReadVariableOp",
         "op": "Const",
         "attr": {
+          "dtype": { "type": "DT_FLOAT" },
           "value": {
             "tensor": {
               "dtype": "DT_FLOAT",
               "tensorShape": { "dim": [{ "size": "128" }] }
             }
-          },
-          "dtype": { "type": "DT_FLOAT" }
+          }
         }
       },
       {
         "name": "model/tf_conv_15/sequential_5/tf_pad_3/Pad/paddings",
         "op": "Const",
         "attr": {
+          "dtype": { "type": "DT_INT32" },
           "value": {
             "tensor": {
               "dtype": "DT_INT32",
               "tensorShape": { "dim": [{ "size": "4" }, { "size": "2" }] }
             }
-          },
-          "dtype": { "type": "DT_INT32" }
+          }
         }
       },
       {
         "name": "model/tf_conv_15/sequential_5/conv2d_15/Conv2D/ReadVariableOp",
         "op": "Const",
         "attr": {
+          "dtype": { "type": "DT_FLOAT" },
           "value": {
             "tensor": {
               "dtype": "DT_FLOAT",
@@ -2715,8 +2716,7 @@
                 ]
               }
             }
-          },
-          "dtype": { "type": "DT_FLOAT" }
+          }
         }
       },
       {
@@ -2736,6 +2736,7 @@
         "name": "model/tfc3_2/tf_conv_17/conv2d_17/Conv2D/ReadVariableOp",
         "op": "Const",
         "attr": {
+          "dtype": { "type": "DT_FLOAT" },
           "value": {
             "tensor": {
               "dtype": "DT_FLOAT",
@@ -2748,8 +2749,7 @@
                 ]
               }
             }
-          },
-          "dtype": { "type": "DT_FLOAT" }
+          }
         }
       },
       {
@@ -2769,14 +2769,15 @@
         "name": "model/tfc3_2/concat/axis",
         "op": "Const",
         "attr": {
-          "value": { "tensor": { "dtype": "DT_INT32", "tensorShape": {} } },
-          "dtype": { "type": "DT_INT32" }
+          "dtype": { "type": "DT_INT32" },
+          "value": { "tensor": { "dtype": "DT_INT32", "tensorShape": {} } }
         }
       },
       {
         "name": "model/tfc3_2/tf_conv_18/conv2d_18/Conv2D/ReadVariableOp",
         "op": "Const",
         "attr": {
+          "dtype": { "type": "DT_FLOAT" },
           "value": {
             "tensor": {
               "dtype": "DT_FLOAT",
@@ -2789,8 +2790,7 @@
                 ]
               }
             }
-          },
-          "dtype": { "type": "DT_FLOAT" }
+          }
         }
       },
       {
@@ -2810,13 +2810,13 @@
         "name": "model/tf_conv_25/sequential_7/tf_pad_4/Pad/paddings",
         "op": "Const",
         "attr": {
+          "dtype": { "type": "DT_INT32" },
           "value": {
             "tensor": {
               "dtype": "DT_INT32",
               "tensorShape": { "dim": [{ "size": "4" }, { "size": "2" }] }
             }
-          },
-          "dtype": { "type": "DT_INT32" }
+          }
         }
       },
       {
@@ -2856,6 +2856,7 @@
         "name": "model/tfc3_3/tf_conv_27/conv2d_27/Conv2D/ReadVariableOp",
         "op": "Const",
         "attr": {
+          "dtype": { "type": "DT_FLOAT" },
           "value": {
             "tensor": {
               "dtype": "DT_FLOAT",
@@ -2868,21 +2869,20 @@
                 ]
               }
             }
-          },
-          "dtype": { "type": "DT_FLOAT" }
+          }
         }
       },
       {
         "name": "model/tfc3_3/tf_conv_27/conv2d_27/BiasAdd/ReadVariableOp",
         "op": "Const",
         "attr": {
+          "dtype": { "type": "DT_FLOAT" },
           "value": {
             "tensor": {
               "dtype": "DT_FLOAT",
               "tensorShape": { "dim": [{ "size": "256" }] }
             }
-          },
-          "dtype": { "type": "DT_FLOAT" }
+          }
         }
       },
       {
@@ -2897,6 +2897,7 @@
         "name": "model/tfc3_3/tf_conv_28/conv2d_28/Conv2D/ReadVariableOp",
         "op": "Const",
         "attr": {
+          "dtype": { "type": "DT_FLOAT" },
           "value": {
             "tensor": {
               "dtype": "DT_FLOAT",
@@ -2909,8 +2910,7 @@
                 ]
               }
             }
-          },
-          "dtype": { "type": "DT_FLOAT" }
+          }
         }
       },
       {
@@ -2930,6 +2930,7 @@
         "name": "model/tfsppf/tf_conv_31/conv2d_31/Conv2D/ReadVariableOp",
         "op": "Const",
         "attr": {
+          "dtype": { "type": "DT_FLOAT" },
           "value": {
             "tensor": {
               "dtype": "DT_FLOAT",
@@ -2942,8 +2943,7 @@
                 ]
               }
             }
-          },
-          "dtype": { "type": "DT_FLOAT" }
+          }
         }
       },
       {
@@ -2971,6 +2971,7 @@
         "name": "model/tfsppf/tf_conv_32/conv2d_32/Conv2D/ReadVariableOp",
         "op": "Const",
         "attr": {
+          "dtype": { "type": "DT_FLOAT" },
           "value": {
             "tensor": {
               "dtype": "DT_FLOAT",
@@ -2983,8 +2984,7 @@
                 ]
               }
             }
-          },
-          "dtype": { "type": "DT_FLOAT" }
+          }
         }
       },
       {
@@ -3065,13 +3065,13 @@
         "name": "model/tfc3_7/tf_conv_53/conv2d_53/BiasAdd/ReadVariableOp",
         "op": "Const",
         "attr": {
+          "dtype": { "type": "DT_FLOAT" },
           "value": {
             "tensor": {
               "dtype": "DT_FLOAT",
               "tensorShape": { "dim": [{ "size": "256" }] }
             }
-          },
-          "dtype": { "type": "DT_FLOAT" }
+          }
         }
       },
       {
@@ -3086,6 +3086,7 @@
         "name": "model/tfc3_7/tf_conv_54/conv2d_54/Conv2D/ReadVariableOp",
         "op": "Const",
         "attr": {
+          "dtype": { "type": "DT_FLOAT" },
           "value": {
             "tensor": {
               "dtype": "DT_FLOAT",
@@ -3098,21 +3099,20 @@
                 ]
               }
             }
-          },
-          "dtype": { "type": "DT_FLOAT" }
+          }
         }
       },
       {
         "name": "model/tfc3_7/tf_conv_54/conv2d_54/BiasAdd/ReadVariableOp",
         "op": "Const",
         "attr": {
+          "dtype": { "type": "DT_FLOAT" },
           "value": {
             "tensor": {
               "dtype": "DT_FLOAT",
               "tensorShape": { "dim": [{ "size": "512" }] }
             }
-          },
-          "dtype": { "type": "DT_FLOAT" }
+          }
         }
       },
       {
@@ -3139,26 +3139,26 @@
         "name": "model/tf_detect/tf_conv2d_2/conv2d_59/BiasAdd/ReadVariableOp",
         "op": "Const",
         "attr": {
+          "dtype": { "type": "DT_FLOAT" },
           "value": {
             "tensor": {
               "dtype": "DT_FLOAT",
               "tensorShape": { "dim": [{ "size": "18" }] }
             }
-          },
-          "dtype": { "type": "DT_FLOAT" }
+          }
         }
       },
       {
         "name": "model/tf_detect/Reshape_4/shape_1",
         "op": "Const",
         "attr": {
+          "dtype": { "type": "DT_INT32" },
           "value": {
             "tensor": {
               "dtype": "DT_INT32",
               "tensorShape": { "dim": [{ "size": "4" }] }
             }
-          },
-          "dtype": { "type": "DT_INT32" }
+          }
         }
       },
       {
@@ -3191,13 +3191,13 @@
         "name": "model/tf_detect/strided_slice_23/stack_2",
         "op": "Const",
         "attr": {
+          "dtype": { "type": "DT_INT32" },
           "value": {
             "tensor": {
               "dtype": "DT_INT32",
               "tensorShape": { "dim": [{ "size": "2" }] }
             }
-          },
-          "dtype": { "type": "DT_INT32" }
+          }
         }
       },
       {
@@ -3212,21 +3212,21 @@
         "name": "model/tf_detect/Reshape_5/shape_1",
         "op": "Const",
         "attr": {
+          "dtype": { "type": "DT_INT32" },
           "value": {
             "tensor": {
               "dtype": "DT_INT32",
               "tensorShape": { "dim": [{ "size": "3" }] }
             }
-          },
-          "dtype": { "type": "DT_INT32" }
+          }
         }
       },
       {
         "name": "model/tf_detect/concat_3/axis",
         "op": "Const",
         "attr": {
-          "value": { "tensor": { "dtype": "DT_INT32", "tensorShape": {} } },
-          "dtype": { "type": "DT_INT32" }
+          "dtype": { "type": "DT_INT32" },
+          "value": { "tensor": { "dtype": "DT_INT32", "tensorShape": {} } }
         }
       },
       {
@@ -3259,13 +3259,13 @@
         "name": "model/tf.__operators__.getitem_2/strided_slice/stack_2",
         "op": "Const",
         "attr": {
+          "dtype": { "type": "DT_INT32" },
           "value": {
             "tensor": {
               "dtype": "DT_INT32",
               "tensorShape": { "dim": [{ "size": "3" }] }
             }
-          },
-          "dtype": { "type": "DT_INT32" }
+          }
         }
       },
       {
@@ -3285,8 +3285,8 @@
         "name": "model/agnostic_nms_1/agnostic_nms/while/maximum_iterations",
         "op": "Const",
         "attr": {
-          "value": { "tensor": { "dtype": "DT_INT32", "tensorShape": {} } },
-          "dtype": { "type": "DT_INT32" }
+          "dtype": { "type": "DT_INT32" },
+          "value": { "tensor": { "dtype": "DT_INT32", "tensorShape": {} } }
         }
       },
       {
@@ -3301,24 +3301,25 @@
         "name": "model/agnostic_nms_1/agnostic_nms/while/loop_counter",
         "op": "Const",
         "attr": {
-          "value": { "tensor": { "dtype": "DT_INT32", "tensorShape": {} } },
-          "dtype": { "type": "DT_INT32" }
+          "dtype": { "type": "DT_INT32" },
+          "value": { "tensor": { "dtype": "DT_INT32", "tensorShape": {} } }
         }
       },
       {
         "name": "model/agnostic_nms_1/agnostic_nms/TensorArrayV2Stack_3/Const",
         "op": "Const",
         "attr": {
+          "dtype": { "type": "DT_INT32" },
           "value": {
             "tensor": { "dtype": "DT_INT32", "tensorShape": { "dim": [{}] } }
-          },
-          "dtype": { "type": "DT_INT32" }
+          }
         }
       },
       {
         "name": "x",
         "op": "Placeholder",
         "attr": {
+          "dtype": { "type": "DT_FLOAT" },
           "shape": {
             "shape": {
               "dim": [
@@ -3328,8 +3329,7 @@
                 { "size": "3" }
               ]
             }
-          },
-          "dtype": { "type": "DT_FLOAT" }
+          }
         }
       },
       {
@@ -3363,8 +3363,8 @@
           "model/agnostic_nms_1/agnostic_nms/TensorArrayV2_4/num_elements"
         ],
         "attr": {
-          "shape_type": { "type": "DT_INT32" },
-          "element_dtype": { "type": "DT_FLOAT" }
+          "element_dtype": { "type": "DT_FLOAT" },
+          "shape_type": { "type": "DT_INT32" }
         },
         "experimentalType": {
           "typeId": "TFT_PRODUCT",
@@ -3433,8 +3433,8 @@
           "frame_name": {
             "s": "bW9kZWwvYWdub3N0aWNfbm1zXzEvYWdub3N0aWNfbm1zL3doaWxl"
           },
-          "T": { "type": "DT_INT32" },
-          "parallel_iterations": { "i": "10" }
+          "parallel_iterations": { "i": "10" },
+          "T": { "type": "DT_INT32" }
         }
       },
       {
@@ -3443,10 +3443,10 @@
         "input": ["model/agnostic_nms_1/agnostic_nms/Const"],
         "attr": {
           "is_constant": { "b": false },
+          "T": { "type": "DT_INT32" },
           "frame_name": {
             "s": "bW9kZWwvYWdub3N0aWNfbm1zXzEvYWdub3N0aWNfbm1zL3doaWxl"
           },
-          "T": { "type": "DT_INT32" },
           "parallel_iterations": { "i": "10" }
         }
       },
@@ -3477,12 +3477,12 @@
         "op": "Enter",
         "input": ["model/agnostic_nms_1/agnostic_nms/TensorArrayV2_3"],
         "attr": {
+          "parallel_iterations": { "i": "10" },
           "is_constant": { "b": false },
           "frame_name": {
             "s": "bW9kZWwvYWdub3N0aWNfbm1zXzEvYWdub3N0aWNfbm1zL3doaWxl"
           },
-          "T": { "type": "DT_VARIANT" },
-          "parallel_iterations": { "i": "10" }
+          "T": { "type": "DT_VARIANT" }
         }
       },
       {
@@ -3491,11 +3491,11 @@
         "input": ["model/agnostic_nms_1/agnostic_nms/TensorArrayV2_4"],
         "attr": {
           "is_constant": { "b": false },
+          "T": { "type": "DT_VARIANT" },
+          "parallel_iterations": { "i": "10" },
           "frame_name": {
             "s": "bW9kZWwvYWdub3N0aWNfbm1zXzEvYWdub3N0aWNfbm1zL3doaWxl"
-          },
-          "T": { "type": "DT_VARIANT" },
-          "parallel_iterations": { "i": "10" }
+          }
         }
       },
       {
@@ -3503,12 +3503,12 @@
         "op": "Enter",
         "input": ["model/agnostic_nms_1/agnostic_nms/TensorArrayV2_5"],
         "attr": {
-          "is_constant": { "b": false },
+          "parallel_iterations": { "i": "10" },
           "frame_name": {
             "s": "bW9kZWwvYWdub3N0aWNfbm1zXzEvYWdub3N0aWNfbm1zL3doaWxl"
           },
-          "T": { "type": "DT_VARIANT" },
-          "parallel_iterations": { "i": "10" }
+          "is_constant": { "b": false },
+          "T": { "type": "DT_VARIANT" }
         }
       },
       {
@@ -3516,12 +3516,12 @@
         "op": "Enter",
         "input": ["model/agnostic_nms_1/agnostic_nms/TensorArrayV2_6"],
         "attr": {
-          "is_constant": { "b": false },
+          "parallel_iterations": { "i": "10" },
           "frame_name": {
             "s": "bW9kZWwvYWdub3N0aWNfbm1zXzEvYWdub3N0aWNfbm1zL3doaWxl"
           },
-          "T": { "type": "DT_VARIANT" },
-          "parallel_iterations": { "i": "10" }
+          "is_constant": { "b": false },
+          "T": { "type": "DT_VARIANT" }
         }
       },
       {
@@ -3540,7 +3540,7 @@
           "model/agnostic_nms_1/agnostic_nms/while/enter/_4",
           "model/agnostic_nms_1/agnostic_nms/while/next_iteration/_47"
         ],
-        "attr": { "N": { "i": "2" }, "T": { "type": "DT_INT32" } }
+        "attr": { "T": { "type": "DT_INT32" }, "N": { "i": "2" } }
       },
       {
         "name": "model/agnostic_nms_1/agnostic_nms/while/merge/_12",
@@ -3550,9 +3550,9 @@
           "model/agnostic_nms_1/agnostic_nms/while/next_iteration/_45"
         ],
         "attr": {
-          "N": { "i": "2" },
+          "T": { "type": "DT_INT32" },
           "_has_manual_control_dependencies": { "b": true },
-          "T": { "type": "DT_INT32" }
+          "N": { "i": "2" }
         }
       },
       {
@@ -3565,20 +3565,20 @@
         ],
         "device": "/device:CPU:0",
         "attr": {
+          "T": { "type": "DT_FLOAT" },
+          "strides": { "list": { "i": ["1", "2", "2", "1"] } },
+          "padding": { "s": "VkFMSUQ=" },
+          "filter_format": { "s": "SFdJTw==" },
           "num_host_args": { "i": "0" },
           "data_format": { "s": "TkhXQw==" },
-          "filter_format": { "s": "SFdJTw==" },
-          "strides": { "list": { "i": ["1", "2", "2", "1"] } },
-          "num_args": { "i": "1" },
-          "fused_ops": { "list": { "s": ["Qmlhc0FkZA=="] } },
           "TArgs": { "list": { "type": ["DT_FLOAT"] } },
-          "padding": { "s": "VkFMSUQ=" },
-          "use_cudnn_on_gpu": { "b": true },
+          "fused_ops": { "list": { "s": ["Qmlhc0FkZA=="] } },
+          "explicit_paddings": { "list": {} },
           "leakyrelu_alpha": { "f": 0.2 },
           "epsilon": { "f": 0.0 },
-          "T": { "type": "DT_FLOAT" },
-          "explicit_paddings": { "list": {} },
-          "dilations": { "list": { "i": ["1", "1", "1", "1"] } }
+          "dilations": { "list": { "i": ["1", "1", "1", "1"] } },
+          "use_cudnn_on_gpu": { "b": true },
+          "num_args": { "i": "1" }
         }
       },
       {
@@ -3588,7 +3588,7 @@
           "model/agnostic_nms_1/agnostic_nms/while/enter/_5",
           "model/agnostic_nms_1/agnostic_nms/while/next_iteration/_48"
         ],
-        "attr": { "N": { "i": "2" }, "T": { "type": "DT_VARIANT" } }
+        "attr": { "T": { "type": "DT_VARIANT" }, "N": { "i": "2" } }
       },
       {
         "name": "model/agnostic_nms_1/agnostic_nms/while/merge/_16",
@@ -3615,7 +3615,7 @@
           "model/agnostic_nms_1/agnostic_nms/while/enter/_8",
           "model/agnostic_nms_1/agnostic_nms/while/next_iteration/_51"
         ],
-        "attr": { "N": { "i": "2" }, "T": { "type": "DT_VARIANT" } }
+        "attr": { "T": { "type": "DT_VARIANT" }, "N": { "i": "2" } }
       },
       {
         "name": "model/agnostic_nms_1/agnostic_nms/while/cond/_0/model/agnostic_nms_1/agnostic_nms/while/Less_1",
@@ -3631,8 +3631,8 @@
         "op": "Const",
         "input": ["^model/agnostic_nms_1/agnostic_nms/while/merge/_12"],
         "attr": {
-          "value": { "tensor": { "dtype": "DT_INT32", "tensorShape": {} } },
-          "dtype": { "type": "DT_INT32" }
+          "dtype": { "type": "DT_INT32" },
+          "value": { "tensor": { "dtype": "DT_INT32", "tensorShape": {} } }
         }
       },
       {
@@ -3676,8 +3676,8 @@
           "model/tf_conv_1/sequential_1/tf_pad_1/Pad/paddings"
         ],
         "attr": {
-          "Tpaddings": { "type": "DT_INT32" },
-          "T": { "type": "DT_FLOAT" }
+          "T": { "type": "DT_FLOAT" },
+          "Tpaddings": { "type": "DT_INT32" }
         }
       },
       {
@@ -3697,20 +3697,20 @@
         ],
         "device": "/device:CPU:0",
         "attr": {
-          "num_host_args": { "i": "0" },
+          "leakyrelu_alpha": { "f": 0.2 },
           "data_format": { "s": "TkhXQw==" },
-          "filter_format": { "s": "SFdJTw==" },
           "fused_ops": { "list": { "s": ["Qmlhc0FkZA=="] } },
-          "num_args": { "i": "1" },
+          "T": { "type": "DT_FLOAT" },
+          "num_host_args": { "i": "0" },
           "strides": { "list": { "i": ["1", "2", "2", "1"] } },
+          "use_cudnn_on_gpu": { "b": true },
+          "explicit_paddings": { "list": {} },
+          "dilations": { "list": { "i": ["1", "1", "1", "1"] } },
           "TArgs": { "list": { "type": ["DT_FLOAT"] } },
           "padding": { "s": "VkFMSUQ=" },
-          "use_cudnn_on_gpu": { "b": true },
-          "leakyrelu_alpha": { "f": 0.2 },
           "epsilon": { "f": 0.0 },
-          "T": { "type": "DT_FLOAT" },
-          "explicit_paddings": { "list": {} },
-          "dilations": { "list": { "i": ["1", "1", "1", "1"] } }
+          "filter_format": { "s": "SFdJTw==" },
+          "num_args": { "i": "1" }
         }
       },
       {
@@ -3813,8 +3813,8 @@
           "model/agnostic_nms_1/agnostic_nms/while/model/agnostic_nms_1/agnostic_nms/while/loop_counter_switch/_23:1"
         ],
         "attr": {
-          "_has_manual_control_dependencies": { "b": true },
-          "T": { "type": "DT_INT32" }
+          "T": { "type": "DT_INT32" },
+          "_has_manual_control_dependencies": { "b": true }
         }
       },
       {
@@ -3842,8 +3842,8 @@
           "model/agnostic_nms_1/agnostic_nms/TensorArrayV2Stack/TensorListStack/element_shape"
         ],
         "attr": {
-          "num_elements": { "i": "1" },
-          "element_dtype": { "type": "DT_FLOAT" }
+          "element_dtype": { "type": "DT_FLOAT" },
+          "num_elements": { "i": "1" }
         }
       },
       {
@@ -3915,13 +3915,13 @@
           "^model/agnostic_nms_1/agnostic_nms/while/loop_body_control/_33"
         ],
         "attr": {
+          "dtype": { "type": "DT_INT32" },
           "value": {
             "tensor": {
               "dtype": "DT_INT32",
               "tensorShape": { "dim": [{ "size": "1" }] }
             }
-          },
-          "dtype": { "type": "DT_INT32" }
+          }
         }
       },
       {
@@ -3931,13 +3931,13 @@
           "^model/agnostic_nms_1/agnostic_nms/while/loop_body_control/_33"
         ],
         "attr": {
+          "dtype": { "type": "DT_INT32" },
           "value": {
             "tensor": {
               "dtype": "DT_INT32",
               "tensorShape": { "dim": [{ "size": "1" }] }
             }
-          },
-          "dtype": { "type": "DT_INT32" }
+          }
         }
       },
       {
@@ -3947,13 +3947,13 @@
           "^model/agnostic_nms_1/agnostic_nms/while/loop_body_control/_33"
         ],
         "attr": {
+          "dtype": { "type": "DT_INT32" },
           "value": {
             "tensor": {
               "dtype": "DT_INT32",
               "tensorShape": { "dim": [{ "size": "2" }] }
             }
-          },
-          "dtype": { "type": "DT_INT32" }
+          }
         }
       },
       {
@@ -3974,8 +3974,8 @@
           "^model/agnostic_nms_1/agnostic_nms/while/loop_body_control/_33"
         ],
         "attr": {
-          "value": { "tensor": { "dtype": "DT_INT32", "tensorShape": {} } },
-          "dtype": { "type": "DT_INT32" }
+          "dtype": { "type": "DT_INT32" },
+          "value": { "tensor": { "dtype": "DT_INT32", "tensorShape": {} } }
         }
       },
       {
@@ -3985,8 +3985,8 @@
           "^model/agnostic_nms_1/agnostic_nms/while/loop_body_control/_33"
         ],
         "attr": {
-          "value": { "tensor": { "dtype": "DT_INT32", "tensorShape": {} } },
-          "dtype": { "type": "DT_INT32" }
+          "dtype": { "type": "DT_INT32" },
+          "value": { "tensor": { "dtype": "DT_INT32", "tensorShape": {} } }
         }
       },
       {
@@ -4012,13 +4012,13 @@
           "^model/agnostic_nms_1/agnostic_nms/while/loop_body_control/_33"
         ],
         "attr": {
+          "dtype": { "type": "DT_INT32" },
           "value": {
             "tensor": {
               "dtype": "DT_INT32",
               "tensorShape": { "dim": [{ "size": "1" }] }
             }
-          },
-          "dtype": { "type": "DT_INT32" }
+          }
         }
       },
       {
@@ -4028,13 +4028,13 @@
           "^model/agnostic_nms_1/agnostic_nms/while/loop_body_control/_33"
         ],
         "attr": {
+          "dtype": { "type": "DT_INT32" },
           "value": {
             "tensor": {
               "dtype": "DT_INT32",
               "tensorShape": { "dim": [{ "size": "1" }] }
             }
-          },
-          "dtype": { "type": "DT_INT32" }
+          }
         }
       },
       {
@@ -4093,8 +4093,8 @@
           "^model/agnostic_nms_1/agnostic_nms/while/loop_body_control/_33"
         ],
         "attr": {
-          "value": { "tensor": { "dtype": "DT_INT32", "tensorShape": {} } },
-          "dtype": { "type": "DT_INT32" }
+          "dtype": { "type": "DT_INT32" },
+          "value": { "tensor": { "dtype": "DT_INT32", "tensorShape": {} } }
         }
       },
       {
@@ -4104,8 +4104,8 @@
           "^model/agnostic_nms_1/agnostic_nms/while/loop_body_control/_33"
         ],
         "attr": {
-          "value": { "tensor": { "dtype": "DT_INT32", "tensorShape": {} } },
-          "dtype": { "type": "DT_INT32" }
+          "dtype": { "type": "DT_INT32" },
+          "value": { "tensor": { "dtype": "DT_INT32", "tensorShape": {} } }
         }
       },
       {
@@ -4115,8 +4115,8 @@
           "^model/agnostic_nms_1/agnostic_nms/while/loop_body_control/_33"
         ],
         "attr": {
-          "value": { "tensor": { "dtype": "DT_INT32", "tensorShape": {} } },
-          "dtype": { "type": "DT_INT32" }
+          "dtype": { "type": "DT_INT32" },
+          "value": { "tensor": { "dtype": "DT_INT32", "tensorShape": {} } }
         }
       },
       {
@@ -4126,13 +4126,13 @@
           "^model/agnostic_nms_1/agnostic_nms/while/loop_body_control/_33"
         ],
         "attr": {
+          "dtype": { "type": "DT_INT32" },
           "value": {
             "tensor": {
               "dtype": "DT_INT32",
               "tensorShape": { "dim": [{ "size": "1" }] }
             }
-          },
-          "dtype": { "type": "DT_INT32" }
+          }
         }
       },
       {
@@ -4158,13 +4158,13 @@
           "^model/agnostic_nms_1/agnostic_nms/while/loop_body_control/_33"
         ],
         "attr": {
+          "dtype": { "type": "DT_INT32" },
           "value": {
             "tensor": {
               "dtype": "DT_INT32",
               "tensorShape": { "dim": [{ "size": "1" }] }
             }
-          },
-          "dtype": { "type": "DT_INT32" }
+          }
         }
       },
       {
@@ -4201,13 +4201,13 @@
           "^model/agnostic_nms_1/agnostic_nms/while/loop_body_control/_33"
         ],
         "attr": {
+          "dtype": { "type": "DT_INT32" },
           "value": {
             "tensor": {
               "dtype": "DT_INT32",
               "tensorShape": { "dim": [{ "size": "2" }] }
             }
-          },
-          "dtype": { "type": "DT_INT32" }
+          }
         }
       },
       {
@@ -4293,13 +4293,13 @@
           "^model/agnostic_nms_1/agnostic_nms/while/loop_body_control/_33"
         ],
         "attr": {
+          "dtype": { "type": "DT_INT32" },
           "value": {
             "tensor": {
               "dtype": "DT_INT32",
               "tensorShape": { "dim": [{ "size": "1" }] }
             }
-          },
-          "dtype": { "type": "DT_INT32" }
+          }
         }
       },
       {
@@ -4364,20 +4364,20 @@
         ],
         "device": "/device:CPU:0",
         "attr": {
-          "num_host_args": { "i": "0" },
-          "data_format": { "s": "TkhXQw==" },
-          "filter_format": { "s": "SFdJTw==" },
-          "fused_ops": { "list": { "s": ["Qmlhc0FkZA=="] } },
           "num_args": { "i": "1" },
-          "strides": { "list": { "i": ["1", "1", "1", "1"] } },
-          "TArgs": { "list": { "type": ["DT_FLOAT"] } },
-          "padding": { "s": "U0FNRQ==" },
-          "use_cudnn_on_gpu": { "b": true },
-          "leakyrelu_alpha": { "f": 0.2 },
+          "num_host_args": { "i": "0" },
           "epsilon": { "f": 0.0 },
-          "T": { "type": "DT_FLOAT" },
           "explicit_paddings": { "list": {} },
-          "dilations": { "list": { "i": ["1", "1", "1", "1"] } }
+          "padding": { "s": "U0FNRQ==" },
+          "dilations": { "list": { "i": ["1", "1", "1", "1"] } },
+          "data_format": { "s": "TkhXQw==" },
+          "fused_ops": { "list": { "s": ["Qmlhc0FkZA=="] } },
+          "TArgs": { "list": { "type": ["DT_FLOAT"] } },
+          "use_cudnn_on_gpu": { "b": true },
+          "strides": { "list": { "i": ["1", "1", "1", "1"] } },
+          "leakyrelu_alpha": { "f": 0.2 },
+          "filter_format": { "s": "SFdJTw==" },
+          "T": { "type": "DT_FLOAT" }
         }
       },
       {
@@ -4390,20 +4390,20 @@
         ],
         "device": "/device:CPU:0",
         "attr": {
-          "num_host_args": { "i": "0" },
-          "data_format": { "s": "TkhXQw==" },
-          "filter_format": { "s": "SFdJTw==" },
-          "strides": { "list": { "i": ["1", "1", "1", "1"] } },
-          "num_args": { "i": "1" },
-          "fused_ops": { "list": { "s": ["Qmlhc0FkZA=="] } },
-          "TArgs": { "list": { "type": ["DT_FLOAT"] } },
+          "dilations": { "list": { "i": ["1", "1", "1", "1"] } },
           "padding": { "s": "U0FNRQ==" },
-          "use_cudnn_on_gpu": { "b": true },
-          "leakyrelu_alpha": { "f": 0.2 },
           "epsilon": { "f": 0.0 },
-          "T": { "type": "DT_FLOAT" },
+          "strides": { "list": { "i": ["1", "1", "1", "1"] } },
+          "fused_ops": { "list": { "s": ["Qmlhc0FkZA=="] } },
+          "leakyrelu_alpha": { "f": 0.2 },
           "explicit_paddings": { "list": {} },
-          "dilations": { "list": { "i": ["1", "1", "1", "1"] } }
+          "filter_format": { "s": "SFdJTw==" },
+          "data_format": { "s": "TkhXQw==" },
+          "num_args": { "i": "1" },
+          "T": { "type": "DT_FLOAT" },
+          "TArgs": { "list": { "type": ["DT_FLOAT"] } },
+          "num_host_args": { "i": "0" },
+          "use_cudnn_on_gpu": { "b": true }
         }
       },
       {
@@ -4514,20 +4514,20 @@
         ],
         "device": "/device:CPU:0",
         "attr": {
-          "num_host_args": { "i": "0" },
-          "data_format": { "s": "TkhXQw==" },
-          "filter_format": { "s": "SFdJTw==" },
-          "strides": { "list": { "i": ["1", "1", "1", "1"] } },
           "num_args": { "i": "1" },
-          "fused_ops": { "list": { "s": ["Qmlhc0FkZA=="] } },
-          "TArgs": { "list": { "type": ["DT_FLOAT"] } },
-          "padding": { "s": "U0FNRQ==" },
-          "use_cudnn_on_gpu": { "b": true },
-          "leakyrelu_alpha": { "f": 0.2 },
           "epsilon": { "f": 0.0 },
+          "num_host_args": { "i": "0" },
+          "strides": { "list": { "i": ["1", "1", "1", "1"] } },
+          "padding": { "s": "U0FNRQ==" },
+          "dilations": { "list": { "i": ["1", "1", "1", "1"] } },
+          "data_format": { "s": "TkhXQw==" },
+          "leakyrelu_alpha": { "f": 0.2 },
+          "TArgs": { "list": { "type": ["DT_FLOAT"] } },
           "T": { "type": "DT_FLOAT" },
           "explicit_paddings": { "list": {} },
-          "dilations": { "list": { "i": ["1", "1", "1", "1"] } }
+          "fused_ops": { "list": { "s": ["Qmlhc0FkZA=="] } },
+          "filter_format": { "s": "SFdJTw==" },
+          "use_cudnn_on_gpu": { "b": true }
         }
       },
       {
@@ -4557,20 +4557,20 @@
         ],
         "device": "/device:CPU:0",
         "attr": {
+          "leakyrelu_alpha": { "f": 0.2 },
           "num_host_args": { "i": "0" },
           "data_format": { "s": "TkhXQw==" },
           "filter_format": { "s": "SFdJTw==" },
-          "fused_ops": { "list": { "s": ["Qmlhc0FkZA=="] } },
-          "num_args": { "i": "1" },
-          "strides": { "list": { "i": ["1", "1", "1", "1"] } },
-          "TArgs": { "list": { "type": ["DT_FLOAT"] } },
-          "padding": { "s": "U0FNRQ==" },
-          "use_cudnn_on_gpu": { "b": true },
-          "leakyrelu_alpha": { "f": 0.2 },
-          "epsilon": { "f": 0.0 },
-          "T": { "type": "DT_FLOAT" },
           "explicit_paddings": { "list": {} },
-          "dilations": { "list": { "i": ["1", "1", "1", "1"] } }
+          "padding": { "s": "U0FNRQ==" },
+          "epsilon": { "f": 0.0 },
+          "num_args": { "i": "1" },
+          "TArgs": { "list": { "type": ["DT_FLOAT"] } },
+          "T": { "type": "DT_FLOAT" },
+          "use_cudnn_on_gpu": { "b": true },
+          "fused_ops": { "list": { "s": ["Qmlhc0FkZA=="] } },
+          "dilations": { "list": { "i": ["1", "1", "1", "1"] } },
+          "strides": { "list": { "i": ["1", "1", "1", "1"] } }
         }
       },
       {
@@ -4608,8 +4608,8 @@
           "model/tfc3/concat/axis"
         ],
         "attr": {
-          "N": { "i": "2" },
           "T": { "type": "DT_FLOAT" },
+          "N": { "i": "2" },
           "Tidx": { "type": "DT_INT32" }
         }
       },
@@ -4623,19 +4623,19 @@
         ],
         "device": "/device:CPU:0",
         "attr": {
-          "num_host_args": { "i": "0" },
+          "use_cudnn_on_gpu": { "b": true },
           "data_format": { "s": "TkhXQw==" },
           "filter_format": { "s": "SFdJTw==" },
-          "strides": { "list": { "i": ["1", "1", "1", "1"] } },
-          "num_args": { "i": "1" },
-          "fused_ops": { "list": { "s": ["Qmlhc0FkZA=="] } },
-          "TArgs": { "list": { "type": ["DT_FLOAT"] } },
-          "padding": { "s": "U0FNRQ==" },
-          "use_cudnn_on_gpu": { "b": true },
-          "leakyrelu_alpha": { "f": 0.2 },
-          "epsilon": { "f": 0.0 },
-          "T": { "type": "DT_FLOAT" },
           "explicit_paddings": { "list": {} },
+          "num_args": { "i": "1" },
+          "T": { "type": "DT_FLOAT" },
+          "epsilon": { "f": 0.0 },
+          "leakyrelu_alpha": { "f": 0.2 },
+          "num_host_args": { "i": "0" },
+          "TArgs": { "list": { "type": ["DT_FLOAT"] } },
+          "strides": { "list": { "i": ["1", "1", "1", "1"] } },
+          "fused_ops": { "list": { "s": ["Qmlhc0FkZA=="] } },
+          "padding": { "s": "U0FNRQ==" },
           "dilations": { "list": { "i": ["1", "1", "1", "1"] } }
         }
       },
@@ -4662,8 +4662,8 @@
           "model/tf_conv_7/sequential_3/tf_pad_2/Pad/paddings"
         ],
         "attr": {
-          "Tpaddings": { "type": "DT_INT32" },
-          "T": { "type": "DT_FLOAT" }
+          "T": { "type": "DT_FLOAT" },
+          "Tpaddings": { "type": "DT_INT32" }
         }
       },
       {
@@ -4676,20 +4676,20 @@
         ],
         "device": "/device:CPU:0",
         "attr": {
-          "num_host_args": { "i": "0" },
           "data_format": { "s": "TkhXQw==" },
-          "filter_format": { "s": "SFdJTw==" },
-          "fused_ops": { "list": { "s": ["Qmlhc0FkZA=="] } },
-          "num_args": { "i": "1" },
-          "strides": { "list": { "i": ["1", "2", "2", "1"] } },
-          "TArgs": { "list": { "type": ["DT_FLOAT"] } },
-          "padding": { "s": "VkFMSUQ=" },
-          "use_cudnn_on_gpu": { "b": true },
-          "leakyrelu_alpha": { "f": 0.2 },
           "epsilon": { "f": 0.0 },
-          "T": { "type": "DT_FLOAT" },
+          "leakyrelu_alpha": { "f": 0.2 },
+          "num_args": { "i": "1" },
+          "TArgs": { "list": { "type": ["DT_FLOAT"] } },
+          "num_host_args": { "i": "0" },
+          "dilations": { "list": { "i": ["1", "1", "1", "1"] } },
           "explicit_paddings": { "list": {} },
-          "dilations": { "list": { "i": ["1", "1", "1", "1"] } }
+          "fused_ops": { "list": { "s": ["Qmlhc0FkZA=="] } },
+          "strides": { "list": { "i": ["1", "2", "2", "1"] } },
+          "use_cudnn_on_gpu": { "b": true },
+          "filter_format": { "s": "SFdJTw==" },
+          "T": { "type": "DT_FLOAT" },
+          "padding": { "s": "VkFMSUQ=" }
         }
       },
       {
@@ -4717,20 +4717,20 @@
         ],
         "device": "/device:CPU:0",
         "attr": {
-          "num_host_args": { "i": "0" },
-          "data_format": { "s": "TkhXQw==" },
-          "filter_format": { "s": "SFdJTw==" },
-          "fused_ops": { "list": { "s": ["Qmlhc0FkZA=="] } },
-          "num_args": { "i": "1" },
           "strides": { "list": { "i": ["1", "1", "1", "1"] } },
           "TArgs": { "list": { "type": ["DT_FLOAT"] } },
-          "padding": { "s": "U0FNRQ==" },
-          "use_cudnn_on_gpu": { "b": true },
-          "leakyrelu_alpha": { "f": 0.2 },
-          "epsilon": { "f": 0.0 },
+          "data_format": { "s": "TkhXQw==" },
           "T": { "type": "DT_FLOAT" },
           "explicit_paddings": { "list": {} },
-          "dilations": { "list": { "i": ["1", "1", "1", "1"] } }
+          "epsilon": { "f": 0.0 },
+          "leakyrelu_alpha": { "f": 0.2 },
+          "num_args": { "i": "1" },
+          "dilations": { "list": { "i": ["1", "1", "1", "1"] } },
+          "fused_ops": { "list": { "s": ["Qmlhc0FkZA=="] } },
+          "use_cudnn_on_gpu": { "b": true },
+          "padding": { "s": "U0FNRQ==" },
+          "filter_format": { "s": "SFdJTw==" },
+          "num_host_args": { "i": "0" }
         }
       },
       {
@@ -4744,19 +4744,19 @@
         "device": "/device:CPU:0",
         "attr": {
           "num_host_args": { "i": "0" },
-          "data_format": { "s": "TkhXQw==" },
-          "filter_format": { "s": "SFdJTw==" },
-          "strides": { "list": { "i": ["1", "1", "1", "1"] } },
-          "num_args": { "i": "1" },
-          "fused_ops": { "list": { "s": ["Qmlhc0FkZA=="] } },
-          "TArgs": { "list": { "type": ["DT_FLOAT"] } },
-          "padding": { "s": "U0FNRQ==" },
-          "use_cudnn_on_gpu": { "b": true },
-          "leakyrelu_alpha": { "f": 0.2 },
-          "epsilon": { "f": 0.0 },
-          "T": { "type": "DT_FLOAT" },
           "explicit_paddings": { "list": {} },
-          "dilations": { "list": { "i": ["1", "1", "1", "1"] } }
+          "epsilon": { "f": 0.0 },
+          "num_args": { "i": "1" },
+          "dilations": { "list": { "i": ["1", "1", "1", "1"] } },
+          "leakyrelu_alpha": { "f": 0.2 },
+          "data_format": { "s": "TkhXQw==" },
+          "use_cudnn_on_gpu": { "b": true },
+          "strides": { "list": { "i": ["1", "1", "1", "1"] } },
+          "T": { "type": "DT_FLOAT" },
+          "filter_format": { "s": "SFdJTw==" },
+          "TArgs": { "list": { "type": ["DT_FLOAT"] } },
+          "fused_ops": { "list": { "s": ["Qmlhc0FkZA=="] } },
+          "padding": { "s": "U0FNRQ==" }
         }
       },
       {
@@ -4799,20 +4799,20 @@
         ],
         "device": "/device:CPU:0",
         "attr": {
-          "num_host_args": { "i": "0" },
-          "data_format": { "s": "TkhXQw==" },
           "filter_format": { "s": "SFdJTw==" },
-          "strides": { "list": { "i": ["1", "1", "1", "1"] } },
-          "num_args": { "i": "1" },
+          "num_host_args": { "i": "0" },
           "fused_ops": { "list": { "s": ["Qmlhc0FkZA=="] } },
+          "num_args": { "i": "1" },
           "TArgs": { "list": { "type": ["DT_FLOAT"] } },
-          "padding": { "s": "U0FNRQ==" },
-          "use_cudnn_on_gpu": { "b": true },
-          "leakyrelu_alpha": { "f": 0.2 },
           "epsilon": { "f": 0.0 },
+          "use_cudnn_on_gpu": { "b": true },
           "T": { "type": "DT_FLOAT" },
+          "padding": { "s": "U0FNRQ==" },
+          "dilations": { "list": { "i": ["1", "1", "1", "1"] } },
+          "strides": { "list": { "i": ["1", "1", "1", "1"] } },
           "explicit_paddings": { "list": {} },
-          "dilations": { "list": { "i": ["1", "1", "1", "1"] } }
+          "leakyrelu_alpha": { "f": 0.2 },
+          "data_format": { "s": "TkhXQw==" }
         }
       },
       {
@@ -4842,20 +4842,20 @@
         ],
         "device": "/device:CPU:0",
         "attr": {
-          "num_host_args": { "i": "0" },
-          "data_format": { "s": "TkhXQw==" },
-          "filter_format": { "s": "SFdJTw==" },
-          "fused_ops": { "list": { "s": ["Qmlhc0FkZA=="] } },
-          "num_args": { "i": "1" },
-          "strides": { "list": { "i": ["1", "1", "1", "1"] } },
-          "TArgs": { "list": { "type": ["DT_FLOAT"] } },
-          "padding": { "s": "U0FNRQ==" },
-          "use_cudnn_on_gpu": { "b": true },
-          "leakyrelu_alpha": { "f": 0.2 },
-          "epsilon": { "f": 0.0 },
           "T": { "type": "DT_FLOAT" },
+          "filter_format": { "s": "SFdJTw==" },
+          "leakyrelu_alpha": { "f": 0.2 },
+          "num_host_args": { "i": "0" },
           "explicit_paddings": { "list": {} },
-          "dilations": { "list": { "i": ["1", "1", "1", "1"] } }
+          "num_args": { "i": "1" },
+          "padding": { "s": "U0FNRQ==" },
+          "TArgs": { "list": { "type": ["DT_FLOAT"] } },
+          "fused_ops": { "list": { "s": ["Qmlhc0FkZA=="] } },
+          "epsilon": { "f": 0.0 },
+          "data_format": { "s": "TkhXQw==" },
+          "dilations": { "list": { "i": ["1", "1", "1", "1"] } },
+          "strides": { "list": { "i": ["1", "1", "1", "1"] } },
+          "use_cudnn_on_gpu": { "b": true }
         }
       },
       {
@@ -4894,19 +4894,19 @@
         ],
         "device": "/device:CPU:0",
         "attr": {
-          "num_host_args": { "i": "0" },
-          "data_format": { "s": "TkhXQw==" },
-          "filter_format": { "s": "SFdJTw==" },
-          "strides": { "list": { "i": ["1", "1", "1", "1"] } },
-          "num_args": { "i": "1" },
-          "fused_ops": { "list": { "s": ["Qmlhc0FkZA=="] } },
-          "TArgs": { "list": { "type": ["DT_FLOAT"] } },
           "padding": { "s": "U0FNRQ==" },
-          "use_cudnn_on_gpu": { "b": true },
-          "leakyrelu_alpha": { "f": 0.2 },
-          "epsilon": { "f": 0.0 },
           "T": { "type": "DT_FLOAT" },
+          "num_host_args": { "i": "0" },
+          "filter_format": { "s": "SFdJTw==" },
+          "leakyrelu_alpha": { "f": 0.2 },
+          "data_format": { "s": "TkhXQw==" },
+          "strides": { "list": { "i": ["1", "1", "1", "1"] } },
+          "epsilon": { "f": 0.0 },
+          "TArgs": { "list": { "type": ["DT_FLOAT"] } },
+          "num_args": { "i": "1" },
+          "use_cudnn_on_gpu": { "b": true },
           "explicit_paddings": { "list": {} },
+          "fused_ops": { "list": { "s": ["Qmlhc0FkZA=="] } },
           "dilations": { "list": { "i": ["1", "1", "1", "1"] } }
         }
       },
@@ -4939,18 +4939,18 @@
         "attr": {
           "num_host_args": { "i": "0" },
           "data_format": { "s": "TkhXQw==" },
-          "filter_format": { "s": "SFdJTw==" },
-          "strides": { "list": { "i": ["1", "1", "1", "1"] } },
-          "num_args": { "i": "1" },
-          "fused_ops": { "list": { "s": ["Qmlhc0FkZA=="] } },
           "TArgs": { "list": { "type": ["DT_FLOAT"] } },
-          "padding": { "s": "U0FNRQ==" },
-          "use_cudnn_on_gpu": { "b": true },
-          "leakyrelu_alpha": { "f": 0.2 },
+          "filter_format": { "s": "SFdJTw==" },
+          "num_args": { "i": "1" },
+          "strides": { "list": { "i": ["1", "1", "1", "1"] } },
+          "fused_ops": { "list": { "s": ["Qmlhc0FkZA=="] } },
           "epsilon": { "f": 0.0 },
-          "T": { "type": "DT_FLOAT" },
+          "use_cudnn_on_gpu": { "b": true },
+          "dilations": { "list": { "i": ["1", "1", "1", "1"] } },
+          "padding": { "s": "U0FNRQ==" },
           "explicit_paddings": { "list": {} },
-          "dilations": { "list": { "i": ["1", "1", "1", "1"] } }
+          "leakyrelu_alpha": { "f": 0.2 },
+          "T": { "type": "DT_FLOAT" }
         }
       },
       {
@@ -4989,8 +4989,8 @@
         ],
         "attr": {
           "N": { "i": "2" },
-          "T": { "type": "DT_FLOAT" },
-          "Tidx": { "type": "DT_INT32" }
+          "Tidx": { "type": "DT_INT32" },
+          "T": { "type": "DT_FLOAT" }
         }
       },
       {
@@ -5003,20 +5003,20 @@
         ],
         "device": "/device:CPU:0",
         "attr": {
-          "num_host_args": { "i": "0" },
-          "data_format": { "s": "TkhXQw==" },
           "filter_format": { "s": "SFdJTw==" },
-          "strides": { "list": { "i": ["1", "1", "1", "1"] } },
           "num_args": { "i": "1" },
-          "fused_ops": { "list": { "s": ["Qmlhc0FkZA=="] } },
-          "TArgs": { "list": { "type": ["DT_FLOAT"] } },
-          "padding": { "s": "U0FNRQ==" },
-          "use_cudnn_on_gpu": { "b": true },
-          "leakyrelu_alpha": { "f": 0.2 },
-          "epsilon": { "f": 0.0 },
-          "T": { "type": "DT_FLOAT" },
           "explicit_paddings": { "list": {} },
-          "dilations": { "list": { "i": ["1", "1", "1", "1"] } }
+          "T": { "type": "DT_FLOAT" },
+          "use_cudnn_on_gpu": { "b": true },
+          "padding": { "s": "U0FNRQ==" },
+          "num_host_args": { "i": "0" },
+          "strides": { "list": { "i": ["1", "1", "1", "1"] } },
+          "dilations": { "list": { "i": ["1", "1", "1", "1"] } },
+          "TArgs": { "list": { "type": ["DT_FLOAT"] } },
+          "epsilon": { "f": 0.0 },
+          "data_format": { "s": "TkhXQw==" },
+          "fused_ops": { "list": { "s": ["Qmlhc0FkZA=="] } },
+          "leakyrelu_alpha": { "f": 0.2 }
         }
       },
       {
@@ -5056,20 +5056,20 @@
         ],
         "device": "/device:CPU:0",
         "attr": {
-          "num_host_args": { "i": "0" },
           "data_format": { "s": "TkhXQw==" },
-          "filter_format": { "s": "SFdJTw==" },
-          "fused_ops": { "list": { "s": ["Qmlhc0FkZA=="] } },
-          "num_args": { "i": "1" },
-          "strides": { "list": { "i": ["1", "2", "2", "1"] } },
-          "TArgs": { "list": { "type": ["DT_FLOAT"] } },
           "padding": { "s": "VkFMSUQ=" },
           "use_cudnn_on_gpu": { "b": true },
-          "leakyrelu_alpha": { "f": 0.2 },
-          "epsilon": { "f": 0.0 },
-          "T": { "type": "DT_FLOAT" },
           "explicit_paddings": { "list": {} },
-          "dilations": { "list": { "i": ["1", "1", "1", "1"] } }
+          "num_host_args": { "i": "0" },
+          "leakyrelu_alpha": { "f": 0.2 },
+          "filter_format": { "s": "SFdJTw==" },
+          "T": { "type": "DT_FLOAT" },
+          "num_args": { "i": "1" },
+          "dilations": { "list": { "i": ["1", "1", "1", "1"] } },
+          "strides": { "list": { "i": ["1", "2", "2", "1"] } },
+          "epsilon": { "f": 0.0 },
+          "TArgs": { "list": { "type": ["DT_FLOAT"] } },
+          "fused_ops": { "list": { "s": ["Qmlhc0FkZA=="] } }
         }
       },
       {
@@ -5097,20 +5097,20 @@
         ],
         "device": "/device:CPU:0",
         "attr": {
-          "num_host_args": { "i": "0" },
-          "data_format": { "s": "TkhXQw==" },
-          "filter_format": { "s": "SFdJTw==" },
-          "fused_ops": { "list": { "s": ["Qmlhc0FkZA=="] } },
-          "num_args": { "i": "1" },
-          "strides": { "list": { "i": ["1", "1", "1", "1"] } },
-          "TArgs": { "list": { "type": ["DT_FLOAT"] } },
-          "padding": { "s": "U0FNRQ==" },
-          "use_cudnn_on_gpu": { "b": true },
           "leakyrelu_alpha": { "f": 0.2 },
-          "epsilon": { "f": 0.0 },
-          "T": { "type": "DT_FLOAT" },
           "explicit_paddings": { "list": {} },
-          "dilations": { "list": { "i": ["1", "1", "1", "1"] } }
+          "strides": { "list": { "i": ["1", "1", "1", "1"] } },
+          "filter_format": { "s": "SFdJTw==" },
+          "use_cudnn_on_gpu": { "b": true },
+          "epsilon": { "f": 0.0 },
+          "num_host_args": { "i": "0" },
+          "TArgs": { "list": { "type": ["DT_FLOAT"] } },
+          "dilations": { "list": { "i": ["1", "1", "1", "1"] } },
+          "fused_ops": { "list": { "s": ["Qmlhc0FkZA=="] } },
+          "T": { "type": "DT_FLOAT" },
+          "data_format": { "s": "TkhXQw==" },
+          "padding": { "s": "U0FNRQ==" },
+          "num_args": { "i": "1" }
         }
       },
       {
@@ -5123,20 +5123,20 @@
         ],
         "device": "/device:CPU:0",
         "attr": {
+          "padding": { "s": "U0FNRQ==" },
+          "explicit_paddings": { "list": {} },
+          "TArgs": { "list": { "type": ["DT_FLOAT"] } },
           "num_host_args": { "i": "0" },
+          "epsilon": { "f": 0.0 },
           "data_format": { "s": "TkhXQw==" },
-          "filter_format": { "s": "SFdJTw==" },
+          "use_cudnn_on_gpu": { "b": true },
           "fused_ops": { "list": { "s": ["Qmlhc0FkZA=="] } },
           "num_args": { "i": "1" },
           "strides": { "list": { "i": ["1", "1", "1", "1"] } },
-          "TArgs": { "list": { "type": ["DT_FLOAT"] } },
-          "padding": { "s": "U0FNRQ==" },
-          "use_cudnn_on_gpu": { "b": true },
-          "leakyrelu_alpha": { "f": 0.2 },
-          "epsilon": { "f": 0.0 },
+          "filter_format": { "s": "SFdJTw==" },
           "T": { "type": "DT_FLOAT" },
-          "explicit_paddings": { "list": {} },
-          "dilations": { "list": { "i": ["1", "1", "1", "1"] } }
+          "dilations": { "list": { "i": ["1", "1", "1", "1"] } },
+          "leakyrelu_alpha": { "f": 0.2 }
         }
       },
       {
@@ -5179,19 +5179,19 @@
         ],
         "device": "/device:CPU:0",
         "attr": {
-          "num_host_args": { "i": "0" },
-          "data_format": { "s": "TkhXQw==" },
-          "filter_format": { "s": "SFdJTw==" },
-          "fused_ops": { "list": { "s": ["Qmlhc0FkZA=="] } },
-          "num_args": { "i": "1" },
-          "strides": { "list": { "i": ["1", "1", "1", "1"] } },
-          "TArgs": { "list": { "type": ["DT_FLOAT"] } },
           "padding": { "s": "U0FNRQ==" },
-          "use_cudnn_on_gpu": { "b": true },
-          "leakyrelu_alpha": { "f": 0.2 },
-          "epsilon": { "f": 0.0 },
-          "T": { "type": "DT_FLOAT" },
           "explicit_paddings": { "list": {} },
+          "fused_ops": { "list": { "s": ["Qmlhc0FkZA=="] } },
+          "leakyrelu_alpha": { "f": 0.2 },
+          "strides": { "list": { "i": ["1", "1", "1", "1"] } },
+          "filter_format": { "s": "SFdJTw==" },
+          "TArgs": { "list": { "type": ["DT_FLOAT"] } },
+          "data_format": { "s": "TkhXQw==" },
+          "T": { "type": "DT_FLOAT" },
+          "num_host_args": { "i": "0" },
+          "use_cudnn_on_gpu": { "b": true },
+          "epsilon": { "f": 0.0 },
+          "num_args": { "i": "1" },
           "dilations": { "list": { "i": ["1", "1", "1", "1"] } }
         }
       },
@@ -5223,19 +5223,19 @@
         "device": "/device:CPU:0",
         "attr": {
           "num_host_args": { "i": "0" },
-          "data_format": { "s": "TkhXQw==" },
-          "filter_format": { "s": "SFdJTw==" },
           "strides": { "list": { "i": ["1", "1", "1", "1"] } },
-          "num_args": { "i": "1" },
+          "filter_format": { "s": "SFdJTw==" },
           "fused_ops": { "list": { "s": ["Qmlhc0FkZA=="] } },
-          "TArgs": { "list": { "type": ["DT_FLOAT"] } },
-          "padding": { "s": "U0FNRQ==" },
-          "use_cudnn_on_gpu": { "b": true },
-          "leakyrelu_alpha": { "f": 0.2 },
+          "data_format": { "s": "TkhXQw==" },
+          "num_args": { "i": "1" },
           "epsilon": { "f": 0.0 },
           "T": { "type": "DT_FLOAT" },
+          "use_cudnn_on_gpu": { "b": true },
           "explicit_paddings": { "list": {} },
-          "dilations": { "list": { "i": ["1", "1", "1", "1"] } }
+          "dilations": { "list": { "i": ["1", "1", "1", "1"] } },
+          "padding": { "s": "U0FNRQ==" },
+          "leakyrelu_alpha": { "f": 0.2 },
+          "TArgs": { "list": { "type": ["DT_FLOAT"] } }
         }
       },
       {
@@ -5274,20 +5274,20 @@
         ],
         "device": "/device:CPU:0",
         "attr": {
-          "num_host_args": { "i": "0" },
-          "data_format": { "s": "TkhXQw==" },
-          "filter_format": { "s": "SFdJTw==" },
-          "strides": { "list": { "i": ["1", "1", "1", "1"] } },
-          "num_args": { "i": "1" },
-          "fused_ops": { "list": { "s": ["Qmlhc0FkZA=="] } },
-          "TArgs": { "list": { "type": ["DT_FLOAT"] } },
           "padding": { "s": "U0FNRQ==" },
-          "use_cudnn_on_gpu": { "b": true },
-          "leakyrelu_alpha": { "f": 0.2 },
           "epsilon": { "f": 0.0 },
-          "T": { "type": "DT_FLOAT" },
+          "fused_ops": { "list": { "s": ["Qmlhc0FkZA=="] } },
           "explicit_paddings": { "list": {} },
-          "dilations": { "list": { "i": ["1", "1", "1", "1"] } }
+          "filter_format": { "s": "SFdJTw==" },
+          "leakyrelu_alpha": { "f": 0.2 },
+          "T": { "type": "DT_FLOAT" },
+          "num_args": { "i": "1" },
+          "num_host_args": { "i": "0" },
+          "dilations": { "list": { "i": ["1", "1", "1", "1"] } },
+          "strides": { "list": { "i": ["1", "1", "1", "1"] } },
+          "data_format": { "s": "TkhXQw==" },
+          "TArgs": { "list": { "type": ["DT_FLOAT"] } },
+          "use_cudnn_on_gpu": { "b": true }
         }
       },
       {
@@ -5317,20 +5317,20 @@
         ],
         "device": "/device:CPU:0",
         "attr": {
-          "num_host_args": { "i": "0" },
           "data_format": { "s": "TkhXQw==" },
           "filter_format": { "s": "SFdJTw==" },
-          "strides": { "list": { "i": ["1", "1", "1", "1"] } },
-          "num_args": { "i": "1" },
           "fused_ops": { "list": { "s": ["Qmlhc0FkZA=="] } },
-          "TArgs": { "list": { "type": ["DT_FLOAT"] } },
-          "padding": { "s": "U0FNRQ==" },
-          "use_cudnn_on_gpu": { "b": true },
-          "leakyrelu_alpha": { "f": 0.2 },
           "epsilon": { "f": 0.0 },
+          "use_cudnn_on_gpu": { "b": true },
+          "num_args": { "i": "1" },
+          "num_host_args": { "i": "0" },
+          "dilations": { "list": { "i": ["1", "1", "1", "1"] } },
+          "TArgs": { "list": { "type": ["DT_FLOAT"] } },
           "T": { "type": "DT_FLOAT" },
           "explicit_paddings": { "list": {} },
-          "dilations": { "list": { "i": ["1", "1", "1", "1"] } }
+          "leakyrelu_alpha": { "f": 0.2 },
+          "strides": { "list": { "i": ["1", "1", "1", "1"] } },
+          "padding": { "s": "U0FNRQ==" }
         }
       },
       {
@@ -5369,20 +5369,20 @@
         ],
         "device": "/device:CPU:0",
         "attr": {
-          "num_host_args": { "i": "0" },
-          "data_format": { "s": "TkhXQw==" },
-          "filter_format": { "s": "SFdJTw==" },
-          "fused_ops": { "list": { "s": ["Qmlhc0FkZA=="] } },
-          "num_args": { "i": "1" },
-          "strides": { "list": { "i": ["1", "1", "1", "1"] } },
-          "TArgs": { "list": { "type": ["DT_FLOAT"] } },
-          "padding": { "s": "U0FNRQ==" },
           "use_cudnn_on_gpu": { "b": true },
-          "leakyrelu_alpha": { "f": 0.2 },
+          "padding": { "s": "U0FNRQ==" },
           "epsilon": { "f": 0.0 },
           "T": { "type": "DT_FLOAT" },
+          "strides": { "list": { "i": ["1", "1", "1", "1"] } },
+          "leakyrelu_alpha": { "f": 0.2 },
+          "num_args": { "i": "1" },
+          "num_host_args": { "i": "0" },
+          "dilations": { "list": { "i": ["1", "1", "1", "1"] } },
           "explicit_paddings": { "list": {} },
-          "dilations": { "list": { "i": ["1", "1", "1", "1"] } }
+          "TArgs": { "list": { "type": ["DT_FLOAT"] } },
+          "data_format": { "s": "TkhXQw==" },
+          "filter_format": { "s": "SFdJTw==" },
+          "fused_ops": { "list": { "s": ["Qmlhc0FkZA=="] } }
         }
       },
       {
@@ -5412,20 +5412,20 @@
         ],
         "device": "/device:CPU:0",
         "attr": {
-          "num_host_args": { "i": "0" },
-          "data_format": { "s": "TkhXQw==" },
-          "filter_format": { "s": "SFdJTw==" },
+          "dilations": { "list": { "i": ["1", "1", "1", "1"] } },
+          "epsilon": { "f": 0.0 },
           "strides": { "list": { "i": ["1", "1", "1", "1"] } },
-          "num_args": { "i": "1" },
+          "T": { "type": "DT_FLOAT" },
+          "data_format": { "s": "TkhXQw==" },
+          "use_cudnn_on_gpu": { "b": true },
+          "num_host_args": { "i": "0" },
           "fused_ops": { "list": { "s": ["Qmlhc0FkZA=="] } },
+          "explicit_paddings": { "list": {} },
+          "leakyrelu_alpha": { "f": 0.2 },
           "TArgs": { "list": { "type": ["DT_FLOAT"] } },
           "padding": { "s": "U0FNRQ==" },
-          "use_cudnn_on_gpu": { "b": true },
-          "leakyrelu_alpha": { "f": 0.2 },
-          "epsilon": { "f": 0.0 },
-          "T": { "type": "DT_FLOAT" },
-          "explicit_paddings": { "list": {} },
-          "dilations": { "list": { "i": ["1", "1", "1", "1"] } }
+          "filter_format": { "s": "SFdJTw==" },
+          "num_args": { "i": "1" }
         }
       },
       {
@@ -5464,8 +5464,8 @@
         ],
         "attr": {
           "N": { "i": "2" },
-          "T": { "type": "DT_FLOAT" },
-          "Tidx": { "type": "DT_INT32" }
+          "Tidx": { "type": "DT_INT32" },
+          "T": { "type": "DT_FLOAT" }
         }
       },
       {
@@ -5478,20 +5478,20 @@
         ],
         "device": "/device:CPU:0",
         "attr": {
-          "num_host_args": { "i": "0" },
-          "data_format": { "s": "TkhXQw==" },
-          "filter_format": { "s": "SFdJTw==" },
+          "dilations": { "list": { "i": ["1", "1", "1", "1"] } },
           "fused_ops": { "list": { "s": ["Qmlhc0FkZA=="] } },
-          "num_args": { "i": "1" },
-          "strides": { "list": { "i": ["1", "1", "1", "1"] } },
-          "TArgs": { "list": { "type": ["DT_FLOAT"] } },
           "padding": { "s": "U0FNRQ==" },
-          "use_cudnn_on_gpu": { "b": true },
-          "leakyrelu_alpha": { "f": 0.2 },
-          "epsilon": { "f": 0.0 },
+          "strides": { "list": { "i": ["1", "1", "1", "1"] } },
+          "num_args": { "i": "1" },
           "T": { "type": "DT_FLOAT" },
+          "num_host_args": { "i": "0" },
           "explicit_paddings": { "list": {} },
-          "dilations": { "list": { "i": ["1", "1", "1", "1"] } }
+          "epsilon": { "f": 0.0 },
+          "data_format": { "s": "TkhXQw==" },
+          "use_cudnn_on_gpu": { "b": true },
+          "filter_format": { "s": "SFdJTw==" },
+          "TArgs": { "list": { "type": ["DT_FLOAT"] } },
+          "leakyrelu_alpha": { "f": 0.2 }
         }
       },
       {
@@ -5531,20 +5531,20 @@
         ],
         "device": "/device:CPU:0",
         "attr": {
-          "num_host_args": { "i": "0" },
-          "data_format": { "s": "TkhXQw==" },
-          "filter_format": { "s": "SFdJTw==" },
-          "fused_ops": { "list": { "s": ["Qmlhc0FkZA=="] } },
-          "num_args": { "i": "1" },
-          "strides": { "list": { "i": ["1", "2", "2", "1"] } },
           "TArgs": { "list": { "type": ["DT_FLOAT"] } },
-          "padding": { "s": "VkFMSUQ=" },
-          "use_cudnn_on_gpu": { "b": true },
+          "dilations": { "list": { "i": ["1", "1", "1", "1"] } },
           "leakyrelu_alpha": { "f": 0.2 },
-          "epsilon": { "f": 0.0 },
-          "T": { "type": "DT_FLOAT" },
           "explicit_paddings": { "list": {} },
-          "dilations": { "list": { "i": ["1", "1", "1", "1"] } }
+          "strides": { "list": { "i": ["1", "2", "2", "1"] } },
+          "num_host_args": { "i": "0" },
+          "num_args": { "i": "1" },
+          "T": { "type": "DT_FLOAT" },
+          "filter_format": { "s": "SFdJTw==" },
+          "padding": { "s": "VkFMSUQ=" },
+          "data_format": { "s": "TkhXQw==" },
+          "fused_ops": { "list": { "s": ["Qmlhc0FkZA=="] } },
+          "use_cudnn_on_gpu": { "b": true },
+          "epsilon": { "f": 0.0 }
         }
       },
       {
@@ -5572,20 +5572,20 @@
         ],
         "device": "/device:CPU:0",
         "attr": {
-          "num_host_args": { "i": "0" },
-          "data_format": { "s": "TkhXQw==" },
-          "filter_format": { "s": "SFdJTw==" },
-          "strides": { "list": { "i": ["1", "1", "1", "1"] } },
-          "num_args": { "i": "1" },
-          "fused_ops": { "list": { "s": ["Qmlhc0FkZA=="] } },
-          "TArgs": { "list": { "type": ["DT_FLOAT"] } },
-          "padding": { "s": "U0FNRQ==" },
-          "use_cudnn_on_gpu": { "b": true },
-          "leakyrelu_alpha": { "f": 0.2 },
-          "epsilon": { "f": 0.0 },
-          "T": { "type": "DT_FLOAT" },
           "explicit_paddings": { "list": {} },
-          "dilations": { "list": { "i": ["1", "1", "1", "1"] } }
+          "strides": { "list": { "i": ["1", "1", "1", "1"] } },
+          "TArgs": { "list": { "type": ["DT_FLOAT"] } },
+          "T": { "type": "DT_FLOAT" },
+          "filter_format": { "s": "SFdJTw==" },
+          "num_args": { "i": "1" },
+          "padding": { "s": "U0FNRQ==" },
+          "num_host_args": { "i": "0" },
+          "use_cudnn_on_gpu": { "b": true },
+          "epsilon": { "f": 0.0 },
+          "data_format": { "s": "TkhXQw==" },
+          "fused_ops": { "list": { "s": ["Qmlhc0FkZA=="] } },
+          "dilations": { "list": { "i": ["1", "1", "1", "1"] } },
+          "leakyrelu_alpha": { "f": 0.2 }
         }
       },
       {
@@ -5598,20 +5598,20 @@
         ],
         "device": "/device:CPU:0",
         "attr": {
-          "num_host_args": { "i": "0" },
-          "data_format": { "s": "TkhXQw==" },
+          "T": { "type": "DT_FLOAT" },
           "filter_format": { "s": "SFdJTw==" },
+          "data_format": { "s": "TkhXQw==" },
+          "dilations": { "list": { "i": ["1", "1", "1", "1"] } },
+          "use_cudnn_on_gpu": { "b": true },
+          "epsilon": { "f": 0.0 },
+          "TArgs": { "list": { "type": ["DT_FLOAT"] } },
+          "num_host_args": { "i": "0" },
+          "leakyrelu_alpha": { "f": 0.2 },
+          "strides": { "list": { "i": ["1", "1", "1", "1"] } },
+          "explicit_paddings": { "list": {} },
           "fused_ops": { "list": { "s": ["Qmlhc0FkZA=="] } },
           "num_args": { "i": "1" },
-          "strides": { "list": { "i": ["1", "1", "1", "1"] } },
-          "TArgs": { "list": { "type": ["DT_FLOAT"] } },
-          "padding": { "s": "U0FNRQ==" },
-          "use_cudnn_on_gpu": { "b": true },
-          "leakyrelu_alpha": { "f": 0.2 },
-          "epsilon": { "f": 0.0 },
-          "T": { "type": "DT_FLOAT" },
-          "explicit_paddings": { "list": {} },
-          "dilations": { "list": { "i": ["1", "1", "1", "1"] } }
+          "padding": { "s": "U0FNRQ==" }
         }
       },
       {
@@ -5654,20 +5654,20 @@
         ],
         "device": "/device:CPU:0",
         "attr": {
+          "dilations": { "list": { "i": ["1", "1", "1", "1"] } },
+          "fused_ops": { "list": { "s": ["Qmlhc0FkZA=="] } },
+          "explicit_paddings": { "list": {} },
+          "epsilon": { "f": 0.0 },
+          "strides": { "list": { "i": ["1", "1", "1", "1"] } },
           "num_host_args": { "i": "0" },
+          "TArgs": { "list": { "type": ["DT_FLOAT"] } },
+          "leakyrelu_alpha": { "f": 0.2 },
+          "T": { "type": "DT_FLOAT" },
+          "use_cudnn_on_gpu": { "b": true },
           "data_format": { "s": "TkhXQw==" },
           "filter_format": { "s": "SFdJTw==" },
-          "strides": { "list": { "i": ["1", "1", "1", "1"] } },
           "num_args": { "i": "1" },
-          "fused_ops": { "list": { "s": ["Qmlhc0FkZA=="] } },
-          "TArgs": { "list": { "type": ["DT_FLOAT"] } },
-          "padding": { "s": "U0FNRQ==" },
-          "use_cudnn_on_gpu": { "b": true },
-          "leakyrelu_alpha": { "f": 0.2 },
-          "epsilon": { "f": 0.0 },
-          "T": { "type": "DT_FLOAT" },
-          "explicit_paddings": { "list": {} },
-          "dilations": { "list": { "i": ["1", "1", "1", "1"] } }
+          "padding": { "s": "U0FNRQ==" }
         }
       },
       {
@@ -5697,20 +5697,20 @@
         ],
         "device": "/device:CPU:0",
         "attr": {
-          "num_host_args": { "i": "0" },
-          "data_format": { "s": "TkhXQw==" },
-          "filter_format": { "s": "SFdJTw==" },
-          "fused_ops": { "list": { "s": ["Qmlhc0FkZA=="] } },
           "num_args": { "i": "1" },
-          "strides": { "list": { "i": ["1", "1", "1", "1"] } },
+          "num_host_args": { "i": "0" },
+          "fused_ops": { "list": { "s": ["Qmlhc0FkZA=="] } },
           "TArgs": { "list": { "type": ["DT_FLOAT"] } },
           "padding": { "s": "U0FNRQ==" },
-          "use_cudnn_on_gpu": { "b": true },
+          "dilations": { "list": { "i": ["1", "1", "1", "1"] } },
+          "filter_format": { "s": "SFdJTw==" },
           "leakyrelu_alpha": { "f": 0.2 },
-          "epsilon": { "f": 0.0 },
-          "T": { "type": "DT_FLOAT" },
           "explicit_paddings": { "list": {} },
-          "dilations": { "list": { "i": ["1", "1", "1", "1"] } }
+          "strides": { "list": { "i": ["1", "1", "1", "1"] } },
+          "T": { "type": "DT_FLOAT" },
+          "epsilon": { "f": 0.0 },
+          "use_cudnn_on_gpu": { "b": true },
+          "data_format": { "s": "TkhXQw==" }
         }
       },
       {
@@ -5748,8 +5748,8 @@
           "model/tfc3_3/concat/axis"
         ],
         "attr": {
-          "N": { "i": "2" },
           "Tidx": { "type": "DT_INT32" },
+          "N": { "i": "2" },
           "T": { "type": "DT_FLOAT" }
         }
       },
@@ -5763,20 +5763,20 @@
         ],
         "device": "/device:CPU:0",
         "attr": {
-          "num_host_args": { "i": "0" },
-          "data_format": { "s": "TkhXQw==" },
-          "filter_format": { "s": "SFdJTw==" },
-          "fused_ops": { "list": { "s": ["Qmlhc0FkZA=="] } },
-          "num_args": { "i": "1" },
+          "use_cudnn_on_gpu": { "b": true },
           "strides": { "list": { "i": ["1", "1", "1", "1"] } },
+          "explicit_paddings": { "list": {} },
+          "T": { "type": "DT_FLOAT" },
+          "epsilon": { "f": 0.0 },
+          "leakyrelu_alpha": { "f": 0.2 },
           "TArgs": { "list": { "type": ["DT_FLOAT"] } },
           "padding": { "s": "U0FNRQ==" },
-          "use_cudnn_on_gpu": { "b": true },
-          "leakyrelu_alpha": { "f": 0.2 },
-          "epsilon": { "f": 0.0 },
-          "T": { "type": "DT_FLOAT" },
-          "explicit_paddings": { "list": {} },
-          "dilations": { "list": { "i": ["1", "1", "1", "1"] } }
+          "filter_format": { "s": "SFdJTw==" },
+          "fused_ops": { "list": { "s": ["Qmlhc0FkZA=="] } },
+          "dilations": { "list": { "i": ["1", "1", "1", "1"] } },
+          "num_host_args": { "i": "0" },
+          "data_format": { "s": "TkhXQw==" },
+          "num_args": { "i": "1" }
         }
       },
       {
@@ -5804,20 +5804,20 @@
         ],
         "device": "/device:CPU:0",
         "attr": {
-          "num_host_args": { "i": "0" },
+          "strides": { "list": { "i": ["1", "1", "1", "1"] } },
           "data_format": { "s": "TkhXQw==" },
+          "explicit_paddings": { "list": {} },
+          "T": { "type": "DT_FLOAT" },
+          "num_host_args": { "i": "0" },
+          "leakyrelu_alpha": { "f": 0.2 },
+          "dilations": { "list": { "i": ["1", "1", "1", "1"] } },
+          "epsilon": { "f": 0.0 },
+          "num_args": { "i": "1" },
+          "padding": { "s": "U0FNRQ==" },
           "filter_format": { "s": "SFdJTw==" },
           "fused_ops": { "list": { "s": ["Qmlhc0FkZA=="] } },
-          "num_args": { "i": "1" },
-          "strides": { "list": { "i": ["1", "1", "1", "1"] } },
           "TArgs": { "list": { "type": ["DT_FLOAT"] } },
-          "padding": { "s": "U0FNRQ==" },
-          "use_cudnn_on_gpu": { "b": true },
-          "leakyrelu_alpha": { "f": 0.2 },
-          "epsilon": { "f": 0.0 },
-          "T": { "type": "DT_FLOAT" },
-          "explicit_paddings": { "list": {} },
-          "dilations": { "list": { "i": ["1", "1", "1", "1"] } }
+          "use_cudnn_on_gpu": { "b": true }
         }
       },
       {
@@ -5840,12 +5840,12 @@
         "op": "MaxPool",
         "input": ["model/tfsppf/tf_conv_31/mul_1"],
         "attr": {
-          "padding": { "s": "U0FNRQ==" },
           "data_format": { "s": "TkhXQw==" },
-          "T": { "type": "DT_FLOAT" },
+          "padding": { "s": "U0FNRQ==" },
           "explicit_paddings": { "list": {} },
-          "ksize": { "list": { "i": ["1", "5", "5", "1"] } },
-          "strides": { "list": { "i": ["1", "1", "1", "1"] } }
+          "strides": { "list": { "i": ["1", "1", "1", "1"] } },
+          "T": { "type": "DT_FLOAT" },
+          "ksize": { "list": { "i": ["1", "5", "5", "1"] } }
         }
       },
       {
@@ -5853,12 +5853,12 @@
         "op": "MaxPool",
         "input": ["model/tfsppf/max_pooling2d/MaxPool"],
         "attr": {
+          "strides": { "list": { "i": ["1", "1", "1", "1"] } },
           "ksize": { "list": { "i": ["1", "5", "5", "1"] } },
           "data_format": { "s": "TkhXQw==" },
-          "T": { "type": "DT_FLOAT" },
           "explicit_paddings": { "list": {} },
-          "padding": { "s": "U0FNRQ==" },
-          "strides": { "list": { "i": ["1", "1", "1", "1"] } }
+          "T": { "type": "DT_FLOAT" },
+          "padding": { "s": "U0FNRQ==" }
         }
       },
       {
@@ -5866,12 +5866,12 @@
         "op": "MaxPool",
         "input": ["model/tfsppf/max_pooling2d/MaxPool_1"],
         "attr": {
-          "ksize": { "list": { "i": ["1", "5", "5", "1"] } },
           "data_format": { "s": "TkhXQw==" },
-          "T": { "type": "DT_FLOAT" },
           "explicit_paddings": { "list": {} },
+          "T": { "type": "DT_FLOAT" },
           "padding": { "s": "U0FNRQ==" },
-          "strides": { "list": { "i": ["1", "1", "1", "1"] } }
+          "strides": { "list": { "i": ["1", "1", "1", "1"] } },
+          "ksize": { "list": { "i": ["1", "5", "5", "1"] } }
         }
       },
       {
@@ -5885,9 +5885,9 @@
           "model/tfsppf/concat/axis"
         ],
         "attr": {
-          "N": { "i": "4" },
+          "Tidx": { "type": "DT_INT32" },
           "T": { "type": "DT_FLOAT" },
-          "Tidx": { "type": "DT_INT32" }
+          "N": { "i": "4" }
         }
       },
       {
@@ -5900,20 +5900,20 @@
         ],
         "device": "/device:CPU:0",
         "attr": {
-          "num_host_args": { "i": "0" },
-          "data_format": { "s": "TkhXQw==" },
-          "filter_format": { "s": "SFdJTw==" },
-          "fused_ops": { "list": { "s": ["Qmlhc0FkZA=="] } },
-          "num_args": { "i": "1" },
-          "strides": { "list": { "i": ["1", "1", "1", "1"] } },
-          "TArgs": { "list": { "type": ["DT_FLOAT"] } },
           "padding": { "s": "U0FNRQ==" },
+          "epsilon": { "f": 0.0 },
+          "TArgs": { "list": { "type": ["DT_FLOAT"] } },
+          "strides": { "list": { "i": ["1", "1", "1", "1"] } },
+          "explicit_paddings": { "list": {} },
           "use_cudnn_on_gpu": { "b": true },
           "leakyrelu_alpha": { "f": 0.2 },
-          "epsilon": { "f": 0.0 },
-          "T": { "type": "DT_FLOAT" },
-          "explicit_paddings": { "list": {} },
-          "dilations": { "list": { "i": ["1", "1", "1", "1"] } }
+          "num_args": { "i": "1" },
+          "dilations": { "list": { "i": ["1", "1", "1", "1"] } },
+          "filter_format": { "s": "SFdJTw==" },
+          "fused_ops": { "list": { "s": ["Qmlhc0FkZA=="] } },
+          "num_host_args": { "i": "0" },
+          "data_format": { "s": "TkhXQw==" },
+          "T": { "type": "DT_FLOAT" }
         }
       },
       {
@@ -5941,20 +5941,20 @@
         ],
         "device": "/device:CPU:0",
         "attr": {
-          "num_host_args": { "i": "0" },
-          "data_format": { "s": "TkhXQw==" },
-          "filter_format": { "s": "SFdJTw==" },
           "strides": { "list": { "i": ["1", "1", "1", "1"] } },
-          "num_args": { "i": "1" },
-          "fused_ops": { "list": { "s": ["Qmlhc0FkZA=="] } },
-          "TArgs": { "list": { "type": ["DT_FLOAT"] } },
-          "padding": { "s": "U0FNRQ==" },
-          "use_cudnn_on_gpu": { "b": true },
+          "data_format": { "s": "TkhXQw==" },
+          "dilations": { "list": { "i": ["1", "1", "1", "1"] } },
           "leakyrelu_alpha": { "f": 0.2 },
+          "num_host_args": { "i": "0" },
+          "use_cudnn_on_gpu": { "b": true },
+          "padding": { "s": "U0FNRQ==" },
+          "TArgs": { "list": { "type": ["DT_FLOAT"] } },
+          "filter_format": { "s": "SFdJTw==" },
+          "num_args": { "i": "1" },
           "epsilon": { "f": 0.0 },
           "T": { "type": "DT_FLOAT" },
           "explicit_paddings": { "list": {} },
-          "dilations": { "list": { "i": ["1", "1", "1", "1"] } }
+          "fused_ops": { "list": { "s": ["Qmlhc0FkZA=="] } }
         }
       },
       {
@@ -5992,8 +5992,8 @@
         ],
         "attr": {
           "N": { "i": "2" },
-          "T": { "type": "DT_FLOAT" },
-          "Tidx": { "type": "DT_INT32" }
+          "Tidx": { "type": "DT_INT32" },
+          "T": { "type": "DT_FLOAT" }
         }
       },
       {
@@ -6006,20 +6006,20 @@
         ],
         "device": "/device:CPU:0",
         "attr": {
-          "num_host_args": { "i": "0" },
-          "data_format": { "s": "TkhXQw==" },
           "filter_format": { "s": "SFdJTw==" },
-          "strides": { "list": { "i": ["1", "1", "1", "1"] } },
+          "explicit_paddings": { "list": {} },
+          "data_format": { "s": "TkhXQw==" },
           "num_args": { "i": "1" },
-          "fused_ops": { "list": { "s": ["Qmlhc0FkZA=="] } },
           "TArgs": { "list": { "type": ["DT_FLOAT"] } },
           "padding": { "s": "U0FNRQ==" },
-          "use_cudnn_on_gpu": { "b": true },
-          "leakyrelu_alpha": { "f": 0.2 },
+          "dilations": { "list": { "i": ["1", "1", "1", "1"] } },
           "epsilon": { "f": 0.0 },
           "T": { "type": "DT_FLOAT" },
-          "explicit_paddings": { "list": {} },
-          "dilations": { "list": { "i": ["1", "1", "1", "1"] } }
+          "strides": { "list": { "i": ["1", "1", "1", "1"] } },
+          "use_cudnn_on_gpu": { "b": true },
+          "fused_ops": { "list": { "s": ["Qmlhc0FkZA=="] } },
+          "num_host_args": { "i": "0" },
+          "leakyrelu_alpha": { "f": 0.2 }
         }
       },
       {
@@ -6032,20 +6032,20 @@
         ],
         "device": "/device:CPU:0",
         "attr": {
+          "epsilon": { "f": 0.0 },
+          "filter_format": { "s": "SFdJTw==" },
+          "TArgs": { "list": { "type": ["DT_FLOAT"] } },
+          "strides": { "list": { "i": ["1", "1", "1", "1"] } },
+          "explicit_paddings": { "list": {} },
+          "leakyrelu_alpha": { "f": 0.2 },
+          "padding": { "s": "U0FNRQ==" },
           "num_host_args": { "i": "0" },
           "data_format": { "s": "TkhXQw==" },
-          "filter_format": { "s": "SFdJTw==" },
-          "fused_ops": { "list": { "s": ["Qmlhc0FkZA=="] } },
-          "num_args": { "i": "1" },
-          "strides": { "list": { "i": ["1", "1", "1", "1"] } },
-          "TArgs": { "list": { "type": ["DT_FLOAT"] } },
-          "padding": { "s": "U0FNRQ==" },
           "use_cudnn_on_gpu": { "b": true },
-          "leakyrelu_alpha": { "f": 0.2 },
-          "epsilon": { "f": 0.0 },
           "T": { "type": "DT_FLOAT" },
-          "explicit_paddings": { "list": {} },
-          "dilations": { "list": { "i": ["1", "1", "1", "1"] } }
+          "fused_ops": { "list": { "s": ["Qmlhc0FkZA=="] } },
+          "dilations": { "list": { "i": ["1", "1", "1", "1"] } },
+          "num_args": { "i": "1" }
         }
       },
       {
@@ -6089,19 +6089,19 @@
         "device": "/device:CPU:0",
         "attr": {
           "num_host_args": { "i": "0" },
+          "dilations": { "list": { "i": ["1", "1", "1", "1"] } },
+          "explicit_paddings": { "list": {} },
+          "use_cudnn_on_gpu": { "b": true },
+          "padding": { "s": "U0FNRQ==" },
           "data_format": { "s": "TkhXQw==" },
+          "T": { "type": "DT_FLOAT" },
+          "epsilon": { "f": 0.0 },
+          "num_args": { "i": "1" },
           "filter_format": { "s": "SFdJTw==" },
           "fused_ops": { "list": { "s": ["Qmlhc0FkZA=="] } },
-          "num_args": { "i": "1" },
-          "strides": { "list": { "i": ["1", "1", "1", "1"] } },
-          "TArgs": { "list": { "type": ["DT_FLOAT"] } },
-          "padding": { "s": "U0FNRQ==" },
-          "use_cudnn_on_gpu": { "b": true },
           "leakyrelu_alpha": { "f": 0.2 },
-          "epsilon": { "f": 0.0 },
-          "T": { "type": "DT_FLOAT" },
-          "explicit_paddings": { "list": {} },
-          "dilations": { "list": { "i": ["1", "1", "1", "1"] } }
+          "TArgs": { "list": { "type": ["DT_FLOAT"] } },
+          "strides": { "list": { "i": ["1", "1", "1", "1"] } }
         }
       },
       {
@@ -6131,20 +6131,20 @@
         ],
         "device": "/device:CPU:0",
         "attr": {
-          "num_host_args": { "i": "0" },
-          "data_format": { "s": "TkhXQw==" },
-          "filter_format": { "s": "SFdJTw==" },
           "strides": { "list": { "i": ["1", "1", "1", "1"] } },
-          "num_args": { "i": "1" },
-          "fused_ops": { "list": { "s": ["Qmlhc0FkZA=="] } },
-          "TArgs": { "list": { "type": ["DT_FLOAT"] } },
-          "padding": { "s": "U0FNRQ==" },
-          "use_cudnn_on_gpu": { "b": true },
-          "leakyrelu_alpha": { "f": 0.2 },
-          "epsilon": { "f": 0.0 },
           "T": { "type": "DT_FLOAT" },
           "explicit_paddings": { "list": {} },
-          "dilations": { "list": { "i": ["1", "1", "1", "1"] } }
+          "filter_format": { "s": "SFdJTw==" },
+          "num_host_args": { "i": "0" },
+          "padding": { "s": "U0FNRQ==" },
+          "data_format": { "s": "TkhXQw==" },
+          "TArgs": { "list": { "type": ["DT_FLOAT"] } },
+          "use_cudnn_on_gpu": { "b": true },
+          "num_args": { "i": "1" },
+          "dilations": { "list": { "i": ["1", "1", "1", "1"] } },
+          "leakyrelu_alpha": { "f": 0.2 },
+          "fused_ops": { "list": { "s": ["Qmlhc0FkZA=="] } },
+          "epsilon": { "f": 0.0 }
         }
       },
       {
@@ -6174,8 +6174,8 @@
         ],
         "attr": {
           "N": { "i": "2" },
-          "T": { "type": "DT_FLOAT" },
-          "Tidx": { "type": "DT_INT32" }
+          "Tidx": { "type": "DT_INT32" },
+          "T": { "type": "DT_FLOAT" }
         }
       },
       {
@@ -6188,20 +6188,20 @@
         ],
         "device": "/device:CPU:0",
         "attr": {
+          "dilations": { "list": { "i": ["1", "1", "1", "1"] } },
+          "filter_format": { "s": "SFdJTw==" },
           "num_host_args": { "i": "0" },
           "data_format": { "s": "TkhXQw==" },
-          "filter_format": { "s": "SFdJTw==" },
+          "T": { "type": "DT_FLOAT" },
+          "use_cudnn_on_gpu": { "b": true },
+          "padding": { "s": "U0FNRQ==" },
+          "epsilon": { "f": 0.0 },
+          "explicit_paddings": { "list": {} },
+          "fused_ops": { "list": { "s": ["Qmlhc0FkZA=="] } },
           "strides": { "list": { "i": ["1", "1", "1", "1"] } },
           "num_args": { "i": "1" },
-          "fused_ops": { "list": { "s": ["Qmlhc0FkZA=="] } },
           "TArgs": { "list": { "type": ["DT_FLOAT"] } },
-          "padding": { "s": "U0FNRQ==" },
-          "use_cudnn_on_gpu": { "b": true },
-          "leakyrelu_alpha": { "f": 0.2 },
-          "epsilon": { "f": 0.0 },
-          "T": { "type": "DT_FLOAT" },
-          "explicit_paddings": { "list": {} },
-          "dilations": { "list": { "i": ["1", "1", "1", "1"] } }
+          "leakyrelu_alpha": { "f": 0.2 }
         }
       },
       {
@@ -6229,20 +6229,20 @@
         ],
         "device": "/device:CPU:0",
         "attr": {
-          "num_host_args": { "i": "0" },
-          "data_format": { "s": "TkhXQw==" },
-          "filter_format": { "s": "SFdJTw==" },
-          "fused_ops": { "list": { "s": ["Qmlhc0FkZA=="] } },
-          "num_args": { "i": "1" },
           "strides": { "list": { "i": ["1", "1", "1", "1"] } },
-          "TArgs": { "list": { "type": ["DT_FLOAT"] } },
-          "padding": { "s": "U0FNRQ==" },
           "use_cudnn_on_gpu": { "b": true },
           "leakyrelu_alpha": { "f": 0.2 },
+          "num_args": { "i": "1" },
+          "fused_ops": { "list": { "s": ["Qmlhc0FkZA=="] } },
+          "TArgs": { "list": { "type": ["DT_FLOAT"] } },
+          "dilations": { "list": { "i": ["1", "1", "1", "1"] } },
           "epsilon": { "f": 0.0 },
           "T": { "type": "DT_FLOAT" },
           "explicit_paddings": { "list": {} },
-          "dilations": { "list": { "i": ["1", "1", "1", "1"] } }
+          "num_host_args": { "i": "0" },
+          "data_format": { "s": "TkhXQw==" },
+          "filter_format": { "s": "SFdJTw==" },
+          "padding": { "s": "U0FNRQ==" }
         }
       },
       {
@@ -6265,9 +6265,9 @@
         "op": "ResizeNearestNeighbor",
         "input": ["model/tf_conv_39/mul_1", "model/tf_upsample_1/resize/size"],
         "attr": {
-          "T": { "type": "DT_FLOAT" },
+          "half_pixel_centers": { "b": true },
           "align_corners": { "b": false },
-          "half_pixel_centers": { "b": true }
+          "T": { "type": "DT_FLOAT" }
         }
       },
       {
@@ -6279,9 +6279,9 @@
           "model/tf_concat_1/concat/axis"
         ],
         "attr": {
-          "N": { "i": "2" },
+          "T": { "type": "DT_FLOAT" },
           "Tidx": { "type": "DT_INT32" },
-          "T": { "type": "DT_FLOAT" }
+          "N": { "i": "2" }
         }
       },
       {
@@ -6294,20 +6294,20 @@
         ],
         "device": "/device:CPU:0",
         "attr": {
-          "num_host_args": { "i": "0" },
-          "data_format": { "s": "TkhXQw==" },
           "filter_format": { "s": "SFdJTw==" },
-          "strides": { "list": { "i": ["1", "1", "1", "1"] } },
-          "num_args": { "i": "1" },
-          "fused_ops": { "list": { "s": ["Qmlhc0FkZA=="] } },
-          "TArgs": { "list": { "type": ["DT_FLOAT"] } },
+          "dilations": { "list": { "i": ["1", "1", "1", "1"] } },
           "padding": { "s": "U0FNRQ==" },
-          "use_cudnn_on_gpu": { "b": true },
+          "num_args": { "i": "1" },
           "leakyrelu_alpha": { "f": 0.2 },
+          "TArgs": { "list": { "type": ["DT_FLOAT"] } },
+          "fused_ops": { "list": { "s": ["Qmlhc0FkZA=="] } },
+          "use_cudnn_on_gpu": { "b": true },
           "epsilon": { "f": 0.0 },
           "T": { "type": "DT_FLOAT" },
-          "explicit_paddings": { "list": {} },
-          "dilations": { "list": { "i": ["1", "1", "1", "1"] } }
+          "num_host_args": { "i": "0" },
+          "strides": { "list": { "i": ["1", "1", "1", "1"] } },
+          "data_format": { "s": "TkhXQw==" },
+          "explicit_paddings": { "list": {} }
         }
       },
       {
@@ -6320,20 +6320,20 @@
         ],
         "device": "/device:CPU:0",
         "attr": {
-          "num_host_args": { "i": "0" },
+          "epsilon": { "f": 0.0 },
           "data_format": { "s": "TkhXQw==" },
           "filter_format": { "s": "SFdJTw==" },
-          "strides": { "list": { "i": ["1", "1", "1", "1"] } },
-          "num_args": { "i": "1" },
-          "fused_ops": { "list": { "s": ["Qmlhc0FkZA=="] } },
-          "TArgs": { "list": { "type": ["DT_FLOAT"] } },
+          "num_host_args": { "i": "0" },
           "padding": { "s": "U0FNRQ==" },
-          "use_cudnn_on_gpu": { "b": true },
+          "num_args": { "i": "1" },
+          "strides": { "list": { "i": ["1", "1", "1", "1"] } },
           "leakyrelu_alpha": { "f": 0.2 },
-          "epsilon": { "f": 0.0 },
-          "T": { "type": "DT_FLOAT" },
+          "fused_ops": { "list": { "s": ["Qmlhc0FkZA=="] } },
           "explicit_paddings": { "list": {} },
-          "dilations": { "list": { "i": ["1", "1", "1", "1"] } }
+          "TArgs": { "list": { "type": ["DT_FLOAT"] } },
+          "dilations": { "list": { "i": ["1", "1", "1", "1"] } },
+          "use_cudnn_on_gpu": { "b": true },
+          "T": { "type": "DT_FLOAT" }
         }
       },
       {
@@ -6376,20 +6376,20 @@
         ],
         "device": "/device:CPU:0",
         "attr": {
-          "num_host_args": { "i": "0" },
-          "data_format": { "s": "TkhXQw==" },
-          "filter_format": { "s": "SFdJTw==" },
-          "strides": { "list": { "i": ["1", "1", "1", "1"] } },
-          "num_args": { "i": "1" },
-          "fused_ops": { "list": { "s": ["Qmlhc0FkZA=="] } },
-          "TArgs": { "list": { "type": ["DT_FLOAT"] } },
-          "padding": { "s": "U0FNRQ==" },
-          "use_cudnn_on_gpu": { "b": true },
           "leakyrelu_alpha": { "f": 0.2 },
-          "epsilon": { "f": 0.0 },
-          "T": { "type": "DT_FLOAT" },
           "explicit_paddings": { "list": {} },
-          "dilations": { "list": { "i": ["1", "1", "1", "1"] } }
+          "num_args": { "i": "1" },
+          "use_cudnn_on_gpu": { "b": true },
+          "dilations": { "list": { "i": ["1", "1", "1", "1"] } },
+          "num_host_args": { "i": "0" },
+          "strides": { "list": { "i": ["1", "1", "1", "1"] } },
+          "fused_ops": { "list": { "s": ["Qmlhc0FkZA=="] } },
+          "padding": { "s": "U0FNRQ==" },
+          "T": { "type": "DT_FLOAT" },
+          "epsilon": { "f": 0.0 },
+          "TArgs": { "list": { "type": ["DT_FLOAT"] } },
+          "filter_format": { "s": "SFdJTw==" },
+          "data_format": { "s": "TkhXQw==" }
         }
       },
       {
@@ -6419,20 +6419,20 @@
         ],
         "device": "/device:CPU:0",
         "attr": {
-          "num_host_args": { "i": "0" },
+          "use_cudnn_on_gpu": { "b": true },
+          "TArgs": { "list": { "type": ["DT_FLOAT"] } },
           "data_format": { "s": "TkhXQw==" },
           "filter_format": { "s": "SFdJTw==" },
-          "fused_ops": { "list": { "s": ["Qmlhc0FkZA=="] } },
-          "num_args": { "i": "1" },
-          "strides": { "list": { "i": ["1", "1", "1", "1"] } },
-          "TArgs": { "list": { "type": ["DT_FLOAT"] } },
-          "padding": { "s": "U0FNRQ==" },
-          "use_cudnn_on_gpu": { "b": true },
           "leakyrelu_alpha": { "f": 0.2 },
-          "epsilon": { "f": 0.0 },
-          "T": { "type": "DT_FLOAT" },
           "explicit_paddings": { "list": {} },
-          "dilations": { "list": { "i": ["1", "1", "1", "1"] } }
+          "num_args": { "i": "1" },
+          "fused_ops": { "list": { "s": ["Qmlhc0FkZA=="] } },
+          "strides": { "list": { "i": ["1", "1", "1", "1"] } },
+          "dilations": { "list": { "i": ["1", "1", "1", "1"] } },
+          "num_host_args": { "i": "0" },
+          "padding": { "s": "U0FNRQ==" },
+          "epsilon": { "f": 0.0 },
+          "T": { "type": "DT_FLOAT" }
         }
       },
       {
@@ -6461,8 +6461,8 @@
           "model/tfc3_5/concat/axis"
         ],
         "attr": {
-          "N": { "i": "2" },
           "T": { "type": "DT_FLOAT" },
+          "N": { "i": "2" },
           "Tidx": { "type": "DT_INT32" }
         }
       },
@@ -6476,20 +6476,20 @@
         ],
         "device": "/device:CPU:0",
         "attr": {
-          "num_host_args": { "i": "0" },
           "data_format": { "s": "TkhXQw==" },
-          "filter_format": { "s": "SFdJTw==" },
-          "strides": { "list": { "i": ["1", "1", "1", "1"] } },
-          "num_args": { "i": "1" },
-          "fused_ops": { "list": { "s": ["Qmlhc0FkZA=="] } },
-          "TArgs": { "list": { "type": ["DT_FLOAT"] } },
+          "T": { "type": "DT_FLOAT" },
           "padding": { "s": "U0FNRQ==" },
+          "TArgs": { "list": { "type": ["DT_FLOAT"] } },
+          "num_host_args": { "i": "0" },
+          "explicit_paddings": { "list": {} },
           "use_cudnn_on_gpu": { "b": true },
           "leakyrelu_alpha": { "f": 0.2 },
+          "filter_format": { "s": "SFdJTw==" },
+          "dilations": { "list": { "i": ["1", "1", "1", "1"] } },
+          "strides": { "list": { "i": ["1", "1", "1", "1"] } },
           "epsilon": { "f": 0.0 },
-          "T": { "type": "DT_FLOAT" },
-          "explicit_paddings": { "list": {} },
-          "dilations": { "list": { "i": ["1", "1", "1", "1"] } }
+          "num_args": { "i": "1" },
+          "fused_ops": { "list": { "s": ["Qmlhc0FkZA=="] } }
         }
       },
       {
@@ -6517,20 +6517,20 @@
         ],
         "device": "/device:CPU:0",
         "attr": {
-          "num_host_args": { "i": "0" },
-          "data_format": { "s": "TkhXQw==" },
+          "dilations": { "list": { "i": ["1", "1", "1", "1"] } },
+          "explicit_paddings": { "list": {} },
           "filter_format": { "s": "SFdJTw==" },
-          "fused_ops": { "list": { "s": ["Qmlhc0FkZA=="] } },
-          "num_args": { "i": "1" },
-          "strides": { "list": { "i": ["1", "1", "1", "1"] } },
-          "TArgs": { "list": { "type": ["DT_FLOAT"] } },
-          "padding": { "s": "VkFMSUQ=" },
+          "num_host_args": { "i": "0" },
+          "T": { "type": "DT_FLOAT" },
           "use_cudnn_on_gpu": { "b": true },
+          "strides": { "list": { "i": ["1", "1", "1", "1"] } },
+          "padding": { "s": "VkFMSUQ=" },
           "leakyrelu_alpha": { "f": 0.2 },
           "epsilon": { "f": 0.0 },
-          "T": { "type": "DT_FLOAT" },
-          "explicit_paddings": { "list": {} },
-          "dilations": { "list": { "i": ["1", "1", "1", "1"] } }
+          "data_format": { "s": "TkhXQw==" },
+          "TArgs": { "list": { "type": ["DT_FLOAT"] } },
+          "fused_ops": { "list": { "s": ["Qmlhc0FkZA=="] } },
+          "num_args": { "i": "1" }
         }
       },
       {
@@ -6568,19 +6568,19 @@
         "device": "/device:CPU:0",
         "attr": {
           "num_host_args": { "i": "0" },
-          "data_format": { "s": "TkhXQw==" },
-          "filter_format": { "s": "SFdJTw==" },
-          "strides": { "list": { "i": ["1", "2", "2", "1"] } },
-          "num_args": { "i": "1" },
-          "fused_ops": { "list": { "s": ["Qmlhc0FkZA=="] } },
-          "TArgs": { "list": { "type": ["DT_FLOAT"] } },
-          "padding": { "s": "VkFMSUQ=" },
-          "use_cudnn_on_gpu": { "b": true },
           "leakyrelu_alpha": { "f": 0.2 },
-          "epsilon": { "f": 0.0 },
-          "T": { "type": "DT_FLOAT" },
+          "padding": { "s": "VkFMSUQ=" },
+          "filter_format": { "s": "SFdJTw==" },
+          "data_format": { "s": "TkhXQw==" },
           "explicit_paddings": { "list": {} },
-          "dilations": { "list": { "i": ["1", "1", "1", "1"] } }
+          "num_args": { "i": "1" },
+          "TArgs": { "list": { "type": ["DT_FLOAT"] } },
+          "use_cudnn_on_gpu": { "b": true },
+          "fused_ops": { "list": { "s": ["Qmlhc0FkZA=="] } },
+          "dilations": { "list": { "i": ["1", "1", "1", "1"] } },
+          "epsilon": { "f": 0.0 },
+          "strides": { "list": { "i": ["1", "2", "2", "1"] } },
+          "T": { "type": "DT_FLOAT" }
         }
       },
       {
@@ -6593,13 +6593,13 @@
           "model/tf_detect/strided_slice_3/stack_2"
         ],
         "attr": {
-          "shrink_axis_mask": { "i": "0" },
           "Index": { "type": "DT_INT32" },
+          "shrink_axis_mask": { "i": "0" },
           "new_axis_mask": { "i": "0" },
           "begin_mask": { "i": "0" },
-          "end_mask": { "i": "0" },
           "T": { "type": "DT_FLOAT" },
-          "ellipsis_mask": { "i": "1" }
+          "ellipsis_mask": { "i": "1" },
+          "end_mask": { "i": "0" }
         }
       },
       {
@@ -6612,13 +6612,13 @@
           "model/tf_detect/strided_slice_5/stack_2"
         ],
         "attr": {
-          "shrink_axis_mask": { "i": "0" },
-          "Index": { "type": "DT_INT32" },
           "new_axis_mask": { "i": "0" },
-          "begin_mask": { "i": "0" },
-          "end_mask": { "i": "0" },
+          "ellipsis_mask": { "i": "1" },
           "T": { "type": "DT_FLOAT" },
-          "ellipsis_mask": { "i": "1" }
+          "Index": { "type": "DT_INT32" },
+          "shrink_axis_mask": { "i": "0" },
+          "end_mask": { "i": "0" },
+          "begin_mask": { "i": "0" }
         }
       },
       {
@@ -6632,12 +6632,12 @@
         ],
         "attr": {
           "shrink_axis_mask": { "i": "0" },
-          "new_axis_mask": { "i": "0" },
-          "Index": { "type": "DT_INT32" },
           "begin_mask": { "i": "0" },
           "T": { "type": "DT_FLOAT" },
-          "end_mask": { "i": "0" },
-          "ellipsis_mask": { "i": "1" }
+          "ellipsis_mask": { "i": "1" },
+          "Index": { "type": "DT_INT32" },
+          "new_axis_mask": { "i": "0" },
+          "end_mask": { "i": "0" }
         }
       },
       {
@@ -6650,13 +6650,13 @@
           "model/tf_detect/strided_slice_7/stack_2"
         ],
         "attr": {
-          "shrink_axis_mask": { "i": "0" },
           "Index": { "type": "DT_INT32" },
-          "new_axis_mask": { "i": "0" },
-          "begin_mask": { "i": "0" },
-          "end_mask": { "i": "2" },
+          "ellipsis_mask": { "i": "1" },
+          "shrink_axis_mask": { "i": "0" },
           "T": { "type": "DT_FLOAT" },
-          "ellipsis_mask": { "i": "1" }
+          "new_axis_mask": { "i": "0" },
+          "end_mask": { "i": "2" },
+          "begin_mask": { "i": "0" }
         }
       },
       {
@@ -6713,9 +6713,9 @@
           "model/tf_concat_2/concat/axis"
         ],
         "attr": {
+          "Tidx": { "type": "DT_INT32" },
           "N": { "i": "2" },
-          "T": { "type": "DT_FLOAT" },
-          "Tidx": { "type": "DT_INT32" }
+          "T": { "type": "DT_FLOAT" }
         }
       },
       {
@@ -6740,20 +6740,20 @@
         ],
         "device": "/device:CPU:0",
         "attr": {
-          "num_host_args": { "i": "0" },
-          "data_format": { "s": "TkhXQw==" },
-          "filter_format": { "s": "SFdJTw==" },
-          "fused_ops": { "list": { "s": ["Qmlhc0FkZA=="] } },
-          "num_args": { "i": "1" },
-          "strides": { "list": { "i": ["1", "1", "1", "1"] } },
           "TArgs": { "list": { "type": ["DT_FLOAT"] } },
-          "padding": { "s": "U0FNRQ==" },
-          "use_cudnn_on_gpu": { "b": true },
-          "leakyrelu_alpha": { "f": 0.2 },
-          "epsilon": { "f": 0.0 },
-          "T": { "type": "DT_FLOAT" },
+          "num_host_args": { "i": "0" },
+          "strides": { "list": { "i": ["1", "1", "1", "1"] } },
+          "num_args": { "i": "1" },
           "explicit_paddings": { "list": {} },
-          "dilations": { "list": { "i": ["1", "1", "1", "1"] } }
+          "padding": { "s": "U0FNRQ==" },
+          "fused_ops": { "list": { "s": ["Qmlhc0FkZA=="] } },
+          "T": { "type": "DT_FLOAT" },
+          "leakyrelu_alpha": { "f": 0.2 },
+          "filter_format": { "s": "SFdJTw==" },
+          "dilations": { "list": { "i": ["1", "1", "1", "1"] } },
+          "use_cudnn_on_gpu": { "b": true },
+          "data_format": { "s": "TkhXQw==" },
+          "epsilon": { "f": 0.0 }
         }
       },
       {
@@ -6766,20 +6766,20 @@
         ],
         "device": "/device:CPU:0",
         "attr": {
-          "num_host_args": { "i": "0" },
-          "data_format": { "s": "TkhXQw==" },
-          "filter_format": { "s": "SFdJTw==" },
-          "strides": { "list": { "i": ["1", "1", "1", "1"] } },
-          "num_args": { "i": "1" },
-          "fused_ops": { "list": { "s": ["Qmlhc0FkZA=="] } },
-          "TArgs": { "list": { "type": ["DT_FLOAT"] } },
           "padding": { "s": "U0FNRQ==" },
           "use_cudnn_on_gpu": { "b": true },
-          "leakyrelu_alpha": { "f": 0.2 },
-          "epsilon": { "f": 0.0 },
+          "strides": { "list": { "i": ["1", "1", "1", "1"] } },
+          "fused_ops": { "list": { "s": ["Qmlhc0FkZA=="] } },
           "T": { "type": "DT_FLOAT" },
+          "TArgs": { "list": { "type": ["DT_FLOAT"] } },
+          "filter_format": { "s": "SFdJTw==" },
           "explicit_paddings": { "list": {} },
-          "dilations": { "list": { "i": ["1", "1", "1", "1"] } }
+          "num_args": { "i": "1" },
+          "data_format": { "s": "TkhXQw==" },
+          "num_host_args": { "i": "0" },
+          "epsilon": { "f": 0.0 },
+          "dilations": { "list": { "i": ["1", "1", "1", "1"] } },
+          "leakyrelu_alpha": { "f": 0.2 }
         }
       },
       {
@@ -6811,9 +6811,9 @@
           "model/tf_detect/concat/axis"
         ],
         "attr": {
+          "Tidx": { "type": "DT_INT32" },
           "N": { "i": "4" },
-          "T": { "type": "DT_FLOAT" },
-          "Tidx": { "type": "DT_INT32" }
+          "T": { "type": "DT_FLOAT" }
         }
       },
       {
@@ -6856,20 +6856,20 @@
         ],
         "device": "/device:CPU:0",
         "attr": {
-          "num_host_args": { "i": "0" },
-          "data_format": { "s": "TkhXQw==" },
-          "filter_format": { "s": "SFdJTw==" },
-          "strides": { "list": { "i": ["1", "1", "1", "1"] } },
-          "num_args": { "i": "1" },
-          "fused_ops": { "list": { "s": ["Qmlhc0FkZA=="] } },
-          "TArgs": { "list": { "type": ["DT_FLOAT"] } },
-          "padding": { "s": "U0FNRQ==" },
-          "use_cudnn_on_gpu": { "b": true },
-          "leakyrelu_alpha": { "f": 0.2 },
           "epsilon": { "f": 0.0 },
-          "T": { "type": "DT_FLOAT" },
+          "dilations": { "list": { "i": ["1", "1", "1", "1"] } },
           "explicit_paddings": { "list": {} },
-          "dilations": { "list": { "i": ["1", "1", "1", "1"] } }
+          "use_cudnn_on_gpu": { "b": true },
+          "data_format": { "s": "TkhXQw==" },
+          "num_args": { "i": "1" },
+          "num_host_args": { "i": "0" },
+          "fused_ops": { "list": { "s": ["Qmlhc0FkZA=="] } },
+          "filter_format": { "s": "SFdJTw==" },
+          "T": { "type": "DT_FLOAT" },
+          "TArgs": { "list": { "type": ["DT_FLOAT"] } },
+          "strides": { "list": { "i": ["1", "1", "1", "1"] } },
+          "leakyrelu_alpha": { "f": 0.2 },
+          "padding": { "s": "U0FNRQ==" }
         }
       },
       {
@@ -6899,20 +6899,20 @@
         ],
         "device": "/device:CPU:0",
         "attr": {
-          "num_host_args": { "i": "0" },
-          "data_format": { "s": "TkhXQw==" },
-          "filter_format": { "s": "SFdJTw==" },
-          "strides": { "list": { "i": ["1", "1", "1", "1"] } },
-          "num_args": { "i": "1" },
-          "fused_ops": { "list": { "s": ["Qmlhc0FkZA=="] } },
-          "TArgs": { "list": { "type": ["DT_FLOAT"] } },
-          "padding": { "s": "U0FNRQ==" },
-          "use_cudnn_on_gpu": { "b": true },
           "leakyrelu_alpha": { "f": 0.2 },
-          "epsilon": { "f": 0.0 },
+          "padding": { "s": "U0FNRQ==" },
+          "TArgs": { "list": { "type": ["DT_FLOAT"] } },
+          "num_args": { "i": "1" },
+          "num_host_args": { "i": "0" },
+          "filter_format": { "s": "SFdJTw==" },
+          "use_cudnn_on_gpu": { "b": true },
+          "dilations": { "list": { "i": ["1", "1", "1", "1"] } },
+          "fused_ops": { "list": { "s": ["Qmlhc0FkZA=="] } },
+          "strides": { "list": { "i": ["1", "1", "1", "1"] } },
+          "data_format": { "s": "TkhXQw==" },
           "T": { "type": "DT_FLOAT" },
           "explicit_paddings": { "list": {} },
-          "dilations": { "list": { "i": ["1", "1", "1", "1"] } }
+          "epsilon": { "f": 0.0 }
         }
       },
       {
@@ -6941,9 +6941,9 @@
           "model/tfc3_6/concat/axis"
         ],
         "attr": {
-          "N": { "i": "2" },
           "T": { "type": "DT_FLOAT" },
-          "Tidx": { "type": "DT_INT32" }
+          "Tidx": { "type": "DT_INT32" },
+          "N": { "i": "2" }
         }
       },
       {
@@ -6956,20 +6956,20 @@
         ],
         "device": "/device:CPU:0",
         "attr": {
-          "num_host_args": { "i": "0" },
-          "data_format": { "s": "TkhXQw==" },
-          "filter_format": { "s": "SFdJTw==" },
-          "strides": { "list": { "i": ["1", "1", "1", "1"] } },
-          "num_args": { "i": "1" },
-          "fused_ops": { "list": { "s": ["Qmlhc0FkZA=="] } },
           "TArgs": { "list": { "type": ["DT_FLOAT"] } },
-          "padding": { "s": "U0FNRQ==" },
+          "num_host_args": { "i": "0" },
           "use_cudnn_on_gpu": { "b": true },
           "leakyrelu_alpha": { "f": 0.2 },
-          "epsilon": { "f": 0.0 },
-          "T": { "type": "DT_FLOAT" },
+          "strides": { "list": { "i": ["1", "1", "1", "1"] } },
+          "filter_format": { "s": "SFdJTw==" },
+          "num_args": { "i": "1" },
+          "padding": { "s": "U0FNRQ==" },
           "explicit_paddings": { "list": {} },
-          "dilations": { "list": { "i": ["1", "1", "1", "1"] } }
+          "dilations": { "list": { "i": ["1", "1", "1", "1"] } },
+          "data_format": { "s": "TkhXQw==" },
+          "T": { "type": "DT_FLOAT" },
+          "fused_ops": { "list": { "s": ["Qmlhc0FkZA=="] } },
+          "epsilon": { "f": 0.0 }
         }
       },
       {
@@ -6997,20 +6997,20 @@
         ],
         "device": "/device:CPU:0",
         "attr": {
-          "num_host_args": { "i": "0" },
-          "data_format": { "s": "TkhXQw==" },
-          "filter_format": { "s": "SFdJTw==" },
           "strides": { "list": { "i": ["1", "1", "1", "1"] } },
-          "num_args": { "i": "1" },
-          "fused_ops": { "list": { "s": ["Qmlhc0FkZA=="] } },
+          "explicit_paddings": { "list": {} },
+          "data_format": { "s": "TkhXQw==" },
+          "T": { "type": "DT_FLOAT" },
           "TArgs": { "list": { "type": ["DT_FLOAT"] } },
+          "leakyrelu_alpha": { "f": 0.2 },
+          "num_args": { "i": "1" },
+          "filter_format": { "s": "SFdJTw==" },
+          "epsilon": { "f": 0.0 },
+          "fused_ops": { "list": { "s": ["Qmlhc0FkZA=="] } },
           "padding": { "s": "VkFMSUQ=" },
           "use_cudnn_on_gpu": { "b": true },
-          "leakyrelu_alpha": { "f": 0.2 },
-          "epsilon": { "f": 0.0 },
-          "T": { "type": "DT_FLOAT" },
-          "explicit_paddings": { "list": {} },
-          "dilations": { "list": { "i": ["1", "1", "1", "1"] } }
+          "dilations": { "list": { "i": ["1", "1", "1", "1"] } },
+          "num_host_args": { "i": "0" }
         }
       },
       {
@@ -7021,8 +7021,8 @@
           "model/tf_conv_51/sequential_13/tf_pad_6/Pad/paddings"
         ],
         "attr": {
-          "Tpaddings": { "type": "DT_INT32" },
-          "T": { "type": "DT_FLOAT" }
+          "T": { "type": "DT_FLOAT" },
+          "Tpaddings": { "type": "DT_INT32" }
         }
       },
       {
@@ -7047,20 +7047,20 @@
         ],
         "device": "/device:CPU:0",
         "attr": {
-          "num_host_args": { "i": "0" },
-          "data_format": { "s": "TkhXQw==" },
-          "filter_format": { "s": "SFdJTw==" },
-          "strides": { "list": { "i": ["1", "2", "2", "1"] } },
-          "num_args": { "i": "1" },
-          "fused_ops": { "list": { "s": ["Qmlhc0FkZA=="] } },
-          "TArgs": { "list": { "type": ["DT_FLOAT"] } },
-          "padding": { "s": "VkFMSUQ=" },
-          "use_cudnn_on_gpu": { "b": true },
-          "leakyrelu_alpha": { "f": 0.2 },
           "epsilon": { "f": 0.0 },
-          "T": { "type": "DT_FLOAT" },
+          "use_cudnn_on_gpu": { "b": true },
+          "padding": { "s": "VkFMSUQ=" },
+          "dilations": { "list": { "i": ["1", "1", "1", "1"] } },
+          "strides": { "list": { "i": ["1", "2", "2", "1"] } },
+          "TArgs": { "list": { "type": ["DT_FLOAT"] } },
+          "filter_format": { "s": "SFdJTw==" },
+          "fused_ops": { "list": { "s": ["Qmlhc0FkZA=="] } },
           "explicit_paddings": { "list": {} },
-          "dilations": { "list": { "i": ["1", "1", "1", "1"] } }
+          "T": { "type": "DT_FLOAT" },
+          "data_format": { "s": "TkhXQw==" },
+          "num_host_args": { "i": "0" },
+          "num_args": { "i": "1" },
+          "leakyrelu_alpha": { "f": 0.2 }
         }
       },
       {
@@ -7073,13 +7073,13 @@
           "model/tf_detect/strided_slice_11/stack_2"
         ],
         "attr": {
-          "shrink_axis_mask": { "i": "0" },
-          "new_axis_mask": { "i": "0" },
           "Index": { "type": "DT_INT32" },
+          "shrink_axis_mask": { "i": "0" },
           "begin_mask": { "i": "0" },
-          "T": { "type": "DT_FLOAT" },
+          "ellipsis_mask": { "i": "1" },
+          "new_axis_mask": { "i": "0" },
           "end_mask": { "i": "0" },
-          "ellipsis_mask": { "i": "1" }
+          "T": { "type": "DT_FLOAT" }
         }
       },
       {
@@ -7092,13 +7092,13 @@
           "model/tf_detect/strided_slice_13/stack_2"
         ],
         "attr": {
-          "shrink_axis_mask": { "i": "0" },
-          "Index": { "type": "DT_INT32" },
-          "new_axis_mask": { "i": "0" },
-          "begin_mask": { "i": "0" },
-          "T": { "type": "DT_FLOAT" },
+          "ellipsis_mask": { "i": "1" },
           "end_mask": { "i": "0" },
-          "ellipsis_mask": { "i": "1" }
+          "begin_mask": { "i": "0" },
+          "shrink_axis_mask": { "i": "0" },
+          "new_axis_mask": { "i": "0" },
+          "Index": { "type": "DT_INT32" },
+          "T": { "type": "DT_FLOAT" }
         }
       },
       {
@@ -7111,13 +7111,13 @@
           "model/tf_detect/strided_slice_14/stack_2"
         ],
         "attr": {
-          "shrink_axis_mask": { "i": "0" },
+          "ellipsis_mask": { "i": "1" },
+          "T": { "type": "DT_FLOAT" },
           "new_axis_mask": { "i": "0" },
-          "Index": { "type": "DT_INT32" },
           "begin_mask": { "i": "0" },
           "end_mask": { "i": "0" },
-          "T": { "type": "DT_FLOAT" },
-          "ellipsis_mask": { "i": "1" }
+          "shrink_axis_mask": { "i": "0" },
+          "Index": { "type": "DT_INT32" }
         }
       },
       {
@@ -7131,12 +7131,12 @@
         ],
         "attr": {
           "shrink_axis_mask": { "i": "0" },
-          "new_axis_mask": { "i": "0" },
-          "Index": { "type": "DT_INT32" },
-          "begin_mask": { "i": "0" },
-          "T": { "type": "DT_FLOAT" },
+          "ellipsis_mask": { "i": "1" },
           "end_mask": { "i": "2" },
-          "ellipsis_mask": { "i": "1" }
+          "T": { "type": "DT_FLOAT" },
+          "begin_mask": { "i": "0" },
+          "Index": { "type": "DT_INT32" },
+          "new_axis_mask": { "i": "0" }
         }
       },
       {
@@ -7193,9 +7193,9 @@
           "model/tf_concat_3/concat/axis"
         ],
         "attr": {
-          "N": { "i": "2" },
           "Tidx": { "type": "DT_INT32" },
-          "T": { "type": "DT_FLOAT" }
+          "T": { "type": "DT_FLOAT" },
+          "N": { "i": "2" }
         }
       },
       {
@@ -7220,20 +7220,20 @@
         ],
         "device": "/device:CPU:0",
         "attr": {
-          "num_host_args": { "i": "0" },
-          "data_format": { "s": "TkhXQw==" },
-          "filter_format": { "s": "SFdJTw==" },
           "fused_ops": { "list": { "s": ["Qmlhc0FkZA=="] } },
-          "num_args": { "i": "1" },
-          "strides": { "list": { "i": ["1", "1", "1", "1"] } },
-          "TArgs": { "list": { "type": ["DT_FLOAT"] } },
-          "padding": { "s": "U0FNRQ==" },
-          "use_cudnn_on_gpu": { "b": true },
-          "leakyrelu_alpha": { "f": 0.2 },
-          "epsilon": { "f": 0.0 },
+          "num_host_args": { "i": "0" },
           "T": { "type": "DT_FLOAT" },
+          "use_cudnn_on_gpu": { "b": true },
           "explicit_paddings": { "list": {} },
-          "dilations": { "list": { "i": ["1", "1", "1", "1"] } }
+          "padding": { "s": "U0FNRQ==" },
+          "TArgs": { "list": { "type": ["DT_FLOAT"] } },
+          "num_args": { "i": "1" },
+          "filter_format": { "s": "SFdJTw==" },
+          "epsilon": { "f": 0.0 },
+          "data_format": { "s": "TkhXQw==" },
+          "strides": { "list": { "i": ["1", "1", "1", "1"] } },
+          "dilations": { "list": { "i": ["1", "1", "1", "1"] } },
+          "leakyrelu_alpha": { "f": 0.2 }
         }
       },
       {
@@ -7246,20 +7246,20 @@
         ],
         "device": "/device:CPU:0",
         "attr": {
-          "num_host_args": { "i": "0" },
-          "data_format": { "s": "TkhXQw==" },
-          "filter_format": { "s": "SFdJTw==" },
-          "fused_ops": { "list": { "s": ["Qmlhc0FkZA=="] } },
-          "num_args": { "i": "1" },
-          "strides": { "list": { "i": ["1", "1", "1", "1"] } },
-          "TArgs": { "list": { "type": ["DT_FLOAT"] } },
-          "padding": { "s": "U0FNRQ==" },
-          "use_cudnn_on_gpu": { "b": true },
           "leakyrelu_alpha": { "f": 0.2 },
-          "epsilon": { "f": 0.0 },
-          "T": { "type": "DT_FLOAT" },
           "explicit_paddings": { "list": {} },
-          "dilations": { "list": { "i": ["1", "1", "1", "1"] } }
+          "fused_ops": { "list": { "s": ["Qmlhc0FkZA=="] } },
+          "use_cudnn_on_gpu": { "b": true },
+          "padding": { "s": "U0FNRQ==" },
+          "dilations": { "list": { "i": ["1", "1", "1", "1"] } },
+          "data_format": { "s": "TkhXQw==" },
+          "strides": { "list": { "i": ["1", "1", "1", "1"] } },
+          "filter_format": { "s": "SFdJTw==" },
+          "epsilon": { "f": 0.0 },
+          "TArgs": { "list": { "type": ["DT_FLOAT"] } },
+          "num_args": { "i": "1" },
+          "num_host_args": { "i": "0" },
+          "T": { "type": "DT_FLOAT" }
         }
       },
       {
@@ -7292,8 +7292,8 @@
         ],
         "attr": {
           "N": { "i": "4" },
-          "Tidx": { "type": "DT_INT32" },
-          "T": { "type": "DT_FLOAT" }
+          "T": { "type": "DT_FLOAT" },
+          "Tidx": { "type": "DT_INT32" }
         }
       },
       {
@@ -7336,19 +7336,19 @@
         ],
         "device": "/device:CPU:0",
         "attr": {
-          "num_host_args": { "i": "0" },
-          "data_format": { "s": "TkhXQw==" },
-          "filter_format": { "s": "SFdJTw==" },
-          "fused_ops": { "list": { "s": ["Qmlhc0FkZA=="] } },
-          "num_args": { "i": "1" },
           "strides": { "list": { "i": ["1", "1", "1", "1"] } },
-          "TArgs": { "list": { "type": ["DT_FLOAT"] } },
-          "padding": { "s": "U0FNRQ==" },
-          "use_cudnn_on_gpu": { "b": true },
-          "leakyrelu_alpha": { "f": 0.2 },
-          "epsilon": { "f": 0.0 },
-          "T": { "type": "DT_FLOAT" },
           "explicit_paddings": { "list": {} },
+          "leakyrelu_alpha": { "f": 0.2 },
+          "TArgs": { "list": { "type": ["DT_FLOAT"] } },
+          "fused_ops": { "list": { "s": ["Qmlhc0FkZA=="] } },
+          "use_cudnn_on_gpu": { "b": true },
+          "padding": { "s": "U0FNRQ==" },
+          "T": { "type": "DT_FLOAT" },
+          "filter_format": { "s": "SFdJTw==" },
+          "data_format": { "s": "TkhXQw==" },
+          "num_host_args": { "i": "0" },
+          "num_args": { "i": "1" },
+          "epsilon": { "f": 0.0 },
           "dilations": { "list": { "i": ["1", "1", "1", "1"] } }
         }
       },
@@ -7379,20 +7379,20 @@
         ],
         "device": "/device:CPU:0",
         "attr": {
+          "padding": { "s": "U0FNRQ==" },
           "num_host_args": { "i": "0" },
-          "data_format": { "s": "TkhXQw==" },
-          "filter_format": { "s": "SFdJTw==" },
+          "epsilon": { "f": 0.0 },
           "fused_ops": { "list": { "s": ["Qmlhc0FkZA=="] } },
-          "num_args": { "i": "1" },
+          "use_cudnn_on_gpu": { "b": true },
+          "T": { "type": "DT_FLOAT" },
+          "dilations": { "list": { "i": ["1", "1", "1", "1"] } },
           "strides": { "list": { "i": ["1", "1", "1", "1"] } },
           "TArgs": { "list": { "type": ["DT_FLOAT"] } },
-          "padding": { "s": "U0FNRQ==" },
-          "use_cudnn_on_gpu": { "b": true },
-          "leakyrelu_alpha": { "f": 0.2 },
-          "epsilon": { "f": 0.0 },
-          "T": { "type": "DT_FLOAT" },
           "explicit_paddings": { "list": {} },
-          "dilations": { "list": { "i": ["1", "1", "1", "1"] } }
+          "filter_format": { "s": "SFdJTw==" },
+          "data_format": { "s": "TkhXQw==" },
+          "num_args": { "i": "1" },
+          "leakyrelu_alpha": { "f": 0.2 }
         }
       },
       {
@@ -7436,20 +7436,20 @@
         ],
         "device": "/device:CPU:0",
         "attr": {
-          "num_host_args": { "i": "0" },
-          "data_format": { "s": "TkhXQw==" },
-          "filter_format": { "s": "SFdJTw==" },
-          "strides": { "list": { "i": ["1", "1", "1", "1"] } },
-          "num_args": { "i": "1" },
-          "fused_ops": { "list": { "s": ["Qmlhc0FkZA=="] } },
           "TArgs": { "list": { "type": ["DT_FLOAT"] } },
+          "epsilon": { "f": 0.0 },
+          "filter_format": { "s": "SFdJTw==" },
+          "num_args": { "i": "1" },
+          "dilations": { "list": { "i": ["1", "1", "1", "1"] } },
+          "T": { "type": "DT_FLOAT" },
           "padding": { "s": "U0FNRQ==" },
           "use_cudnn_on_gpu": { "b": true },
-          "leakyrelu_alpha": { "f": 0.2 },
-          "epsilon": { "f": 0.0 },
-          "T": { "type": "DT_FLOAT" },
           "explicit_paddings": { "list": {} },
-          "dilations": { "list": { "i": ["1", "1", "1", "1"] } }
+          "strides": { "list": { "i": ["1", "1", "1", "1"] } },
+          "data_format": { "s": "TkhXQw==" },
+          "leakyrelu_alpha": { "f": 0.2 },
+          "fused_ops": { "list": { "s": ["Qmlhc0FkZA=="] } },
+          "num_host_args": { "i": "0" }
         }
       },
       {
@@ -7477,20 +7477,20 @@
         ],
         "device": "/device:CPU:0",
         "attr": {
-          "num_host_args": { "i": "0" },
-          "data_format": { "s": "TkhXQw==" },
-          "filter_format": { "s": "SFdJTw==" },
-          "strides": { "list": { "i": ["1", "1", "1", "1"] } },
           "num_args": { "i": "1" },
-          "fused_ops": { "list": { "s": ["Qmlhc0FkZA=="] } },
-          "TArgs": { "list": { "type": ["DT_FLOAT"] } },
+          "strides": { "list": { "i": ["1", "1", "1", "1"] } },
           "padding": { "s": "VkFMSUQ=" },
-          "use_cudnn_on_gpu": { "b": true },
-          "leakyrelu_alpha": { "f": 0.2 },
-          "epsilon": { "f": 0.0 },
+          "num_host_args": { "i": "0" },
+          "dilations": { "list": { "i": ["1", "1", "1", "1"] } },
           "T": { "type": "DT_FLOAT" },
           "explicit_paddings": { "list": {} },
-          "dilations": { "list": { "i": ["1", "1", "1", "1"] } }
+          "TArgs": { "list": { "type": ["DT_FLOAT"] } },
+          "use_cudnn_on_gpu": { "b": true },
+          "data_format": { "s": "TkhXQw==" },
+          "fused_ops": { "list": { "s": ["Qmlhc0FkZA=="] } },
+          "filter_format": { "s": "SFdJTw==" },
+          "epsilon": { "f": 0.0 },
+          "leakyrelu_alpha": { "f": 0.2 }
         }
       },
       {
@@ -7515,13 +7515,13 @@
           "model/tf_detect/strided_slice_19/stack_2"
         ],
         "attr": {
+          "end_mask": { "i": "0" },
+          "new_axis_mask": { "i": "0" },
+          "T": { "type": "DT_FLOAT" },
           "shrink_axis_mask": { "i": "0" },
           "Index": { "type": "DT_INT32" },
-          "new_axis_mask": { "i": "0" },
-          "begin_mask": { "i": "0" },
-          "T": { "type": "DT_FLOAT" },
-          "end_mask": { "i": "0" },
-          "ellipsis_mask": { "i": "1" }
+          "ellipsis_mask": { "i": "1" },
+          "begin_mask": { "i": "0" }
         }
       },
       {
@@ -7534,13 +7534,13 @@
           "model/tf_detect/strided_slice_21/stack_2"
         ],
         "attr": {
-          "shrink_axis_mask": { "i": "0" },
           "new_axis_mask": { "i": "0" },
-          "Index": { "type": "DT_INT32" },
-          "begin_mask": { "i": "0" },
           "T": { "type": "DT_FLOAT" },
+          "shrink_axis_mask": { "i": "0" },
           "end_mask": { "i": "0" },
-          "ellipsis_mask": { "i": "1" }
+          "Index": { "type": "DT_INT32" },
+          "ellipsis_mask": { "i": "1" },
+          "begin_mask": { "i": "0" }
         }
       },
       {
@@ -7553,13 +7553,13 @@
           "model/tf_detect/strided_slice_22/stack_2"
         ],
         "attr": {
-          "shrink_axis_mask": { "i": "0" },
-          "new_axis_mask": { "i": "0" },
           "Index": { "type": "DT_INT32" },
+          "ellipsis_mask": { "i": "1" },
           "begin_mask": { "i": "0" },
-          "T": { "type": "DT_FLOAT" },
+          "new_axis_mask": { "i": "0" },
           "end_mask": { "i": "0" },
-          "ellipsis_mask": { "i": "1" }
+          "T": { "type": "DT_FLOAT" },
+          "shrink_axis_mask": { "i": "0" }
         }
       },
       {
@@ -7572,13 +7572,13 @@
           "model/tf_detect/strided_slice_23/stack_2"
         ],
         "attr": {
+          "T": { "type": "DT_FLOAT" },
           "shrink_axis_mask": { "i": "0" },
           "new_axis_mask": { "i": "0" },
-          "Index": { "type": "DT_INT32" },
-          "begin_mask": { "i": "0" },
-          "T": { "type": "DT_FLOAT" },
           "end_mask": { "i": "2" },
-          "ellipsis_mask": { "i": "1" }
+          "Index": { "type": "DT_INT32" },
+          "ellipsis_mask": { "i": "1" },
+          "begin_mask": { "i": "0" }
         }
       },
       {
@@ -7640,8 +7640,8 @@
           "model/tf_detect/concat_2/axis"
         ],
         "attr": {
-          "N": { "i": "4" },
           "T": { "type": "DT_FLOAT" },
+          "N": { "i": "4" },
           "Tidx": { "type": "DT_INT32" }
         }
       },
@@ -7667,9 +7667,9 @@
           "model/tf_detect/concat_3/axis"
         ],
         "attr": {
-          "N": { "i": "3" },
+          "Tidx": { "type": "DT_INT32" },
           "T": { "type": "DT_FLOAT" },
-          "Tidx": { "type": "DT_INT32" }
+          "N": { "i": "3" }
         }
       },
       {
@@ -7685,9 +7685,9 @@
           "shrink_axis_mask": { "i": "0" },
           "Index": { "type": "DT_INT32" },
           "new_axis_mask": { "i": "0" },
+          "T": { "type": "DT_FLOAT" },
           "begin_mask": { "i": "3" },
           "end_mask": { "i": "3" },
-          "T": { "type": "DT_FLOAT" },
           "ellipsis_mask": { "i": "0" }
         }
       },
@@ -7701,13 +7701,13 @@
           "model/tf.__operators__.getitem_2/strided_slice/stack_2"
         ],
         "attr": {
-          "shrink_axis_mask": { "i": "0" },
           "Index": { "type": "DT_INT32" },
-          "new_axis_mask": { "i": "0" },
-          "begin_mask": { "i": "3" },
           "end_mask": { "i": "7" },
+          "ellipsis_mask": { "i": "0" },
           "T": { "type": "DT_FLOAT" },
-          "ellipsis_mask": { "i": "0" }
+          "begin_mask": { "i": "3" },
+          "shrink_axis_mask": { "i": "0" },
+          "new_axis_mask": { "i": "0" }
         }
       },
       {
@@ -7720,12 +7720,12 @@
           "model/tf.__operators__.getitem/strided_slice/stack_2"
         ],
         "attr": {
-          "shrink_axis_mask": { "i": "0" },
           "new_axis_mask": { "i": "0" },
           "Index": { "type": "DT_INT32" },
-          "begin_mask": { "i": "2" },
           "end_mask": { "i": "0" },
+          "begin_mask": { "i": "2" },
           "T": { "type": "DT_FLOAT" },
+          "shrink_axis_mask": { "i": "0" },
           "ellipsis_mask": { "i": "1" }
         }
       },
@@ -7737,8 +7737,8 @@
           "model/agnostic_nms_1/agnostic_nms/TensorArrayUnstack_1/TensorListFromTensor/element_shape"
         ],
         "attr": {
-          "shape_type": { "type": "DT_INT32" },
-          "element_dtype": { "type": "DT_FLOAT" }
+          "element_dtype": { "type": "DT_FLOAT" },
+          "shape_type": { "type": "DT_INT32" }
         },
         "experimentalType": {
           "typeId": "TFT_PRODUCT",
@@ -7777,12 +7777,12 @@
           "model/agnostic_nms_1/agnostic_nms/TensorArrayUnstack_1/TensorListFromTensor"
         ],
         "attr": {
-          "is_constant": { "b": false },
+          "T": { "type": "DT_VARIANT" },
           "frame_name": {
             "s": "bW9kZWwvYWdub3N0aWNfbm1zXzEvYWdub3N0aWNfbm1zL3doaWxl"
           },
-          "T": { "type": "DT_VARIANT" },
-          "parallel_iterations": { "i": "10" }
+          "parallel_iterations": { "i": "10" },
+          "is_constant": { "b": false }
         }
       },
       {
@@ -7793,8 +7793,8 @@
           "model/agnostic_nms_1/agnostic_nms/TensorArrayUnstack_2/TensorListFromTensor/element_shape"
         ],
         "attr": {
-          "shape_type": { "type": "DT_INT32" },
-          "element_dtype": { "type": "DT_FLOAT" }
+          "element_dtype": { "type": "DT_FLOAT" },
+          "shape_type": { "type": "DT_INT32" }
         },
         "experimentalType": {
           "typeId": "TFT_PRODUCT",
@@ -7851,7 +7851,7 @@
           "model/agnostic_nms_1/agnostic_nms/while/enter/_10",
           "model/agnostic_nms_1/agnostic_nms/while/next_iteration/_53"
         ],
-        "attr": { "N": { "i": "2" }, "T": { "type": "DT_VARIANT" } }
+        "attr": { "T": { "type": "DT_VARIANT" }, "N": { "i": "2" } }
       },
       {
         "name": "model/agnostic_nms_1/agnostic_nms/while/enter/_11",
@@ -7860,12 +7860,12 @@
           "model/agnostic_nms_1/agnostic_nms/TensorArrayUnstack_2/TensorListFromTensor"
         ],
         "attr": {
-          "is_constant": { "b": false },
           "frame_name": {
             "s": "bW9kZWwvYWdub3N0aWNfbm1zXzEvYWdub3N0aWNfbm1zL3doaWxl"
           },
-          "T": { "type": "DT_VARIANT" },
-          "parallel_iterations": { "i": "10" }
+          "parallel_iterations": { "i": "10" },
+          "is_constant": { "b": false },
+          "T": { "type": "DT_VARIANT" }
         }
       },
       {
@@ -7908,7 +7908,7 @@
           "model/agnostic_nms_1/agnostic_nms/while/enter/_11",
           "model/agnostic_nms_1/agnostic_nms/while/next_iteration/_54"
         ],
-        "attr": { "N": { "i": "2" }, "T": { "type": "DT_VARIANT" } }
+        "attr": { "T": { "type": "DT_VARIANT" }, "N": { "i": "2" } }
       },
       {
         "name": "model/tf.concat/concat",
@@ -7921,8 +7921,8 @@
           "model/tf.concat/concat/axis"
         ],
         "attr": {
-          "N": { "i": "4" },
           "T": { "type": "DT_FLOAT" },
+          "N": { "i": "4" },
           "Tidx": { "type": "DT_INT32" }
         }
       },
@@ -7985,8 +7985,8 @@
           "model/agnostic_nms_1/agnostic_nms/while/body/_1/model/agnostic_nms_1/agnostic_nms/while/ArgMax/dimension"
         ],
         "attr": {
-          "Tidx": { "type": "DT_INT32" },
           "T": { "type": "DT_FLOAT" },
+          "Tidx": { "type": "DT_INT32" },
           "output_type": { "type": "DT_INT64" }
         }
       },
@@ -8017,11 +8017,11 @@
         ],
         "attr": {
           "is_constant": { "b": false },
+          "T": { "type": "DT_VARIANT" },
+          "parallel_iterations": { "i": "10" },
           "frame_name": {
             "s": "bW9kZWwvYWdub3N0aWNfbm1zXzEvYWdub3N0aWNfbm1zL3doaWxl"
-          },
-          "T": { "type": "DT_VARIANT" },
-          "parallel_iterations": { "i": "10" }
+          }
         }
       },
       {
@@ -8044,9 +8044,9 @@
           "model/agnostic_nms_1/agnostic_nms/while/body/_1/model/agnostic_nms_1/agnostic_nms/while/Max/reduction_indices"
         ],
         "attr": {
+          "keep_dims": { "b": false },
           "Tidx": { "type": "DT_INT32" },
-          "T": { "type": "DT_FLOAT" },
-          "keep_dims": { "b": false }
+          "T": { "type": "DT_FLOAT" }
         }
       },
       {
@@ -8110,9 +8110,9 @@
           "model/agnostic_nms_1/agnostic_nms/while/body/_1/model/agnostic_nms_1/agnostic_nms/while/GatherV2_2/axis"
         ],
         "attr": {
-          "Taxis": { "type": "DT_INT32" },
           "Tparams": { "type": "DT_FLOAT" },
           "Tindices": { "type": "DT_INT32" },
+          "Taxis": { "type": "DT_INT32" },
           "batch_dims": { "i": "0" }
         }
       },
@@ -8123,8 +8123,8 @@
           "model/agnostic_nms_1/agnostic_nms/while/body/_1/model/agnostic_nms_1/agnostic_nms/while/non_max_suppression/NonMaxSuppressionV3"
         ],
         "attr": {
-          "T": { "type": "DT_INT32" },
-          "out_type": { "type": "DT_INT32" }
+          "out_type": { "type": "DT_INT32" },
+          "T": { "type": "DT_INT32" }
         },
         "experimentalType": {
           "typeId": "TFT_PRODUCT",
@@ -8145,10 +8145,10 @@
           "model/agnostic_nms_1/agnostic_nms/while/body/_1/model/agnostic_nms_1/agnostic_nms/while/GatherV2_1/axis"
         ],
         "attr": {
-          "Tparams": { "type": "DT_FLOAT" },
           "Taxis": { "type": "DT_INT32" },
-          "Tindices": { "type": "DT_INT32" },
-          "batch_dims": { "i": "0" }
+          "Tparams": { "type": "DT_FLOAT" },
+          "batch_dims": { "i": "0" },
+          "Tindices": { "type": "DT_INT32" }
         }
       },
       {
@@ -8160,10 +8160,10 @@
           "model/agnostic_nms_1/agnostic_nms/while/body/_1/model/agnostic_nms_1/agnostic_nms/while/GatherV2/axis"
         ],
         "attr": {
-          "Tparams": { "type": "DT_FLOAT" },
-          "Taxis": { "type": "DT_INT32" },
           "Tindices": { "type": "DT_INT32" },
-          "batch_dims": { "i": "0" }
+          "Taxis": { "type": "DT_INT32" },
+          "batch_dims": { "i": "0" },
+          "Tparams": { "type": "DT_FLOAT" }
         }
       },
       {
@@ -8176,13 +8176,13 @@
           "model/agnostic_nms_1/agnostic_nms/while/body/_1/model/agnostic_nms_1/agnostic_nms/while/strided_slice_3/stack_2"
         ],
         "attr": {
-          "shrink_axis_mask": { "i": "1" },
+          "ellipsis_mask": { "i": "0" },
           "new_axis_mask": { "i": "0" },
-          "Index": { "type": "DT_INT32" },
-          "begin_mask": { "i": "0" },
           "end_mask": { "i": "0" },
+          "shrink_axis_mask": { "i": "1" },
           "T": { "type": "DT_INT32" },
-          "ellipsis_mask": { "i": "0" }
+          "Index": { "type": "DT_INT32" },
+          "begin_mask": { "i": "0" }
         }
       },
       {
@@ -8192,8 +8192,8 @@
           "model/agnostic_nms_1/agnostic_nms/while/body/_1/model/agnostic_nms_1/agnostic_nms/while/GatherV2"
         ],
         "attr": {
-          "T": { "type": "DT_FLOAT" },
-          "out_type": { "type": "DT_INT32" }
+          "out_type": { "type": "DT_INT32" },
+          "T": { "type": "DT_FLOAT" }
         },
         "experimentalType": {
           "typeId": "TFT_PRODUCT",
@@ -8232,8 +8232,8 @@
           "model/agnostic_nms_1/agnostic_nms/while/body/_1/model/agnostic_nms_1/agnostic_nms/while/GatherV2"
         ],
         "attr": {
-          "T": { "type": "DT_FLOAT" },
-          "out_type": { "type": "DT_INT32" }
+          "out_type": { "type": "DT_INT32" },
+          "T": { "type": "DT_FLOAT" }
         },
         "experimentalType": {
           "typeId": "TFT_PRODUCT",
@@ -8276,13 +8276,13 @@
           "model/agnostic_nms_1/agnostic_nms/while/body/_1/model/agnostic_nms_1/agnostic_nms/while/strided_slice/stack_2"
         ],
         "attr": {
-          "shrink_axis_mask": { "i": "1" },
           "Index": { "type": "DT_INT32" },
-          "new_axis_mask": { "i": "0" },
-          "begin_mask": { "i": "0" },
-          "T": { "type": "DT_INT32" },
+          "ellipsis_mask": { "i": "0" },
           "end_mask": { "i": "0" },
-          "ellipsis_mask": { "i": "0" }
+          "new_axis_mask": { "i": "0" },
+          "shrink_axis_mask": { "i": "1" },
+          "T": { "type": "DT_INT32" },
+          "begin_mask": { "i": "0" }
         }
       },
       {
@@ -8295,13 +8295,13 @@
           "model/agnostic_nms_1/agnostic_nms/while/body/_1/model/agnostic_nms_1/agnostic_nms/while/strided_slice_1/stack_2"
         ],
         "attr": {
+          "ellipsis_mask": { "i": "0" },
+          "Index": { "type": "DT_INT32" },
+          "end_mask": { "i": "0" },
           "shrink_axis_mask": { "i": "1" },
           "new_axis_mask": { "i": "0" },
-          "Index": { "type": "DT_INT32" },
           "begin_mask": { "i": "0" },
-          "end_mask": { "i": "0" },
-          "T": { "type": "DT_INT32" },
-          "ellipsis_mask": { "i": "0" }
+          "T": { "type": "DT_INT32" }
         }
       },
       {
@@ -8314,13 +8314,13 @@
           "model/agnostic_nms_1/agnostic_nms/while/body/_1/model/agnostic_nms_1/agnostic_nms/while/strided_slice_2/stack_2"
         ],
         "attr": {
-          "shrink_axis_mask": { "i": "1" },
           "Index": { "type": "DT_INT32" },
-          "new_axis_mask": { "i": "0" },
-          "begin_mask": { "i": "0" },
           "T": { "type": "DT_INT32" },
+          "begin_mask": { "i": "0" },
+          "new_axis_mask": { "i": "0" },
+          "ellipsis_mask": { "i": "0" },
           "end_mask": { "i": "0" },
-          "ellipsis_mask": { "i": "0" }
+          "shrink_axis_mask": { "i": "1" }
         }
       },
       {
@@ -8380,9 +8380,9 @@
           "model/agnostic_nms_1/agnostic_nms/while/body/_1/model/agnostic_nms_1/agnostic_nms/while/sub_1"
         ],
         "attr": {
-          "N": { "i": "2" },
           "axis": { "i": "0" },
-          "T": { "type": "DT_INT32" }
+          "T": { "type": "DT_INT32" },
+          "N": { "i": "2" }
         }
       },
       {
@@ -8393,8 +8393,8 @@
           "model/agnostic_nms_1/agnostic_nms/while/body/_1/model/agnostic_nms_1/agnostic_nms/while/sub_2"
         ],
         "attr": {
-          "N": { "i": "2" },
           "axis": { "i": "0" },
+          "N": { "i": "2" },
           "T": { "type": "DT_INT32" }
         }
       },
@@ -8441,8 +8441,8 @@
           "model/agnostic_nms_1/agnostic_nms/while/body/_1/model/agnostic_nms_1/agnostic_nms/while/Pad/paddings"
         ],
         "attr": {
-          "Tpaddings": { "type": "DT_INT32" },
-          "T": { "type": "DT_FLOAT" }
+          "T": { "type": "DT_FLOAT" },
+          "Tpaddings": { "type": "DT_INT32" }
         }
       },
       {
@@ -8461,7 +8461,7 @@
           "model/agnostic_nms_1/agnostic_nms/while/body/_1/model/agnostic_nms_1/agnostic_nms/while/PadV2_1/paddings/0",
           "ConstantFolding/model/agnostic_nms_1/agnostic_nms/while/body/_1/model/agnostic_nms_1/agnostic_nms/while/PadV2_1/paddings_const_axis"
         ],
-        "attr": { "Tdim": { "type": "DT_INT32" }, "T": { "type": "DT_INT32" } }
+        "attr": { "T": { "type": "DT_INT32" }, "Tdim": { "type": "DT_INT32" } }
       },
       {
         "name": "model/agnostic_nms_1/agnostic_nms/while/body/_1/model/agnostic_nms_1/agnostic_nms/while/TensorArrayV2Write/TensorListSetItem",
@@ -8506,8 +8506,8 @@
           "model/agnostic_nms_1/agnostic_nms/while/body/_1/model/agnostic_nms_1/agnostic_nms/while/PadV2_1/constant_values"
         ],
         "attr": {
-          "Tpaddings": { "type": "DT_INT32" },
-          "T": { "type": "DT_FLOAT" }
+          "T": { "type": "DT_FLOAT" },
+          "Tpaddings": { "type": "DT_INT32" }
         }
       },
       {
