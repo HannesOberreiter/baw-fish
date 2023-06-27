@@ -81,6 +81,16 @@
                   :label-value="scoreThreshold + ' Score Threshold'"
                   :label-always="true"
                 />
+                <q-slider
+                  class="q-mt-md"
+                  v-model="iouThreshold"
+                  :min="0"
+                  :max="1"
+                  :step="0.01"
+                  :disable="!rawCropped || isLoading"
+                  :label-value="iouThreshold + ' IOU Threshold (Overlap)'"
+                  :label-always="true"
+                />
               </div>
               <div class="text-h4" v-if="!isLoading">
                 Count: <b>{{ resultCount }}</b> <br />
@@ -139,6 +149,8 @@ const { isSupported, data, post } = useBroadcastChannel({
 });
 
 const scoreThreshold = ref(0.5);
+const iouThreshold = ref(0.1);
+
 const resultCount = ref(0);
 const resultCounts = ref<number[]>([]);
 const resultMean = ref(0);
@@ -258,7 +270,7 @@ async function onPredict() {
       .expandDims(0);
   });
   isLoadingItems.value.push('Predicting...');
-  const output = (await model.executeAsync(input)) as
+  const output = (await model.predictAsync(input)) as
     | tf.Tensor<tf.Rank>[]
     | null;
   if (!output) {
@@ -266,18 +278,34 @@ async function onPredict() {
     isLoading.value = false;
     return;
   }
+  input.dispose();
+
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   // 0: "detection_boxes", 1: "detection_scores", 2: "detection_classes", 3: "num_detections"
   const boxes = output[0].dataSync();
   const scores = output[1].dataSync();
-  const validDetections = output[3].dataSync()[0];
-  isLoadingItems.value.push('Post processing...');
 
-  resultCount.value = 0;
+  const kMax = output[1].shape[1] as number;
 
+  const indexTensor = tf.tidy(() => {
+    const boxes2 = tf.tensor2d(boxes, [kMax, 4]);
+    return tf.image.nonMaxSuppression(
+      boxes2,
+      scores,
+      kMax,
+      iouThreshold.value,
+      scoreThreshold.value
+    );
+  });
+  const indexes = indexTensor.dataSync() as Float32Array;
+
+  indexTensor.dispose();
   tf.dispose(output);
 
-  for (let i = 0; i < validDetections; ++i) {
+  isLoadingItems.value.push('Post processing...');
+
+  resultCount.value = indexes.length;
+  indexes.forEach((i) => {
     let [x1, y1, x2, y2] = boxes.slice(i * 4, (i + 1) * 4);
     x1 *= c.width;
     x2 *= c.width;
@@ -286,15 +314,13 @@ async function onPredict() {
     const width = x2 - x1;
     const height = y2 - y1;
 
-    if (scores[i] < scoreThreshold.value) continue;
-    resultCount.value++;
     const score = scores[i].toFixed(2);
 
     ctx.strokeStyle = '#00FFFF';
     ctx.lineWidth = 4;
     ctx.strokeRect(x1, y1, width, height);
     ctx.fillText(score, x1, y1);
-  }
+  });
 
   resultCounts.value.push(resultCount.value);
   resultMean.value = calculateMean(resultCounts.value);
