@@ -1,7 +1,7 @@
 path: ../content/dataset # dataset root dir
 train: images/train/ # train images (relative to 'path')
 val: images/valid/ # val images (relative to 'path')
-test: images/test/ # test images (optional) https://eval.ai/web/challenges/challenge-page/800/overview
+test: images/test/ # test images
 
 # Classes
 nc: 1 # number of classes
