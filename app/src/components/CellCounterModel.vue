@@ -161,7 +161,7 @@ const resultMean = ref(0);
 const isLoading = ref(false);
 const isLoadingItems = ref<string[]>([]);
 
-const modelUrl = getDistUrl() + '/models/cell-counter/model.json';
+const modelUrl = getDistUrl() + '/models/cell-counter/model.json?version=1';
 const canvasRaw = ref<HTMLCanvasElement | null>(null);
 const canvasCrop = ref<HTMLCanvasElement | null>(null);
 const selectedRegion = ref<HTMLCanvasElement | null>(null);
