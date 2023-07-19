@@ -38,4 +38,4 @@ The **notebook** [index.ipynb](index.ipynb) contains all information to run trai
 
 ## Fish Blood Cells Example Prediction Result
 
-![example inference result](/example_result.jpg)
+![example inference result](example_result.jpg)
