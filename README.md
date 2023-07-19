@@ -4,7 +4,7 @@ Mono-repository for utility helper and tools.
 
 ## Utility Demo Homepage
 
-<https://hannesoberreiter.github.io/baw-fish-cell-yolo>
+<https://hannesoberreiter.github.io/baw-fish>
 
 ## Folder structure
 
