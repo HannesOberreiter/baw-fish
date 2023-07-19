@@ -1,5 +1,7 @@
 # BAW Fish
 
+[![Deploy to GitHub Pages](https://github.com/HannesOberreiter/baw-fish/actions/workflows/deploy.yml/badge.svg)](https://github.com/HannesOberreiter/baw-fish/actions/workflows/deploy.yml)
+
 [![pages-build-deployment](https://github.com/HannesOberreiter/baw-fish/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/HannesOberreiter/baw-fish/actions/workflows/pages/pages-build-deployment)
 
 Mono-repository for utility helper and tools.
