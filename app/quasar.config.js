@@ -60,7 +60,7 @@ module.exports = configure(function (/* ctx */) {
 
       // rebuildCache: true, // rebuilds Vite/linter/etc cache on startup
 
-      publicPath: '/baw-fish-cell-yolo',
+      publicPath: '/baw-fish',
       // analyze: true,
       // env: {},
       // rawDefine: {}
